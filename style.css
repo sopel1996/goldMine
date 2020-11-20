@@ -1,0 +1,9 @@
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 1230px;
+    width: 100vw;
+    background: url(img/png/bgMain.png) 50% 50% no-repeat; /* Добавляем фон */
+    background-size: 100% 100%; /* Масштабируем фон */
+}
