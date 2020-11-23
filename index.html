@@ -1,51 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gold Mine</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
         <div class="woodDesk">
 
-<object type="image/svg+xml" data="img/svg/woodDesk.svg">
-</object>
+            <object type="image/svg+xml" data="img/svg/woodDesk.svg">
+            </object>
+            <p class="siteHead">золотая лихорадка</p>
         </div>
         <div class="stone aboutUs">
             <object type="image/svg+xml" data="img/svg/stoneAboutUs.svg">
-</object>
+            </object>
+            <p>О нас</p>
         </div>
         <div class="stone news">
             <object type="image/svg+xml" data="img/svg/stoneNews.svg">
-</object>
+            </object>
+            <p>Новости</p>
         </div>
         <div class="stone contacts">
             <object type="image/svg+xml" data="img/svg/stoneContacts.svg">
-</object>
+            </object>
+            <p>Контакты</p>
         </div>
         <div class="stone help">
             <object type="image/svg+xml" data="img/svg/stoneHelp.svg">
-</object>
+            </object>
+            <p>Помощь</p>
         </div>
         <div class="mine">
             <object type="image/svg+xml" data="img/svg/mine.svg">
-</object>
+            </object>
+            <div class="woodTab">
+                <p class="signUp">регистрация</p>
+                <p class="username">
+                    <img src="img/svg/diamond.svg" alt="">
+                </p>
+                <!-- <p class="signIn">вход</p> -->
+
+                <form action="post" class="loginForm">
+                    <input type="text" name="userName" id="userName" placeholder="Логин">
+                    <input type="password" name="userPassword" id="userPassword" placeholder="Пароль">
+                    <input type="submit" value="ВХОД" class="signIn">
+                    <div>
+
+                        <input type="checkbox" name="rememberMe" id="rememberMe">
+                        <label for="rememberMe">Запомнить меня</label>
+                    </div>
+                    <p>Забыли пароль?</p>
+                </form>
+
+            </div>
         </div>
         <div class="statsPlate">
             <object type="image/svg+xml" data="img/svg/statsPlate.svg">
-</object>
+            </object>
         </div>
     </main>
-    <footer background="img/svg/footer.svg">
-        <div class="logo">
-            <object type="image/svg+xml" data="img/svg/logo.svg">
-</object>
+    <footer class="footer">
+        <div class="footerNav">
+            <div class="logo">
+                <a href="#">
+                    <object type="image/svg+xml" data="img/svg/logo.svg">
+                    </object>
+                </a>
+            </div>
+            <div class="footerMenuSocialLang">
+                <ul>
+                    <li>НОВОСТИ</li>
+                    <li>О НАС</li>
+                    <li>КОНТАКТЫ</li>
+                    <li>ПОМОЩЬ</li>
+                </ul>
+                <!-- </div> -->
+                <div class="footerSocialLang">
+
+                    <div class="social">
+                        <img class="vk" src="img/svg/vk.svg" alt="" srcset="">
+                        <img class="instagram" src="img/svg/instagram.svg" alt="" srcset="">
+                        <img class="telegram" src="img/svg/telegram.svg" alt="" srcset="">
+                    </div>
+                    <div class="lang">
+                        <img class="rus" src="img/svg/rus.svg" alt="" srcset="">
+                        <img class="ens" src="img/svg/eng.svg" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="menu"></div>
-        <div class="copyright"></div>
-        <div class="language"></div>
+        <div class="footerCopyright">
+            footerCopyright
+        </div>
     </footer>
 </body>
+
 </html>
