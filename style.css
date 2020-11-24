@@ -2,6 +2,10 @@
     font-family: "Sanek";
     src: url("fonts/sanekRegular/Sanek-Regular_Cyrillic.otf") format("openType");
    }
+@font-face {
+    font-family: "Bebas";
+    src: url("fonts/bebasNeue/BebasNeue-Regular.otf") format("openType");
+   }
 body{
     margin: 0;
     padding: 0;
@@ -28,7 +32,7 @@ main{
     z-index: 10;
  }
 .stone p{
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas', sans-serif;
     z-index: 11;
     font-size: 55px;
     font-weight: normal;
@@ -38,7 +42,7 @@ main{
     text-shadow: black 0 0 4px;
  }
 ul li{
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas', sans-serif;
     font-weight: bold;
     font-size: 41px;
     line-height: 41px;
@@ -160,14 +164,50 @@ ul li{
     text-align: center;
     width: 140px; 
     margin-bottom: 10px;
+    background-color: #F8CC08;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    outline: none;
 
 }
 .loginForm label, 
 .loginForm p{
     font-size: 13px;
+    color: #ffffff;
+    font-family: 'Bebas', sans-serif;
     /* text-align: center; */
     /* width: 140px;  */
 }
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  .custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    margin-right: 4px;
+    background-color: #F8CC08;
+}
+
+.custom-checkbox:checked+label::before {
+    background-image: url("img/svg/x.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
 
 .signIn{
     position: absolute;
@@ -181,6 +221,37 @@ ul li{
     outline: none; 
     border: none;
 }
+
+
+.stats{
+    position: absolute;
+    z-index: 15;
+    top:25px;
+    left:25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats p{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas',sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.stats b{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas',sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+
+}
+
+
+
 
 footer{
     background: url(img/svg/bgFooter.svg) 50% 50% no-repeat; 
