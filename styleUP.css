@@ -1,0 +1,356 @@
+@font-face {
+    font-family: "Sanek";
+    src: url("fonts/sanekRegular/Sanek-Regular_Cyrillic.otf") format("openType");
+   }
+@font-face {
+    font-family: "Bebas";
+    src: url("fonts/bebasNeue/BebasNeue-Regular.otf") format("openType");
+   }
+body{
+    margin: 0;
+    padding: 0;
+    background: url(img/svg/bgMainUP.svg) 50% 50% no-repeat; 
+    background-size: cover;
+
+}
+main{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.trolley{
+    position: absolute;
+    bottom: 0;
+    left: 500px;
+}
+
+.gold{
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    z-index: 20;
+}
+
+
+.balance{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 60px;
+    right: 40px;
+}
+.balance p{
+    color: #000000;
+    font-family: "Bebas";
+    font-weight: bold;
+    font-size: 35px;
+    margin: 0;
+}
+.balance b{
+    color: #400800;
+    font-family: "Bebas";
+    /* font-weight: bold; */
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.level{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 180px;
+    right: 250px;
+}
+.level p{
+    color: #000000;
+    font-family: "Bebas";
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0;
+}
+.level b{
+    color: #400800;
+    font-family: "Bebas";
+    /* font-weight: bold; */
+    font-size: 30px;
+    /* margin-top: 10px; */
+}
+
+
+.exitSign{
+    position: absolute;
+    right:-20px;
+    top: 150px;
+}
+
+.exitText{
+    transform: rotate(-38deg);
+    text-transform: uppercase;
+    color: #FAB523;
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    z-index: 5;
+
+    display: inline-flex;
+    align-items: center;
+
+
+    font-size: 21px;
+    font-weight: bold;
+    font-family: "Lato";
+}
+.exitText::before{
+    content: '';
+    display: inline-block;
+    background: url("img/svg/exitBefore.svg") 50% 50% no-repeat;
+    width: 45px;
+    height: 45px;
+    z-index: 5;
+    margin-right: 5px;
+}
+
+
+.sectionInner{
+    position: relative;
+    height: 819px;
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+ .nav{
+     width: 100%;
+ }
+ .nav ul {
+     margin: 0;
+     padding: 0;
+    height: 70px;
+    list-style: none;
+    font-family: "Sanek";
+    font-weight: bold;
+    font-size: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+ .navItem {
+     width: 250px;
+     height: 117px;
+     line-height: 170px;
+     display: inline;
+     background: url(img/svg/wood_1.svg) 50% 50% no-repeat;
+     text-align: center;
+     vertical-align: bottom;
+     color: #fff;
+    }
+    
+    .navItem:hover,
+    .active {
+       background: url(img/svg/woodHover.svg) 50% 50% no-repeat;
+       color: #F8CC08;
+    }
+
+.user{
+    width: 600px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+    font-family: "Bebas";
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #400800;
+    background-color: #F8CC08;
+}
+
+.columns{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.column{
+    position: relative;
+}
+.woodDesk{
+    position: absolute;
+    top: -60px;
+    left: -45px;
+}
+
+.goldMining,
+.goldExport,
+.goldCosts{
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    top: -25px;
+    left: 40px;
+    text-transform: uppercase;
+}
+.firstLine{
+    margin:0;
+    padding: 0;
+    font-size: 39px;
+    line-height: 39px;
+    font-weight: normal;
+    font-family: "Bebas";
+    Color: #400800;
+}
+.secondLine{
+    margin:10px 0;
+    padding: 10px 0;
+    
+    border-top: 2px solid #250C03;
+    border-bottom: 2px solid #250C03;
+    line-height: 45px;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: "Bebas";
+    Color: #400800;
+}
+.thirdLine{
+    margin:0;
+    padding: 0;
+    line-height: 39px;
+    font-size: 39px;
+    font-weight: normal;
+    font-family: "Bebas";
+    Color: #400800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background: url(img/svg/bgFooterUP.svg) 50% 50% no-repeat;  
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    height: 290px;
+    width: 1920px;
+    bottom: 0px;
+    left:0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footerNav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+.footerMenuSocialLang{
+    /* width: 100%; */
+    flex-grow: 0.10;
+    /* height: 35%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ .footerMenuSocialLang ul li:hover{
+    color: #F8CC08;
+    text-shadow: black 0 0 4px;
+ }
+
+
+
+.footerMenuSocialLang ul{
+    display: block;
+    font-family: 'Bebas', sans-serif;
+    font-weight: bold;
+    font-size: 41px;
+    line-height: 41px;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footerSocialLang{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    padding-right: 50px;
+}
+
+.vk{
+    width: 31px;
+    height: 31px;
+    padding-right: 10px;
+}
+.instagram{
+    width: 31px;
+    height: 31px;
+    padding-right: 10px;
+}
+.telegram{
+    width: 31px;
+    height: 31px;
+}
+.lang{
+    width: 80px;
+    height: 30px;
+    background: rgba(255,255,255,0.5) 50% 50% no-repeat;
+}
+.rus{
+    width: 28px;
+    height: 20px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.eng{
+    width: 28px;
+    height: 20px;
+    padding-top: 5px;
+}

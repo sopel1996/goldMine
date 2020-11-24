@@ -67,6 +67,7 @@ ul li{
     top: 0px;
     left: 30px;
     z-index: 13;
+    cursor: default;
 }
 .news{
     position: absolute;
@@ -78,6 +79,7 @@ ul li{
     top: -10px;
     left: 30px;
     font-size: 55px;
+    cursor: default;
 }
 .contacts{
     position: absolute;
@@ -90,6 +92,7 @@ ul li{
     top: 35px;
     left: 25px;
     font-size: 40px;
+    cursor: default;
 
 }
 .help{
@@ -103,6 +106,8 @@ ul li{
     left: 15px;
     font-size: 30px;
     font-weight: bold;
+    display: block;
+    cursor: default;
 }
 .mine{
     position: absolute;
@@ -269,17 +274,22 @@ footer{
     align-items: center;
 }
 
+.footerUP{
+    background: url(img/svg/bgFooterUP.svg) 50% 50% no-repeat; 
+}
+
 .footerNav{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    color: #ffffff;
 }
 .footerMenuSocialLang{
     /* width: 100%; */
     flex-grow: 0.10;
-    height: 35%;
+    /* height: 35%; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
