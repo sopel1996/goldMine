@@ -1,64 +1,145 @@
+
 @font-face {
     font-family: "Sanek";
     src: url("fonts/sanekRegular/Sanek-Regular_Cyrillic.otf") format("openType");
    }
 @font-face {
     font-family: "Bebas";
-    src: url("fonts/bebasNeue/BebasNeue-Regular.otf") format("openType");
+    src: url("fonts/bebasNeue/BebasNeueBold.otf") format("openType");
    }
-body{
+body{   
     margin: 0;
     padding: 0;
-    height: 1440px;
-    width: 1920px;
+    height: 100vh;
+    width: 100vw;
+    font-size: 10px;
+    /* height: 1440px;
+    width: 1920px; */
 }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 30;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modalActive{
+    display: block;
+}
+.popup{
+    position: relative;
+    /* width: 1526px;
+    height: 887px; */
+    height: auto;
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    z-index: 40;
+}
+.cancel{
+    position: absolute;
+    top: 4vw;
+    right:  5vw;
+    z-index: 40;
+    width: 20px;
+    height: 20px;
+    /* background: url(img/svg/x.svg) 50% 50% no-repeat; 
+    background-size: cover; */
+
+    background: url(img/svg/x.svg)no-repeat; 
+    background-size: cover;
+
+}
+
 main{
     position: relative;
-    height: 1230px;
-    width: 1920px;
-    background: url(img/svg/bgMain.svg) 50% 50% no-repeat; 
-    background-size: cover;
+    /* height: 1230px;
+    width: 1920px; */
+    height: 80vh;
+    width: 100vw;
+    background: url(img/svg/bgMain.svg) bottom left repeat-x; 
+    background-size: contain;
+    /* background-clip: content-box; */
     /* background-color: red; */
 }
-.siteHead{
-    position: absolute;
-    top: 30px;
-    left: 100px;
-    font-family: 'Sanek';
-    font-size: 80px;
-    text-transform: uppercase;
-}
-.stone{
-    z-index: 10;
- }
-.stone p{
-    font-family: 'Bebas', sans-serif;
-    z-index: 11;
-    font-size: 55px;
-    font-weight: normal;
- }
-.stone p:hover{
-    color: #F8CC08;
-    text-shadow: black 0 0 4px;
- }
-ul li{
-    font-family: 'Bebas', sans-serif;
-    font-weight: bold;
-    font-size: 41px;
-    line-height: 41px;
-    display: block;
- }
- ul li:hover{
-    color: #F8CC08;
-    text-shadow: black 0 0 4px;
- }
 .woodDesk{
     position: absolute;
     top: 0;
     left: 0;
+
+    width: 25vw;
+    height: auto;
 }
-.aboutUs{
+
+.siteHead{
+    margin:0;
     position: absolute;
+    top: 4vw;
+    left: 4vw;
+    font-family: 'Sanek';
+    font-size: 500%;
+    text-transform: uppercase;
+}
+
+
+.news{
+    position: absolute;
+    bottom: 12vw;
+    left: 5vw;
+    font-family: 'Bebas', sans-serif;
+    z-index: 110;
+    font-size: 600%;
+}
+.news .stone{  
+    /* font-family: 'Bebas', sans-serif;
+    z-index: 11;
+    font-size: 600%;
+    position: absolute; */
+    height: auto;
+    width: 16vw;
+
+}
+.news .stoneTitle{
+    margin: 0;
+    position: absolute;
+    top: 3vw;
+    left: 3vw;
+    cursor: pointer;
+}
+/* .stone p{
+    font-family: 'Bebas', sans-serif;
+    z-index: 11;
+    font-size: 600%;
+ } */
+.stoneTitle:hover{
+    color: #F8CC08;
+    text-shadow: black 0 0 4px;
+ }
+
+/* .news object{
+    height: auto;
+    width: 16vw;
+} */
+
+/* .news{
+    position: absolute;
+    bottom: 12vw;
+    left: 5vw;
+} */
+/* .news p{
+    position: absolute;
+    /* top: -10px; */
+    left: 30px;
+    font-size: 55px;
+    cursor: default;
+} */
+.aboutUs{
+    /* position: absolute; */
     top: 800px;
     left: 390px;
 }
@@ -69,34 +150,22 @@ ul li{
     z-index: 13;
     cursor: default;
 }
-.news{
-    position: absolute;
-    top: 733px;
-    left: 100px;
-}
-.news p{
-    position: absolute;
-    top: -10px;
-    left: 30px;
-    font-size: 55px;
-    cursor: default;
-}
 .contacts{
-    position: absolute;
+    /* position: absolute; */
     top: 760px;
     left: 640px;
-    
-}
-.contacts p{
-    position: absolute;
-    top: 35px;
-    left: 25px;
-    font-size: 40px;
-    cursor: default;
 
 }
+.contacts p{
+     position: absolute;
+     top: 35px;
+     left: 25px;
+     font-size: 40px;
+     cursor: default;
+ 
+ }
 .help{
-    position: absolute;
+    /* position: absolute; */
     top: 880px;
     left: 825px;
 }
@@ -109,18 +178,24 @@ ul li{
     display: block;
     cursor: default;
 }
+
+ul li{
+    font-family: 'Bebas', sans-serif;
+    font-weight: bold;
+    font-size: 41px;
+    line-height: 41px;
+    display: block;
+ }
+ ul li:hover{
+    color: #F8CC08;
+    text-shadow: black 0 0 4px;
+ }
 .mine{
     position: absolute;
     top: 256px;
     left: 815px;
 }
 
-/* .woodTab{
-    position: absolute;
-    top: 210px;
-    left: 430px;
-    z-index: 15;
-} */
 .signUp{
     position: absolute;
     top: 25px;
@@ -259,14 +334,18 @@ ul li{
 
 
 footer{
-    background: url(img/svg/bgFooter.svg) 50% 50% no-repeat; 
-    background-size: cover;
+    background: url(img/svg/bgFooter.svg) repeat-x; 
+    /* background-size: 100%; */
+    background-size: contain;
+    /* background-clip: content-box; */
     position: relative;
-    z-index: 0;
-    height: 290px;
-    width: 1920px;
-    bottom: 30px;
-    left:0;
+    z-index: 100;
+    /* height: 290px;
+    width: 1920px; */
+    height: 20vh;
+    width: 100vw;
+    bottom: 2%;
+    /* left:0; */
 
     display: flex;
     flex-direction: column;

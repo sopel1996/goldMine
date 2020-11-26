@@ -10,22 +10,35 @@
 </head>
 
 <body>
+
+    
     <main>
+        <div class="modal">
+            <div class="popup">
+                <object type="image/svg+xml" data="img/svg/popup.svg" class="popup">
+                </object>
+                <div class="cancel">
+                    <!-- <object type="image/svg+xml" data="img/svg/x.svg">
+                    </object> -->
+                </div>
+            </div>
+
+        </div>
         <div class="woodDesk">
 
-            <object type="image/svg+xml" data="img/svg/woodDesk.svg">
+            <object type="image/svg+xml" data="img/svg/woodDesk.svg" class="woodDesk">
             </object>
             <p class="siteHead">золотая лихорадка</p>
         </div>
-        <div class="stone aboutUs">
-            <object type="image/svg+xml" data="img/svg/stoneAboutUs.svg">
+        <div class="news">
+            <object type="image/svg+xml" data="img/svg/stoneNews.svg"  class="stone">
             </object>
-            <p>О нас</p>
+            <p class="stoneTitle">Новости</p>
         </div>
-        <div class="stone news">
-            <object type="image/svg+xml" data="img/svg/stoneNews.svg">
+        <div class="aboutUs">
+            <object type="image/svg+xml" data="img/svg/stoneAboutUs.svg" class="stone">
             </object>
-            <p>Новости</p>
+            <p class="stoneTitle">О нас</p>
         </div>
         <div class="stone contacts">
             <object type="image/svg+xml" data="img/svg/stoneContacts.svg">
@@ -47,7 +60,7 @@
                 </p>
                 <!-- <p class="signIn">вход</p> -->
 
-                <form action="post" class="loginForm">
+                <form action="userPage.html" class="loginForm">
                     <input type="text" name="userName" id="userName" placeholder="Логин">
                     <input type="password" name="userPassword" id="userPassword" placeholder="Пароль">
                     <input type="submit" value="ВХОД" class="signIn">
