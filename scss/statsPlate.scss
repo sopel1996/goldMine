@@ -1,0 +1,38 @@
+.statsPlateContainer{
+    position: absolute;
+    bottom: 3vw;
+    right: 5vw;
+    z-index: 10;
+    
+    .statsPlate{
+        width: 15vw;
+        height: auto;
+    }
+        
+        .stats{
+            position: absolute;
+            z-index: 15;
+            top:1vw;
+            left:2.5vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .titleRow{
+                margin: 0;
+                padding: 0;
+                font-family: 'Bebas',sans-serif;
+                font-size: 250%;
+                text-transform: uppercase;
+            }
+            
+            .statsRow{
+                margin: 0;
+                padding: 0;
+                font-family: 'Bebas',sans-serif;
+                font-size: 350%;
+                text-transform: uppercase;
+            }
+        }
+}

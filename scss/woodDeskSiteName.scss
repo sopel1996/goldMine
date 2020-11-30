@@ -1,0 +1,17 @@
+.woodDesk{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: auto;
+    
+    .siteHead{
+        margin:0;
+        position: absolute;
+        top: 4vw;
+        left: 4vw;
+        font-family: 'Sanek';
+        font-size: 500%;
+        text-transform: uppercase;
+    }
+}

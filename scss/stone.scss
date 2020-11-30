@@ -1,0 +1,94 @@
+.news{
+    position: absolute;
+    bottom: 5vw;
+    left: 5vw;
+    font-family: 'Bebas', sans-serif;
+    z-index: 110;
+    font-size: 450%;
+    
+    & .stone{  
+        height: auto;
+        width: 12vw;
+        
+    }
+    
+    & .stoneTitle{
+        margin: 0;
+        position: absolute;
+        top: 3vw;
+        left: 3vw;
+        cursor: pointer;
+    }
+}
+
+.aboutUs{
+    position: absolute;
+    bottom: 3vw;
+    left: 18vw;
+    font-family: 'Bebas', sans-serif;
+    z-index: 110;
+    font-size: 450%;
+    
+    & .stone{  
+        height: auto;
+        width: 9vw;
+        
+    }
+    
+    & .stoneTitle{
+        margin: 0;
+        position: absolute;
+        top: 2vw;
+        left: 2vw;
+        cursor: pointer;
+    }
+}
+
+.contacts{
+    position: absolute;
+    bottom: 3vw;
+    left: 28vw;
+    font-family: 'Bebas', sans-serif;
+    z-index: 110;
+    font-size: 350%;
+    
+    & .stone{  
+        height: auto;
+        width: 10vw;
+    }
+    
+    & .stoneTitle{
+        margin: 0;
+        position: absolute;
+        top: 3vw;
+        left: 1.5vw;
+        cursor: pointer;
+    }
+}
+
+.help{
+    position: absolute;
+    bottom: 3vw;
+    left: 37vw;
+    font-family: 'Bebas', sans-serif;
+    z-index: 110;
+    font-size: 300%;
+    
+    & .stone{  
+        height: auto;
+        width: 6.5vw;
+    }
+    
+    & .stoneTitle{
+        margin: 0;
+        position: absolute;
+        top: 1.6vw;
+        left: 0.6vw;
+        cursor: pointer;
+    }
+}
+
+.stoneTitle:hover{
+    color: #F8CC08;
+    text-shadow: black 0 0 4px;
+}

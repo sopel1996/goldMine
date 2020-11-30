@@ -1,0 +1,577 @@
+
+@font-face {
+    font-family: "Sanek";
+    src: url("fonts/sanekRegular/Sanek-Regular_Cyrillic.otf") format("openType");
+   }
+@font-face {
+    font-family: "Bebas";
+    src: url("fonts/bebasNeue/BebasNeueBold.otf") format("openType");
+   }
+body{  
+    background: url(img/svg/bodyBgMainOneScreen.svg) no-repeat;
+    background-size: cover; 
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-size: 13px;
+    /* height: 1440px;
+    width: 1920px; */
+}
+
+main{
+    position: relative;
+    /* height: 1230px;
+    width: 1920px; */
+    height: 80vh;
+    width: 100vw;
+    /* background: url(img/svg/bgMainOneScreen.svg) no-repeat;  */
+    background-size: cover;
+    /* background-clip: content-box; */
+    /* background-color: red; */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 30;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modalActive{
+    display: block;
+}
+
+.popup{
+    position: relative;
+    /* width: 1526px;
+    height: 887px; */
+    height: auto;
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    z-index: 40;
+}
+
+.cancel{
+    position: absolute;
+    top: 4vw;
+    right:  5vw;
+    z-index: 40;
+    width: 20px;
+    height: 20px;
+    /* background: url(img/svg/x.svg) 50% 50% no-repeat; 
+    background-size: cover; */
+
+    background: url(img/svg/x.svg)no-repeat; 
+    background-size: cover;
+
+}
+
+.woodDesk{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 25vw;
+    height: auto;
+}
+
+.siteHead{
+    margin:0;
+    position: absolute;
+    top: 4vw;
+    left: 4vw;
+    font-family: 'Sanek';
+    font-size: 500%;
+    text-transform: uppercase;
+}
+
+.news{
+    position: absolute;
+    bottom: 5vw;
+    left: 5vw;
+    font-family: 'Bebas', sans-serif;
+    z-index: 110;
+    font-size: 450%;
+}
+
+.news .stone{  
+    height: auto;
+    width: 12vw;
+
+}
+
+.news .stoneTitle{
+    margin: 0;
+    position: absolute;
+    top: 3vw;
+    left: 3vw;
+    cursor: pointer;
+}
+
+.aboutUs{
+    position: absolute;
+    bottom: 3vw;
+    left: 18vw;
+    font-family: 'Bebas', sans-serif;
+    z-index: 110;
+    font-size: 450%;
+}
+
+.aboutUs .stone{  
+    height: auto;
+    width: 9vw;
+
+}
+
+.aboutUs .stoneTitle{
+    margin: 0;
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    cursor: pointer;
+}
+
+.contacts{
+    position: absolute;
+    bottom: 3vw;
+    left: 28vw;
+    font-family: 'Bebas', sans-serif;
+    z-index: 110;
+    font-size: 350%;
+}
+
+.contacts .stone{  
+    height: auto;
+    width: 10vw;
+}
+
+.contacts .stoneTitle{
+    margin: 0;
+    position: absolute;
+    top: 3vw;
+    left: 1.5vw;
+    cursor: pointer;
+}
+
+.help{
+    position: absolute;
+    bottom: 3vw;
+    left: 37vw;
+    font-family: 'Bebas', sans-serif;
+    z-index: 110;
+    font-size: 300%;
+}
+
+.help .stone{  
+    height: auto;
+    width: 6.5vw;
+}
+
+.help .stoneTitle{
+    margin: 0;
+    position: absolute;
+    top: 1.6vw;
+    left: 0.6vw;
+    cursor: pointer;
+}
+
+.stoneTitle:hover{
+    color: #F8CC08;
+    text-shadow: black 0 0 4px;
+}
+
+.mineContainer{
+    position: absolute;
+    bottom: 0vw;
+    left: 45vw;
+}
+
+.mine{
+    width: 45vw;
+    height: auto;
+}
+ 
+.statsPlateContainer{
+    position: absolute;
+    bottom: 3vw;
+    right: 5vw;
+    z-index: 10;
+}
+
+.statsPlate{
+    width: 15vw;
+    height: auto;
+}
+ 
+.stats{
+    position: absolute;
+    z-index: 15;
+    top:1vw;
+    left:2.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.titleRow{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas',sans-serif;
+    font-size: 250%;
+    text-transform: uppercase;
+}
+
+.statsRow{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas',sans-serif;
+    font-size: 350%;
+    text-transform: uppercase;
+}
+
+.woodTab{
+    border:1px solid red;
+    position: absolute;
+    top: 5vw;
+    left: 15.5vw;
+}
+
+.signUp{
+    margin: 0;
+    position: absolute;
+    top: -0.5vw;
+    left: 3vw;
+    z-index: 15;
+    font-family: 'Sanek';
+    font-size: 650%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.username{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 3.0vw;
+    left: 1vw;
+    z-index: 15;
+    font-family: 'Sanek';
+    font-size: 850%;
+    text-transform: uppercase;
+}
+
+.diamond{
+    width: 15vw;
+    height: auto;
+}
+
+.signUp:hover,
+.signIn:hover {
+    color: #F8CC08;
+    text-shadow: black 0 0 4px;
+}
+
+.loginForm{
+    position: absolute;
+    top: 18vw;
+    left: 21vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loginForm input:not([type="checkbox"]):not([type="submit"]){
+    font-size: 220%;
+    text-align: center;
+    width: 6vw; 
+    margin-bottom: 0.5vw;
+    background-color: #F8CC08;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    outline: none;
+    
+}
+
+.loginForm label, 
+.loginForm p{
+    font-size: 130%;
+    color: #ffffff;
+    font-family: 'Bebas', sans-serif;
+    /* text-align: center; */
+    /* width: 140px;  */
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    margin-right: 4px;
+    background-color: #F8CC08;
+}
+
+.custom-checkbox:checked+label::before {
+    background-image: url("img/svg/x.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 45% 50%;
+}
+
+.signIn{
+    position: absolute;
+    bottom: 9.5vw;
+    left: 1vw;
+    z-index: 15;
+    font-family: 'Sanek';
+    font-size: 650%;
+    text-transform: uppercase;
+    background-color: rgba(255,255,255,0);
+    outline: none; 
+    border: none;
+    cursor: pointer;
+}
+
+
+footer{
+    position: relative;
+    z-index: 100;
+    height: 20vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerNav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.footerMenuSocialLang{
+    flex-grow: 0.10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footerSocialLang{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerMenu{
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footerMenuElement{
+    font-family: 'Bebas', sans-serif;
+    font-weight: bold;
+    font-size: 350%;
+    display: block;
+    text-transform: uppercase;
+}
+
+.footerMenuElement:hover{
+    color: #F8CC08;
+    text-shadow: black 0 0 4px;
+}
+
+.logoContainer{
+    padding-right: 50px;
+}
+
+.logo{
+    width: 10vw;
+    height: auto;
+}
+
+.socialElement{
+    width: 1.3vw;
+    height: auto;
+    padding-right: 0.5vw;
+}
+
+.lang{
+    width: 4,5vw;
+    height: auto;
+    background: rgba(255,255,255,0.5) 50% 50% no-repeat;
+}
+.langFlag{
+    width: 1.5vw;
+    height: auto;
+    padding: 5px;
+}
+
+.footerCopyright{
+    font-family: sans-serif;
+    font-size: 170%;
+    color: #CBCBCB;
+}
+.footerCopyright::before{
+    content: '\A9';
+}
+
+
+@media (min-width: 200px){
+    body{
+        font-size: 3px;
+    }   
+    .username{
+        top:3.5vw;
+    }
+    .signIn{
+        bottom: 11.5vw;
+    }
+}
+@media (min-width: 640px){
+    body{
+        font-size: 3px;
+    }
+    .username{
+        top:3.7vw;
+    }
+    .signIn{
+        bottom: 10.5vw;
+    }
+}
+@media (min-width: 720px){
+    body{
+        font-size: 4px;
+    }
+    .username{
+        top:3.6vw;
+    }
+    .signIn{
+        bottom: 10.5vw;
+    }
+}
+@media (min-width: 860px){
+    body{
+        font-size: 5px;
+    }
+    .username{
+        top:3.3vw;
+    }
+    .signIn{
+        bottom: 9.6vw;
+    }
+}
+@media (min-width: 1024px){
+    body{
+        font-size: 6px;
+    }
+    .username{
+        top:3.3vw;
+    }
+    .signIn{
+        bottom: 9.6vw;
+    }
+}
+@media (min-width: 1200px){
+    body{
+        font-size: 7px;
+    }
+    .username{
+        top:3.3vw;
+    }
+    .signIn{
+        bottom: 9.6vw;
+    }
+}
+@media (min-width: 1370px){
+    body{
+        font-size: 8px;
+    }
+    .username{
+        top:3.3vw;
+    }
+    .signIn{
+        bottom: 9.6vw;
+    }
+}
+@media (min-width: 1700px){
+    body{
+        font-size: 10px;
+    }
+    .username{
+        top:3.5vw;
+    }
+    .signIn{
+        bottom: 8.5vw;
+    }
+}
+@media (min-width: 1900px){
+    body{
+        font-size: 11px;
+    }
+    .username{
+        top:3vw;
+    }
+    .signIn{
+        bottom: 9vw;
+    }
+}
+
+@media (min-width: 2250px) {
+    body{
+        font-size: 12px;
+    }
+    .username{
+        top:3.5vw;
+    }
+    .signIn{
+        bottom: 8.5vw;
+    }
+}
+@media (min-width: 2250px) {
+    body{
+        font-size: 13px;
+    }
+    .username{
+        top:3.5vw;
+    }
+    .signIn{
+        bottom: 8.5vw;
+    }
+}
