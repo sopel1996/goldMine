@@ -545,22 +545,28 @@ main{
     width: 14vw;
     height: auto;
 }
-.woodDesk{
+.woodDeskContainer{
     position: absolute;
     bottom: 14vw;
     right: -1.1vw;
+}
+.woodDesk{
     width: 17vw;
     height: auto;
 }
 
+
+.hide{
+    display:none;
+}
 .goldMining,
 .goldExport,
 .goldCosts{
     position: absolute;
     width: 10vw;
     text-align: center;
-    bottom: 14.8vw;
-    left: 1.8vw;
+    bottom: 1vw;
+    left: 3.7vw;
     text-transform: uppercase;
     font-size: 300%;
 }
@@ -596,7 +602,14 @@ main{
 }
 
 
+.myGold{
+    bottom:6vw;
+    right: -1.1vw;
+}
 
+.myGold .title{
+    
+}
 
 
 
