@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gold Mine</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
 
@@ -18,8 +18,6 @@
                 <object type="image/svg+xml" data="img/svg/popup.svg" class="popup">
                 </object>
                 <div class="cancel">
-                    <!-- <object type="image/svg+xml" data="img/svg/x.svg">
-                    </object> -->
                 </div>
             </div>
 
@@ -36,87 +34,87 @@
             <p class="stoneTitle">Новости</p>
         </div>
         <div class="aboutUs">
-            <object type="image/svg+xml" data="img/svg/stoneAboutUs.svg" class="stone">
+            <object type="image/svg+xml" data="img/svg/stoneAboutUs.svg"  class="stone">
             </object>
             <p class="stoneTitle">О нас</p>
         </div>
-        <div class="stone contacts">
-            <object type="image/svg+xml" data="img/svg/stoneContacts.svg">
+        <div class="contacts">
+            <object type="image/svg+xml" data="img/svg/stoneContacts.svg"  class="stone">
             </object>
-            <p>Контакты</p>
+            <p class="stoneTitle">Контакты</p>
         </div>
-        <div class="stone help">
-            <object type="image/svg+xml" data="img/svg/stoneHelp.svg">
+        <div class="help">
+            <object type="image/svg+xml" data="img/svg/stoneHelp.svg"  class="stone">
             </object>
-            <p>Помощь</p>
+            <p class="stoneTitle">Помощь</p>
         </div>
-        <div class="mine">
-            <object type="image/svg+xml" data="img/svg/mine.svg">
+        
+        <div class="mineContainer">
+            <object type="image/svg+xml" data="img/svg/mine.svg" class="mine">
             </object>
+
             <div class="woodTab">
                 <p class="signUp">регистрация</p>
-                <p class="username">
-                    <img src="img/svg/diamond.svg" alt="">
-                </p>
-                <!-- <p class="signIn">вход</p> -->
-
-                <form action="userPage.html" class="loginForm">
-                    <input type="text" name="userName" id="userName" placeholder="Логин">
-                    <input type="password" name="userPassword" id="userPassword" placeholder="Пароль">
-                    <input type="submit" value="ВХОД" class="signIn">
-                    <div>
-
-                        <input type="checkbox" class="custom-checkbox" name="rememberMe" id="rememberMe">
-                        <label for="rememberMe">Запомнить меня</label>
-                    </div>
-                    <p>Забыли пароль?</p>
-                </form>
-
+                <div class="username">
+                    <object type="image/svg+xml" data="img/svg/diamond.svg"  class="diamond">
+                    </object>
+                </div>
             </div>
+
+            <form action="userPage.html" class="loginForm">
+                <input type="text" name="userName" id="userName" placeholder="Логин">
+                <input type="password" name="userPassword" id="userPassword" placeholder="Пароль">
+                <input type="submit" value="ВХОД" class="signIn">
+                <div>
+                    <input type="checkbox" class="custom-checkbox" name="rememberMe" id="rememberMe">
+                    <label for="rememberMe">Запомнить меня</label>
+                </div>
+                <p>Забыли пароль?</p>
+            </form>
+
         </div>
-        <div class="statsPlate">
-            <object type="image/svg+xml" data="img/svg/statsPlate.svg">
+        <div class="statsPlateContainer">
+            <object type="image/svg+xml" data="img/svg/statsPlate.svg" class="statsPlate">
             </object>
             <div class="stats">
-                <p>Нас уже</p>
-                <b>532 человека</b>
-                <p>Выплачено</p>
-                <b>123456789 руб</b>
+                <p class="titleRow">Нас уже</p>
+                <b class="statsRow">532 человека</b>
+                <p class="titleRow">Выплачено</p>
+                <b class="statsRow">123456789 руб</b>
             </div>
         </div>
     </main>
     <footer class="footer">
         <div class="footerNav">
-            <div class="logo">
+            <div class="logoContainer">
                 <a href="#">
-                    <object type="image/svg+xml" data="img/svg/logo.svg">
+                    <object type="image/svg+xml" data="img/svg/logo.svg" class="logo">
                     </object>
                 </a>
             </div>
             <div class="footerMenuSocialLang">
-                <ul>
-                    <li>НОВОСТИ</li>
-                    <li>О НАС</li>
-                    <li>КОНТАКТЫ</li>
-                    <li>ПОМОЩЬ</li>
+                <ul class="footerMenu">
+                    <li class="footerMenuElement">НОВОСТИ</li>
+                    <li class="footerMenuElement">О НАС</li>
+                    <li class="footerMenuElement">КОНТАКТЫ</li>
+                    <li class="footerMenuElement">ПОМОЩЬ</li>
                 </ul>
-                <!-- </div> -->
                 <div class="footerSocialLang">
 
                     <div class="social">
-                        <img class="vk" src="img/svg/vk.svg" alt="" srcset="">
-                        <img class="instagram" src="img/svg/instagram.svg" alt="" srcset="">
-                        <img class="telegram" src="img/svg/telegram.svg" alt="" srcset="">
+                        <img class="socialElement" src="img/svg/vk.svg" alt="vk" >
+                        <img class="socialElement" src="img/svg/instagram.svg" alt="instagram">
+                        <img class="socialElement" src="img/svg/telegram.svg" alt="telegram">
                     </div>
                     <div class="lang">
-                        <img class="rus" src="img/svg/rus.svg" alt="" srcset="">
-                        <img class="ens" src="img/svg/eng.svg" alt="" srcset="">
+                        <img class="langFlag" src="img/svg/rus.svg" alt="rus">
+                        <img class="langFlag" src="img/svg/eng.svg" alt="eng">
                     </div>
                 </div>
             </div>
         </div>
         <div class="footerCopyright">
-            footerCopyright
+            2018-2020 Gold-Mine. Все права защищены.
         </div>
     </footer>
 </body>

@@ -7,15 +7,19 @@
     font-family: "Bebas";
     src: url("fonts/bebasNeue/BebasNeueBold.otf") format("openType");
    }
-body{   
+body{  
+    background: url(img/svg/bodyBgMainOneScreen.svg) no-repeat;
+    background-size: cover; 
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100vw;
-    font-size: 10px;
+    font-size: 13px;
     /* height: 1440px;
     width: 1920px; */
 }
+
+
 .modal {
     display: none;
     position: fixed;
@@ -27,9 +31,11 @@ body{
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
 }
+
 .modalActive{
     display: block;
 }
+
 .popup{
     position: relative;
     /* width: 1526px;
@@ -41,6 +47,7 @@ body{
     margin-top: 2vh;
     z-index: 40;
 }
+
 .cancel{
     position: absolute;
     top: 4vw;
@@ -62,11 +69,12 @@ main{
     width: 1920px; */
     height: 80vh;
     width: 100vw;
-    background: url(img/svg/bgMain.svg) bottom left repeat-x; 
-    background-size: contain;
+    /* background: url(img/svg/bgMainOneScreen.svg) no-repeat;  */
+    background-size: cover;
     /* background-clip: content-box; */
     /* background-color: red; */
 }
+
 .woodDesk{
     position: absolute;
     top: 0;
@@ -86,24 +94,21 @@ main{
     text-transform: uppercase;
 }
 
-
 .news{
     position: absolute;
-    bottom: 12vw;
+    bottom: 5vw;
     left: 5vw;
     font-family: 'Bebas', sans-serif;
     z-index: 110;
-    font-size: 600%;
+    font-size: 450%;
 }
+
 .news .stone{  
-    /* font-family: 'Bebas', sans-serif;
-    z-index: 11;
-    font-size: 600%;
-    position: absolute; */
     height: auto;
-    width: 16vw;
+    width: 12vw;
 
 }
+
 .news .stoneTitle{
     margin: 0;
     position: absolute;
@@ -111,115 +116,163 @@ main{
     left: 3vw;
     cursor: pointer;
 }
-/* .stone p{
+
+.aboutUs{
+    position: absolute;
+    bottom: 3vw;
+    left: 18vw;
     font-family: 'Bebas', sans-serif;
-    z-index: 11;
-    font-size: 600%;
- } */
+    z-index: 110;
+    font-size: 450%;
+}
+
+.aboutUs .stone{  
+    height: auto;
+    width: 9vw;
+
+}
+
+.aboutUs .stoneTitle{
+    margin: 0;
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    cursor: pointer;
+}
+
+.contacts{
+    position: absolute;
+    bottom: 3vw;
+    left: 28vw;
+    font-family: 'Bebas', sans-serif;
+    z-index: 110;
+    font-size: 350%;
+}
+
+.contacts .stone{  
+    height: auto;
+    width: 10vw;
+}
+
+.contacts .stoneTitle{
+    margin: 0;
+    position: absolute;
+    top: 3vw;
+    left: 1.5vw;
+    cursor: pointer;
+}
+
+.help{
+    position: absolute;
+    bottom: 3vw;
+    left: 37vw;
+    font-family: 'Bebas', sans-serif;
+    z-index: 110;
+    font-size: 300%;
+}
+
+.help .stone{  
+    height: auto;
+    width: 6.5vw;
+}
+
+.help .stoneTitle{
+    margin: 0;
+    position: absolute;
+    top: 1.6vw;
+    left: 0.6vw;
+    cursor: pointer;
+}
+
 .stoneTitle:hover{
     color: #F8CC08;
     text-shadow: black 0 0 4px;
- }
-
-/* .news object{
-    height: auto;
-    width: 16vw;
-} */
-
-/* .news{
-    position: absolute;
-    bottom: 12vw;
-    left: 5vw;
-} */
-/* .news p{
-    position: absolute;
-    /* top: -10px; */
-    left: 30px;
-    font-size: 55px;
-    cursor: default;
-} */
-.aboutUs{
-    /* position: absolute; */
-    top: 800px;
-    left: 390px;
-}
-.aboutUs p{
-    position: absolute;
-    top: 0px;
-    left: 30px;
-    z-index: 13;
-    cursor: default;
-}
-.contacts{
-    /* position: absolute; */
-    top: 760px;
-    left: 640px;
-
-}
-.contacts p{
-     position: absolute;
-     top: 35px;
-     left: 25px;
-     font-size: 40px;
-     cursor: default;
- 
- }
-.help{
-    /* position: absolute; */
-    top: 880px;
-    left: 825px;
-}
-.help p{
-    position: absolute;
-    top: 20px;
-    left: 15px;
-    font-size: 30px;
-    font-weight: bold;
-    display: block;
-    cursor: default;
 }
 
-ul li{
-    font-family: 'Bebas', sans-serif;
-    font-weight: bold;
-    font-size: 41px;
-    line-height: 41px;
-    display: block;
- }
- ul li:hover{
-    color: #F8CC08;
-    text-shadow: black 0 0 4px;
- }
+.mineContainer{
+    position: absolute;
+    bottom: 0vw;
+    left: 45vw;
+}
+
 .mine{
-    position: absolute;
-    top: 256px;
-    left: 815px;
+    width: 45vw;
+    height: auto;
 }
-
-.signUp{
+ 
+.statsPlateContainer{
     position: absolute;
-    top: 25px;
-    left: 430px;
-    z-index: 15;
-    font-family: 'Sanek';
-    font-size: 85px;
-    text-transform: uppercase;
-}
-.username{
-    position: absolute;
-    top: 125px;
-    left: 400px;
-    z-index: 15;
-    font-family: 'Sanek';
-    font-size: 85px;
-    text-transform: uppercase;
+    bottom: 3vw;
+    right: 5vw;
+    z-index: 10;
 }
 
 .statsPlate{
+    width: 15vw;
+    height: auto;
+}
+ 
+.stats{
     position: absolute;
-    top: 700px;
-    right: 50px;
-    z-index: 10;
+    z-index: 15;
+    top:1vw;
+    left:2.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.titleRow{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas',sans-serif;
+    font-size: 250%;
+    text-transform: uppercase;
+}
+
+.statsRow{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas',sans-serif;
+    font-size: 350%;
+    text-transform: uppercase;
+}
+
+.woodTab{
+    border:1px solid red;
+    position: absolute;
+    top: 5vw;
+    left: 15.5vw;
+}
+
+.signUp{
+    margin: 0;
+    position: absolute;
+    top: 0vw;
+    left: 3.5vw;
+    z-index: 15;
+    font-family: 'Sanek';
+    font-size: 650%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.username{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 3.0vw;
+    left: 1vw;
+    z-index: 15;
+    font-family: 'Sanek';
+    font-size: 850%;
+    text-transform: uppercase;
+}
+
+.diamond{
+    width: 15vw;
+    height: auto;
 }
 
 .signUp:hover,
@@ -230,8 +283,8 @@ ul li{
 
 .loginForm{
     position: absolute;
-    bottom: 300px;
-    left: 490px;
+    top: 18vw;
+    left: 21vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -240,36 +293,39 @@ ul li{
 }
 
 .loginForm input:not([type="checkbox"]):not([type="submit"]){
-    font-size: 22px;
+    font-size: 220%;
     text-align: center;
-    width: 140px; 
-    margin-bottom: 10px;
+    width: 6vw; 
+    margin-bottom: 0.5vw;
     background-color: #F8CC08;
     border: 3px solid #ffffff;
     border-radius: 5px;
     outline: none;
-
+    
 }
+
 .loginForm label, 
 .loginForm p{
-    font-size: 13px;
+    font-size: 130%;
     color: #ffffff;
     font-family: 'Bebas', sans-serif;
     /* text-align: center; */
     /* width: 140px;  */
 }
+
 .custom-checkbox {
     position: absolute;
     z-index: -1;
     opacity: 0;
-  }
+}
 
-  .custom-checkbox+label {
+.custom-checkbox+label {
     display: inline-flex;
     align-items: center;
     user-select: none;
-  }
-  .custom-checkbox+label::before {
+}
+
+.custom-checkbox+label::before {
     content: '';
     display: inline-block;
     width: 13px;
@@ -286,75 +342,34 @@ ul li{
     background-image: url("img/svg/x.svg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 50% 50%;
-  }
+    background-size: 45% 50%;
+}
 
 .signIn{
     position: absolute;
-    top: -125px;
-    left: 20px;
+    bottom: 9.5vw;
+    left: 1vw;
     z-index: 15;
     font-family: 'Sanek';
-    font-size: 85px;
+    font-size: 650%;
     text-transform: uppercase;
     background-color: rgba(255,255,255,0);
     outline: none; 
     border: none;
+    cursor: pointer;
 }
-
-
-.stats{
-    position: absolute;
-    z-index: 15;
-    top:25px;
-    left:25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.stats p{
-    margin: 0;
-    padding: 0;
-    font-family: 'Bebas',sans-serif;
-    font-size: 25px;
-    text-transform: uppercase;
-}
-.stats b{
-    margin: 0;
-    padding: 0;
-    font-family: 'Bebas',sans-serif;
-    font-size: 35px;
-    text-transform: uppercase;
-
-}
-
-
 
 
 footer{
-    background: url(img/svg/bgFooter.svg) repeat-x; 
-    /* background-size: 100%; */
-    background-size: contain;
-    /* background-clip: content-box; */
     position: relative;
     z-index: 100;
-    /* height: 290px;
-    width: 1920px; */
     height: 20vh;
     width: 100vw;
-    bottom: 2%;
-    /* left:0; */
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.footerUP{
-    background: url(img/svg/bgFooterUP.svg) 50% 50% no-repeat; 
 }
 
 .footerNav{
@@ -365,17 +380,22 @@ footer{
     align-items: center;
     color: #ffffff;
 }
+
 .footerMenuSocialLang{
-    /* width: 100%; */
     flex-grow: 0.10;
-    /* height: 35%; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.footerMenuSocialLang ul{
-    /* margin: 0; */
+.footerSocialLang{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerMenu{
     padding: 0;
     width: 100%;
     list-style: none;
@@ -384,45 +404,142 @@ footer{
     flex-direction: row;
     justify-content: space-between;
 }
-.footerSocialLang{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+
+.footerMenuElement{
+    font-family: 'Bebas', sans-serif;
+    font-weight: bold;
+    font-size: 350%;
+    display: block;
+    text-transform: uppercase;
 }
 
-.logo{
+.footerMenuElement:hover{
+    color: #F8CC08;
+    text-shadow: black 0 0 4px;
+}
+
+.logoContainer{
     padding-right: 50px;
 }
 
-.vk{
-    width: 31px;
-    height: 31px;
-    padding-right: 10px;
+.logo{
+    width: 10vw;
+    height: auto;
 }
-.instagram{
-    width: 31px;
-    height: 31px;
-    padding-right: 10px;
+
+.socialElement{
+    width: 1.3vw;
+    height: auto;
+    padding-right: 0.5vw;
 }
-.telegram{
-    width: 31px;
-    height: 31px;
-}
+
 .lang{
-    width: 80px;
-    height: 30px;
+    width: 4,5vw;
+    height: auto;
     background: rgba(255,255,255,0.5) 50% 50% no-repeat;
 }
-.rus{
-    width: 28px;
-    height: 20px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-left: 5px;
+.langFlag{
+    width: 1.5vw;
+    height: auto;
+    padding: 5px;
 }
-.eng{
-    width: 28px;
-    height: 20px;
-    padding-top: 5px;
+
+.footerCopyright{
+    font-family: sans-serif;
+    font-size: 170%;
+    color: #CBCBCB;
+}
+.footerCopyright::before{
+    content: '\A9';
+}
+
+
+@media (min-width: 200px){
+    body{
+        font-size: 3px;
+    }   
+    .username{
+        top:3.5vw;
+    }
+    .signIn{
+        bottom: 10.5vw;
+    }
+}
+@media (min-width: 640px){
+    body{
+        font-size: 3px;
+    }
+    .username{
+        top:3.7vw;
+    }
+    .signIn{
+        bottom: 10.5vw;
+    }
+}
+@media (min-width: 720px){
+    body{
+        font-size: 4px;
+    }
+    .username{
+        top:3.6vw;
+    }
+    .signIn{
+        bottom: 10.5vw;
+    }
+}
+@media (min-width: 860px){
+    body{
+        font-size: 5px;
+    }
+    .username{
+        top:3.3vw;
+    }
+    .signIn{
+        bottom: 9.6vw;
+    }
+}
+@media (min-width: 1024px){
+    body{
+        font-size: 6px;
+    }
+    .username{
+        top:3.3vw;
+    }
+    .signIn{
+        bottom: 9.6vw;
+    }
+}
+@media (min-width: 1200px){
+    body{
+        font-size: 7px;
+    }
+    .username{
+        top:3.3vw;
+    }
+    .signIn{
+        bottom: 9.6vw;
+    }
+}
+@media (min-width: 1370px){
+    body{
+        font-size: 8px;
+    }
+    .username{
+        top:3.3vw;
+    }
+    .signIn{
+        bottom: 9.6vw;
+    }
+}
+
+@media (min-width: 1441px) {
+    body{
+        font-size: 13px;
+    }
+    .username{
+        top:3.5vw;
+    }
+    .signIn{
+        bottom: 8.5vw;
+    }
 }

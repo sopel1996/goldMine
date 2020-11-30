@@ -10,9 +10,31 @@
 
 <body>
     <main>
+        
+        <object type="image/svg+xml" data="img/svg/trolley.svg" class="trolley">
+        </object>
+
+        <div class="goldContainer">
+            <object type="image/svg+xml" data="img/svg/gold.svg" class="gold">
+            </object>
+            <div class="balanceContainer">
+                <p class="title">Баланс</p>
+                <b class="value">123456789</b>
+            </div>
+            <div class="level">
+                <p class="title">уровень шахты</p> <b class="value">12</b>
+            </div>
+        </div>
+
+        <div class="exitSignContainer">
+            <object type="image/svg+xml" data="img/svg/exitSign.svg" class="exitSign">
+            </object>
+            <p class="signText">выход</p>
+        </div>
+       
         <div class="sectionInner">
-            <div class="nav">
-                <ul>
+            <div class="navContainer">
+                <ul class="nav">
                     <li class="navItem active">Моя шахта</li>
                     <li 
                     class="navItem">Золото</li>
@@ -61,62 +83,43 @@
                 </div>
                 
             </div>
-            <div class="trolley">
-                <object type="image/svg+xml" data="img/svg/trolley.svg">
-                </object>
-            </div>
+            
         </div>
-                <div class="gold">
-                    <object type="image/svg+xml" data="img/svg/gold.svg">
-                    </object>
-                    <div class="balance">
-                        <p>Баланс</p>
-                        <b>123456789</b>
-                    </div>
-                    <div class="level">
-                        <p>уровень шахты</p> <b>12</b>
-                    </div>
-                    
-                </div>
-        <div class="exitSign">
-            <object type="image/svg+xml" data="img/svg/exitSign.svg">
-            </object>
-            <p class="exitText">выход</p>
-        </div>
+                
+        
     </main>
 
     <footer class="footer">
         <div class="footerNav">
-            <div class="logo">
+            <div class="logoContainer">
                 <a href="#">
-                    <object type="image/svg+xml" data="img/svg/logo.svg">
+                    <object type="image/svg+xml" data="img/svg/logo.svg" class="logo">
                     </object>
                 </a>
             </div>
             <div class="footerMenuSocialLang">
-                <ul>
-                    <li>НОВОСТИ</li>
-                    <li>О НАС</li>
-                    <li>КОНТАКТЫ</li>
-                    <li>ПОМОЩЬ</li>
+                <ul class="footerMenu">
+                    <li class="footerMenuElement">НОВОСТИ</li>
+                    <li class="footerMenuElement">О НАС</li>
+                    <li class="footerMenuElement">КОНТАКТЫ</li>
+                    <li class="footerMenuElement">ПОМОЩЬ</li>
                 </ul>
-                <!-- </div> -->
                 <div class="footerSocialLang">
 
                     <div class="social">
-                        <img class="vk" src="img/svg/vk.svg" alt="" srcset="">
-                        <img class="instagram" src="img/svg/instagram.svg" alt="" srcset="">
-                        <img class="telegram" src="img/svg/telegram.svg" alt="" srcset="">
+                        <img class="socialElement" src="img/svg/vk.svg" alt="vk" >
+                        <img class="socialElement" src="img/svg/instagram.svg" alt="instagram">
+                        <img class="socialElement" src="img/svg/telegram.svg" alt="telegram">
                     </div>
                     <div class="lang">
-                        <img class="rus" src="img/svg/rus.svg" alt="" srcset="">
-                        <img class="ens" src="img/svg/eng.svg" alt="" srcset="">
+                        <img class="langFlag" src="img/svg/rus.svg" alt="rus">
+                        <img class="langFlag" src="img/svg/eng.svg" alt="eng">
                     </div>
                 </div>
             </div>
         </div>
         <div class="footerCopyright">
-            footerCopyright
+            2018-2020 Gold-Mine. Все права защищены.
         </div>
     </footer>
 </body>
