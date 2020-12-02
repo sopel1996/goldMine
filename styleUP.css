@@ -356,6 +356,12 @@
 @font-face {
     font-family: "Bebas";
     src: url("fonts/bebasNeue/BebasNeueBold.otf") format("openType");
+    font-weight: bold;
+   }
+@font-face {
+    font-family: "Bebas";
+    src: url("fonts/bebasNeue/BebasNeueRegular.otf") format("openType");
+    font-weight: normal;
    }
 body{
     background: url(img/svg/bgUP.svg) 50% 50% no-repeat; 
@@ -364,7 +370,7 @@ body{
     padding: 0;
     height: 100vh;
     width: 100vw;
-    font-size: 13px;
+    font-size: 17px;
 
 }
 main{
@@ -376,9 +382,46 @@ main{
     height: 80vh;
 }
 
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 30;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal .popup {
+  position: relative;
+  height: auto;
+  width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  z-index: 40;
+}
+.modal .popup .cancel {
+  position: absolute;
+  top: 4vw;
+  right: 5vw;
+  z-index: 40;
+  width: 20px;
+  height: 20px;
+  background: url("../img/svg/x.svg") no-repeat;
+  background-size: cover;
+}
+
+.modalActive {
+  display: block;
+}
+
+
 .trolley{
     position: absolute;
-    bottom: 1vw;
+    bottom: 1.3vw;
     left: 30vw;
     width: 8vw;
     height: auto;
@@ -390,7 +433,7 @@ main{
     padding: 0;
     position: absolute;
     right: 0vw;
-    bottom: 1vw;
+    bottom: 1.3vw;
     z-index: 20;
 }
 .gold{
@@ -466,6 +509,7 @@ main{
     content: '';
     display: inline-block;
     background: url("img/svg/exitBefore.svg") 50% 50% no-repeat;
+    background-size: cover;
     width: 2.5vw;
     height: 2.5vw;
     z-index: 5;
@@ -474,7 +518,7 @@ main{
 
 
 .sectionInner{
-    padding-bottom: 2vw;
+    padding-bottom: 2.5vw;
     position: relative;
     height: 100%;
     width: 70vw;
@@ -500,9 +544,10 @@ main{
 .navItem {
     width: 14vw;
     height: 6.5vw;
-    line-height: 9vw;
+    line-height: 9.3vw;
     display: inline;
-    background: url("img/svg/wood_1.svg") 50% 0% no-repeat;
+    background: url("img/svg/wood.svg") 50% 60% no-repeat;
+    background-size: contain;
     text-align: center;
     vertical-align: bottom;
     color: #fff;
@@ -511,7 +556,7 @@ main{
     
 .navItem:hover,
 .active {
-   background: url("img/svg/woodHover.svg") 50% 0% no-repeat;
+   background-image: url("img/svg/woodHover.svg");
    color: #F8CC08;
 }
 
@@ -535,6 +580,7 @@ main{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    z-index: 0;
 }
 
 .column{
@@ -556,9 +602,7 @@ main{
 }
 
 
-.hide{
-    display:none;
-}
+
 .goldMining,
 .goldExport,
 .goldCosts{
@@ -580,8 +624,8 @@ main{
     Color: #400800;
 }
 .secondLine{
-    margin:10px 0;
-    padding: 10px 0;
+    margin:0.5vw 0;
+    padding: 0.5vw 0;
     
     border-top: 2px solid #250C03;
     border-bottom: 2px solid #250C03;
@@ -604,27 +648,478 @@ main{
 
 .myGold{
     bottom:6vw;
-    right: -1.1vw;
+    right: -1.2vw;
 }
 
-.myGold .title{
-    
+.goldMining{
+  position: absolute;
+  top: 3vw;
+  left: 3.5vw;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.goldMining .title{
+    width: 10vw;
+    text-align: center;
+    font-size: 100%;
+    color: #400800;
+}
+
+.inputTitle{
+    font-family: "Bebas";
+    width: 10vw;
+    text-align: center;
+    font-size: 80%;
+    color: #400800;
+    font-weight: normal;
+    margin:0;
+    padding:0;
+}
+.inputRow{
+  width: 10vw;
+  height: auto;
+  vertical-align: middle;
+
+  background-color: #F8CC08;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  outline: none;
+
+  font-family: "Bebas";
+  font-weight: bold;
+  font-size: 90%;
+  color: #400800;
+  /* line-height: 1vw; */
+  text-align: right;
+
+}
+
+.myMineSubmit{
+  margin-top: 1vw;
+  padding: 0.5vw;
+  border: none;
+  border-top: 2px solid #400800;
+  border-bottom: 2px solid #400800;
+  outline: none;
+
+  background-color: rgba(255, 255, 255, 0.0);
+  font-family: "Bebas";
+  font-weight: bold;
+  font-size: 100%;
+  color: #400800;
+  line-height: 2vw;
+
+  width: 8vw;
+  height:auto;
+  position: absolute;
+  bottom: 2vw;
+  left: 1vw;
+}
+
+.infoContainer{
+  margin-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 65%;
+}
+
+.infoTitle{
+
+}
+
+.infoContent{
+  font-weight: bold;
+  font-size: 110%;
+}
+
+._sumMargin{
+  margin-top: 0.25vw;
+}
+._sumSize{
+  font-size:100%;
+}
+/* .sumTitle{
+  margin-top: 100vw;
+} */
+
+.bigBanner{
+  bottom: 7vw;
+  left: 5vw;
+  z-index: 1000;
+  
+}
+.bigBanner .woodDesk{
+  z-index: 1000;
+  width: 60vw;
+  height: auto;
+}
+
+.column{
+  z-index: 0;
+}
+.allOperation{
+  background: url("img/svg/tableHeadBg.svg") 50% 50% no-repeat;
+  background-size: cover;
+  
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 340%;
+  color: #400800;
+
+  width: 12vw;
+  height: auto;
+
+  border: none;
+  outline: none;
+
+  position: absolute;
+  top: 2vw;
+  right: 10.5vw;
+
+  z-index:1000;
+}
+.tableStats{
+  position: absolute;
+  top: 2vw;
+  left: 0;
+
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 340%;
+  color: #400800;
+  
+  width: 60vw;
+  height: auto;
+  text-align: center;
+}
+
+.captionFirsLine{
+  font-weight: bold;
+}
+.captionSecondLine{
+  font-size: 70%;
+}
+
+th{
+  background: url("img/svg/tableHeadBg.svg") 50% 50% no-repeat;
+  background-size: contain;;
 }
 
 
+.refContainer{
+  position: absolute;
+  top:2vw;
+  left: 0vw;
+  width: 90%;
+  height: 80%;
+
+  font-size: 120%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.refTitle{
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 340%;
+  color: #400800;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.refFirstLine{
+
+}
+.refSeconLine{
+  font-weight: normal;
+  font-size: 60%;
+}
+.refActitives{
+  width:80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.refLink{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.refID{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label{
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 200%;
+  color: #400800; 
+}
+.refLinkInput{
+  width:10vw;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 140%;
+  color: #400800;
+  background-color: #F8CC08;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  outline: none;
+
+}
+.refIDInput{
+  width: 7vw;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 140%;
+  color: #400800;
+  background-color: #F8CC08;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  outline: none;
+}
+.refBanner{
+  width: 15vw;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 140%;
+  color: #400800;
+  background-color: rgba(255,255,255,0);
+  border: 3px solid #400800;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
 
 
+.refBannerText{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 3vw;
+}
+
+.refBannerText::after{
+  content: ' ';
+  display: inline-block;
+  background: url("img/svg/iconImg.svg") 50% 50% no-repeat;
+  background-size: contain;
+  width: 2vw;
+  height: 2vw;
+  vertical-align: middle;
+  margin-left: 0.5vw;
+}
+
+.refBtn{
+  width: 12vw;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 250%;
+  color: #400800;
+  background-color: rgba(255,255,255,0);
+  border: 3px solid #400800;
+  outline: none;
+}
+
+.refBanner:hover,
+.refBtn:hover{
+  color: #F8CC08;
+  text-shadow: black 0 0 4px;
+}
+.accountingContainer{
+  font-size: 100%;
+}
+.optionsContainer{
+  position: absolute;
+  top:2vw;
+  left: 0vw;
+  width: 90%;
+  height: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.optionsActitives{
+  width:80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.saveChange{
+  width: 15vw;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 250%;
+  color: #400800;
+  background-color: rgba(255,255,255,0);
+  border: 3px solid #400800;
+  border-left: none;
+  border-right: none;
+  outline: none;
+
+  
+  position: absolute;
+  top: 17vw;
+  right: 22vw;
+
+}
+
+.userData,
+.userPassword,
+.userPay,
+.userSodial{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+
+}
+.userDataForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userDataTitle{
+  align-self: center;
+}
+
+.userDataInput{
+  width: 8vw;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 140%;
+  color: #400800;
+  background-color: #F8CC08;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  outline: none;
+  margin-bottom: 0.5vw;
+}
+
+#oldPass,
+#newPass,
+#repeatNewPass{
+  text-align: center;
+}
+
+.userPay{
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.savePayInfo{
+  width: 7vw;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 250%;
+  color: #400800;
+  background-color: rgba(255,255,255,0);
+  border: 3px solid #400800;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
 
 
+.userSodial{
+  height: 50%;
+  width: 10vw;
+}
+
+.userSodialTelegram,
+.userSodialVk,
+.userSodialInstagram,
+.googleAuth{
+  /* width: 9vw; */
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 200%;
+  color: #400800;
+  margin-bottom: 1vw;
+}
+
+.userSodialTelegram::before{
+  content: "";
+  display: inline-block;
+  width: 1vw;
+  height: 1vw;
+  background: url(img/svg/telegram.svg) 50% 50% no-repeat;
+  background-size: contain;
+  margin-right: 0.5vw;
+}
+.userSodialVk::before{
+  content: "";
+  display: inline-block;
+  width: 1vw;
+  height: 1vw;
+  background: url(img/svg/vk.svg) 50% 50% no-repeat;
+  background-size: contain;
+  margin-right: 0.5vw;
+}
+.userSodialInstagram::before{
+  content: "";
+  display: inline-block;
+  width: 1vw;
+  height: 1vw;
+  background: url(img/svg/instagram.svg) 50% 50% no-repeat;
+  background-size: contain;
+  margin-right: 0.5vw;
+}
+.googleAuth::before{
+  content: "";
+  display: inline-block;
+  width: 1vw;
+  height: 1vw;
+  background: url(img/svg/googleAuth.svg) 50% 50% no-repeat;
+  background-size: contain;
+  margin-right: 0.5vw;
+}
 
 
-
-
-
-
-
-
-
+.userDataTitle{
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 200%;
+  color: #400800;
+}
 
 
 
@@ -714,3 +1209,134 @@ footer {
   footer .footerCopyright::before {
     content: "©";
   }
+
+  .hide{
+    display:none;
+}
+
+
+
+@media (min-width: 425px) {
+  body{
+      font-size: 3px;
+  }
+  
+  .refContainer{
+    font-size: 106%;
+  }
+  .accountingContainer{
+    font-size: 95%;
+  }
+  /* .sectionInner{
+    padding-bottom: 3.5vw;
+  } */
+  /* .trolley{
+    bottom: 1.9vw;
+  }
+  .goldContainer{
+    bottom: 1.8vw;
+   } */
+   .refBtn{
+     font-size: 200%;
+   }
+   .saveChange{
+     font-size: 200%;
+     top: 18vw;
+   }
+   .savePayInfo{
+    font-size: 200%;
+   }
+}
+@media (min-width: 768px) {
+  body{
+      font-size: 5px;
+  }
+  
+  .refContainer{
+    font-size: 106%;
+  }
+  .accountingContainer{
+    font-size: 95%;
+  }
+  /* .sectionInner{
+    padding-bottom: 3.5vw;
+  } */
+  /* .trolley{
+    bottom: 1.9vw;
+  }
+  .goldContainer{
+    bottom: 1.8vw;
+   } */
+   .refBtn{
+     font-size: 200%;
+   }
+   .saveChange{
+     font-size: 200%;
+     top: 18vw;
+   }
+   .savePayInfo{
+    font-size: 200%;
+   }
+}
+@media (min-width: 1024px) {
+  body{
+      font-size: 7px;
+  }
+  
+  .refContainer{
+    font-size: 106%;
+  }
+  .accountingContainer{
+    font-size: 95%;
+  }
+  /* .sectionInner{
+    padding-bottom: 3.5vw;
+  } */
+  /* .trolley{
+    bottom: 1.9vw;
+  }
+  .goldContainer{
+    bottom: 1.8vw;
+  }*/
+   } 
+@media (min-width: 1440px) {
+  body{
+      font-size: 10px;
+  }
+  
+  .refContainer{
+    font-size: 109%;
+  }
+  .accountingContainer{
+    font-size: 100%;
+  }
+  /* .sectionInner{
+    padding-bottom: 2.5vw;
+  } */
+  /* .trolley{
+    bottom: 1.3vw;
+  }
+  .goldContainer{
+    bottom: 1.3vw;
+  }*/
+   } 
+@media (min-width: 2550px) {
+  body{
+      font-size: 17px;
+  }
+  .refContainer{
+    font-size: 120%;
+  }
+  .accountingContainer{
+    font-size: 100%;
+  }
+  /* .sectionInner{
+    padding-bottom: 2.5vw;
+  } */
+  /* .trolley{
+    bottom: 1.3vw;
+  }
+  .goldContainer{
+    bottom: 1.3vw;
+   } */
+}

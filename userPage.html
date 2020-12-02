@@ -6,10 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Page</title>
     <link rel="stylesheet" href="styleUP.css">
+    <script src="js/scriptUP.js" defer></script>
 </head>
 
 <body>
     <main>
+        <div class="modal">
+            <div class="popup">
+                <object type="image/svg+xml" data="img/svg/popup.svg" class="popup">
+                </object>
+                <div class="cancel">
+                </div>
+            </div>
+
+        </div>
         
         <object type="image/svg+xml" data="img/svg/trolley.svg" class="trolley">
         </object>
@@ -36,43 +46,139 @@
             <div class="navContainer">
                 <ul class="nav">
                     <li class="navItem active">Моя шахта</li>
-                    <li 
-                    class="navItem">Золото</li>
-                    <li 
-                    class="navItem">Учет</li>
-                    <li 
-                    class="navItem">Работники</li>
-                    <li 
-                    class="navItem">Настройки</li>
+                    <li class="navItem">Золото</li>
+                    <li class="navItem">Учет</li>
+                    <li class="navItem">Работники</li>
+                    <li class="navItem">Настройки</li>
                 </ul>
             </div>
-            <div class="user hide">Доброй пожаловать в шахту, юзер</div>
+            <div class="user">Доброй пожаловать в шахту, юзер</div>
             <div class="columns">
+                <div class="woodDeskContainer bigBanner hide">
+                    
+                    <object type="image/svg+xml" data="img/svg/banner2Column.svg" class="woodDesk">
+                    </object>
+
+                    <div class="optionsContainer hide">
+                        <div class="refTitle">
+                            <div class="refFirstLine">
+                                Настройки
+                            </div> 
+                        </div>
+
+                        <div class="optionsActitives">
+                            <div class="userData">
+                                <div class="userDataTitle">Общие данные</div>
+                                <label for="userName">Имя</label>
+                                <input type="text" name="userName" id="userName" class="userDataInput" readonly value="123">
+                                <label for="userLogin">Логин</label>
+                                <input type="text" name="userLogin" id="userLogin" class="userDataInput" readonly value="123">
+                                <label for="userEmail">Email</label>
+                                <input type="text" name="userEmail" id="userEmail" class="userDataInput" readonly value="123">
+                            </div>
+                            <form action="" class="userPassword">
+                                <div class="userDataTitle">Смена пароля</div>
+                                
+                                <input type="password" name="oldPass" id="oldPass" class="userDataInput" placeholder="старый пароль">
+                                
+                                <input type="password" name="newPass" id="newPass" class="userDataInput" placeholder="новый пароль">
+                                
+                                <input type="password" name="repeatNewPass" id="repeatNewPass" class="userDataInput" placeholder="повторите новый пароль">
+                                <input type="submit" value="Сохранить настройки" class="saveChange"></input>
+                            </form>
+                            <div class="userPay">
+                                <div class="userDataTitle">Способы оплаты</div>
+                                <img src="img/svg/payeer.svg" alt="payeerLogo">
+                                <form action="" class="userDataForm">
+                                    <input type="text" name="payInfo" id="payInfo" class="userDataInput"><br>
+                                    <input type="submit" value="Сохранить" class="savePayInfo"></input>
+                                </form>
+
+                            </div>
+                            <div class="userSodial">
+                                <div class="userSodialTelegram">@andr2222</div>
+                                <div class="userSodialVk">adnr2222</div>
+                                <div class="userSodialInstagram">@andr2222</div>
+                                <div class="googleAuth">Двухфакторная аутентификация</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="refContainer hide">
+                        <div class="refTitle">
+                            <div class="refFirstLine">
+                                партнерская программа
+                            </div> 
+                            <div class="refSeconLine">
+                                Описание партнерской программы
+                            </div> 
+                        
+                        </div>
+
+                        <div class="refActitives">
+                            <div class="refLink">
+                                <label for="refLink">ваша реферальная ссылка</label>
+                                <input type="text" name="refLink" id="refLink" class="refLinkInput" readonly value="123">
+                            </div>
+                            <div class="refID">
+                                <label for="refLink">код игрока</label>
+                                <input type="text" name="refID" id="refID" class="refIDInput" readonly value="123">
+                            </div>
+                            <button class="refBanner">
+                                <div class="refBannerText">
+                                    ваши реферальные баннеры
+                                </div>
+                            </button>
+
+                        </div>
+                        <button class="refBtn">ваши работники</button>
+                    </div>
+
+
+                    <div class="accountingContainer hide">
+                        <button class="allOperation">все операции</button>
+                        <table class="tableStats">
+                            <caption class="captionFirsLine">Статистика</caption>
+                            <caption class="captionSecondLine">последние 5 операций</caption>
+                            <tr>
+                                <th>дата</th>
+                                <th>доход</th>
+                                <th>расход</th>
+                            </tr>
+                            <tr>
+                                <td>10.10.10</td>
+                                <td>1000</td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td>10.10.10</td>
+                                <td>1000</td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td>10.10.10</td>
+                                <td>1000</td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td>10.10.10</td>
+                                <td>1000</td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td>10.10.10</td>
+                                <td>1000</td>
+                                <td>500</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
                 <div class="column">
                     <object type="image/svg+xml" data="img/svg/woodColumn.svg" class="woodColumn">
                     </object>
-                    <div class="woodDeskContainer hide myMine">    
-                        <object type="image/svg+xml" data="img/svg/woodDeskWithPaperSmall.svg" class="woodDesk">
-                        </object>
-                        <div class="goldMining">
-                            <p class="firstLine">Добыто</p>
-                            <p class="secondLine">3345673</p>
-                            <p class="thirdLine">слитков</p>
-                        </div>
-                    </div>
-                    <div class="woodDeskContainer myGold">    
-                        <object type="image/svg+xml" data="img/svg/woodDeskWithPaperBig.svg" class="woodDesk">
-                        </object>
-                        <div class="goldMining">
-                            <p class="firstLine">Добыто</p>
-                            <p class="secondLine">3345673</p>
-                            <p class="thirdLine">слитков</p>
-                        </div>
-                </div>
-                <!-- <div class="column">
-                    <object type="image/svg+xml" data="img/svg/woodColumn.svg" class="woodColumn">
-                    </object>
-                    <div class="woodDeskContainer hide myMine">
+                    <div class="woodDeskContainer myMine">
                         <object type="image/svg+xml" data="img/svg/woodDeskWithPaperSmall.svg" class="woodDesk">
                         </object>
                         <div class="goldExport">
@@ -81,11 +187,60 @@
                             <p class="thirdLine">слитков</p>
                         </div>
                     </div>  
+
+                    <div class="woodDeskContainer hide myGold">    
+                        <object type="image/svg+xml" data="img/svg/woodDeskWithPaperBig.svg" class="woodDesk">
+                        </object>
+                        <div class="goldMining">
+                            <p class="title">Пополнить счет</p>
+                            <p class="inputTitle">сумма</p>
+                            <form action="">
+                                <input type="number" name="inputSum" id="inputSum" class="inputRow" value="0" min="0">
+                                <input type="submit" value="пополнить"class="myMineSubmit">
+                            </form>
+                            <div class="infoContainer">
+                                <div class="infoTitle">курс игровой валюты</div>
+                                <div class="infoContent">1 рубль = 1 золоту</div>
+                            </div>
+                        </div>
+                    </div>
+                        
                 </div>
                 <div class="column">
                     <object type="image/svg+xml" data="img/svg/woodColumn.svg" class="woodColumn">
                     </object>
-                    <div class="woodDeskContainer hide myMine">
+                    <div class="woodDeskContainer  myMine">
+                        <object type="image/svg+xml" data="img/svg/woodDeskWithPaperSmall.svg" class="woodDesk">
+                        </object>
+                        <div class="goldExport">
+                            <p class="firstLine">Вывезено</p>
+                            <p class="secondLine">3345673</p>
+                            <p class="thirdLine">слитков</p>
+                        </div>
+                    </div> 
+                    
+                    <div class="woodDeskContainer hide myGold">    
+                        <object type="image/svg+xml" data="img/svg/woodDeskWithPaperBig.svg" class="woodDesk">
+                        </object>
+                        <div class="goldMining">
+                            <p class="title">Вывести золото</p>
+                            <p class="inputTitle">сумма</p>
+                            <form action="">
+                                <input type="number" name="outputSum" id="outputSum" class="inputRow" value="0" min="0">
+                                <input type="submit" value="вывести"class="myMineSubmit">
+                            </form>
+                            <div class="infoContainer">
+                                <div class="infoTitle">курс игровой валюты</div>
+                                <div class="infoContent">1 рубль = 1 золоту</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="column">
+                    <object type="image/svg+xml" data="img/svg/woodColumn.svg" class="woodColumn">
+                    </object>
+                    <div class="woodDeskContainer myMine">
                         <object type="image/svg+xml" data="img/svg/woodDeskWithPaperSmall.svg" class="woodDesk">
                         </object>
                         <div class="goldCosts">
@@ -94,7 +249,23 @@
                             <p class="thirdLine">слитков</p>
                         </div>  
                     </div>
-                </div> -->
+
+                    <div class="woodDeskContainer hide myGold">    
+                        <object type="image/svg+xml" data="img/svg/woodDeskWithPaperBig.svg" class="woodDesk">
+                        </object>
+                        <div class="goldMining">
+                            <p class="title">Перевести золото</p>
+                            <p class="inputTitle">Логин</p>
+                            <form action="">
+                                <input type="text" name="transactionName" id="transactionName" class="inputRow">
+                                <p class="inputTitle _sumMargin">сумма</p>
+                                <input type="number" name="transactionSum" id="transactionSum" class="inputRow infoContainer _sumMargin _sumSize" value="0" min="0">
+                                <input type="submit" value="пополнить"class="myMineSubmit">
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
                 
             </div>
             
