@@ -345,6 +345,12 @@ template {
 @font-face {
   font-family: "Bebas";
   src: url("../fonts/bebasNeue/BebasNeueBold.otf") format("openType");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Bebas";
+  src: url("../fonts/bebasNeue/BebasNeueRegular.otf") format("openType");
+  font-weight: normal;
 }
 body {
   background: url("../img/svg/bodyBgMainOneScreen.svg") no-repeat;
@@ -420,6 +426,7 @@ main {
   bottom: 5vw;
   left: 5vw;
   font-family: "Bebas", sans-serif;
+  font-weight: bold;
   z-index: 110;
   font-size: 450%;
 }
@@ -440,6 +447,7 @@ main {
   bottom: 3vw;
   left: 18vw;
   font-family: "Bebas", sans-serif;
+  font-weight: bold;
   z-index: 110;
   font-size: 450%;
 }
@@ -460,6 +468,7 @@ main {
   bottom: 3vw;
   left: 28vw;
   font-family: "Bebas", sans-serif;
+  font-weight: bold;
   z-index: 110;
   font-size: 350%;
 }
@@ -480,6 +489,7 @@ main {
   bottom: 3vw;
   left: 37vw;
   font-family: "Bebas", sans-serif;
+  font-weight: bold;
   z-index: 110;
   font-size: 300%;
 }
@@ -568,6 +578,7 @@ main {
   font-size: 130%;
   color: #ffffff;
   font-family: "Bebas", sans-serif;
+  font-weight: bold;
 }
 .mineContainer .custom-checkbox {
   position: absolute;
@@ -635,6 +646,7 @@ main {
   margin: 0;
   padding: 0;
   font-family: "Bebas", sans-serif;
+  font-weight: bold;
   font-size: 250%;
   text-transform: uppercase;
 }
@@ -642,6 +654,7 @@ main {
   margin: 0;
   padding: 0;
   font-family: "Bebas", sans-serif;
+  font-weight: bold;
   font-size: 350%;
   text-transform: uppercase;
 }
