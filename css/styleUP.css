@@ -847,7 +847,7 @@ main {
 
 footer {
   position: relative;
-  z-index: 100;
+  z-index: 0;
   height: 20vh;
   width: 100vw;
   display: flex;

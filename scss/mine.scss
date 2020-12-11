@@ -19,17 +19,12 @@
             position: absolute;
             top: -0.5vw;
             left: 3vw;
-            z-index: 15;
+            z-index: 10;
             font-family: 'Sanek';
             font-size: 650%;
             text-transform: uppercase;
             cursor: pointer;
 
-            &:hover,
-            &:hover {
-                color: #F8CC08;
-                text-shadow: black 0 0 4px;
-            }
         }
         
         .username{
@@ -38,7 +33,7 @@
             position: absolute;
             top: 3.0vw;
             left: 1vw;
-            z-index: 15;
+            z-index: 10;
             font-family: 'Sanek';
             font-size: 850%;
             text-transform: uppercase;
@@ -82,6 +77,11 @@
         }
     }
 
+    .signUp:hover,
+    .signIn:hover {
+        color: #F8CC08;
+        text-shadow: black 0 0 4px;
+    }
     .custom-checkbox {
         position: absolute;
         z-index: -1;
@@ -118,7 +118,7 @@
         position: absolute;
         bottom: 9vw;
         left: 1vw;
-        z-index: 15;
+        z-index: 10;
         font-family: 'Sanek';
         font-size: 650%;
         text-transform: uppercase;

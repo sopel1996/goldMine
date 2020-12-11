@@ -372,7 +372,7 @@ main {
 .modal {
   display: none;
   position: fixed;
-  z-index: 30;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100%;
@@ -387,13 +387,13 @@ main {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2vh;
-  z-index: 40;
+  z-index: 110;
 }
 .modal .popup .cancel {
   position: absolute;
   top: 4vw;
   right: 5vw;
-  z-index: 40;
+  z-index: 120;
   width: 20px;
   height: 20px;
   background: url("../img/svg/x.svg") no-repeat;
@@ -427,7 +427,7 @@ main {
   left: 5vw;
   font-family: "Bebas", sans-serif;
   font-weight: bold;
-  z-index: 110;
+  z-index: 10;
   font-size: 450%;
 }
 .news .stone {
@@ -448,7 +448,7 @@ main {
   left: 18vw;
   font-family: "Bebas", sans-serif;
   font-weight: bold;
-  z-index: 110;
+  z-index: 10;
   font-size: 450%;
 }
 .aboutUs .stone {
@@ -469,7 +469,7 @@ main {
   left: 28vw;
   font-family: "Bebas", sans-serif;
   font-weight: bold;
-  z-index: 110;
+  z-index: 10;
   font-size: 350%;
 }
 .contacts .stone {
@@ -490,7 +490,7 @@ main {
   left: 37vw;
   font-family: "Bebas", sans-serif;
   font-weight: bold;
-  z-index: 110;
+  z-index: 10;
   font-size: 300%;
 }
 .help .stone {
@@ -530,15 +530,11 @@ main {
   position: absolute;
   top: -0.5vw;
   left: 3vw;
-  z-index: 15;
+  z-index: 10;
   font-family: "Sanek";
   font-size: 650%;
   text-transform: uppercase;
   cursor: pointer;
-}
-.mineContainer .woodTab .signUp:hover, .mineContainer .woodTab .signUp:hover {
-  color: #F8CC08;
-  text-shadow: black 0 0 4px;
 }
 .mineContainer .woodTab .username {
   margin: 0;
@@ -546,7 +542,7 @@ main {
   position: absolute;
   top: 3vw;
   left: 1vw;
-  z-index: 15;
+  z-index: 10;
   font-family: "Sanek";
   font-size: 850%;
   text-transform: uppercase;
@@ -580,6 +576,11 @@ main {
   font-family: "Bebas", sans-serif;
   font-weight: bold;
 }
+.mineContainer .signUp:hover,
+.mineContainer .signIn:hover {
+  color: #F8CC08;
+  text-shadow: black 0 0 4px;
+}
 .mineContainer .custom-checkbox {
   position: absolute;
   z-index: -1;
@@ -612,7 +613,7 @@ main {
   position: absolute;
   bottom: 9vw;
   left: 1vw;
-  z-index: 15;
+  z-index: 10;
   font-family: "Sanek";
   font-size: 650%;
   text-transform: uppercase;
@@ -626,7 +627,7 @@ main {
   position: absolute;
   bottom: 3vw;
   right: 5vw;
-  z-index: 10;
+  z-index: 20;
 }
 .statsPlateContainer .statsPlate {
   width: 15vw;
@@ -634,7 +635,7 @@ main {
 }
 .statsPlateContainer .stats {
   position: absolute;
-  z-index: 15;
+  z-index: 20;
   top: 1vw;
   left: 2.5vw;
   display: flex;
@@ -661,7 +662,7 @@ main {
 
 footer {
   position: relative;
-  z-index: 100;
+  z-index: 0;
   height: 20vh;
   width: 100vw;
   display: flex;
