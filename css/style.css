@@ -372,13 +372,15 @@ main {
 .modal {
   display: none;
   position: fixed;
-  z-index: 30;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+  font-family: "Bebas", sans-serif;
+  font-weight: bold;
 }
 .modal .popup {
   position: relative;
@@ -387,17 +389,123 @@ main {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2vh;
-  z-index: 40;
+  z-index: 110;
 }
 .modal .popup .cancel {
   position: absolute;
   top: 4vw;
   right: 5vw;
-  z-index: 40;
-  width: 20px;
-  height: 20px;
+  z-index: 110;
+  width: 1.5vw;
+  height: 1.5vw;
   background: url("../img/svg/x.svg") no-repeat;
-  background-size: cover;
+  background-size: contain;
+}
+.modal .popup .closeModalSignUp {
+  top: 7.5vw;
+  right: 3vw;
+  width: 1vw;
+  height: 1vw;
+}
+.modal .popup .popupContainer {
+  position: absolute;
+  top: 8vw;
+  left: 3vw;
+  width: 85%;
+  height: 75%;
+  z-index: 120;
+}
+.modal .popup .popupContainer .popupSignUp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpImg {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpImg .signUpTrolley {
+  width: 15vw;
+  height: auto;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm {
+  font-size: 200%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .formTitle {
+  padding: 0;
+  margin: 0;
+  width: 10vw;
+  text-align: center;
+  font-size: 150%;
+  color: #400800;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .signUpFormInput {
+  border: none;
+  border-bottom: 2px solid #400800;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .signUpFormInput::placeholder {
+  text-align: center;
+  color: #400800;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .signUpSubmit {
+  border: none;
+  border-bottom: 4px solid #400800;
+  border-top: 4px solid #400800;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  color: #400800;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  width: 100%;
+  transition: all 0.3s;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label a,
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label a:hover,
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label a:link,
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label a:visited {
+  text-decoration: none;
+  color: #FAB523;
+  text-shadow: black 0 0 4px;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label::after {
+  content: "";
+  display: inline-block;
+  width: 1.5vw;
+  height: 2.5vw;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-left: 7px;
+  background: url("../img/svg/rulesOff.svg") 50% no-repeat;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox:checked + label::after {
+  background-image: url("../img/svg/x.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 45% 50%;
+  background: url("../img/svg/rulesOn.svg") 50% no-repeat;
+}
+.modal .modalSignUp {
+  width: 40vw;
+  top: 5vw;
 }
 
 .modalActive {
@@ -427,7 +535,7 @@ main {
   left: 5vw;
   font-family: "Bebas", sans-serif;
   font-weight: bold;
-  z-index: 110;
+  z-index: 10;
   font-size: 450%;
 }
 .news .stone {
@@ -448,7 +556,7 @@ main {
   left: 18vw;
   font-family: "Bebas", sans-serif;
   font-weight: bold;
-  z-index: 110;
+  z-index: 10;
   font-size: 450%;
 }
 .aboutUs .stone {
@@ -469,7 +577,7 @@ main {
   left: 28vw;
   font-family: "Bebas", sans-serif;
   font-weight: bold;
-  z-index: 110;
+  z-index: 10;
   font-size: 350%;
 }
 .contacts .stone {
@@ -490,7 +598,7 @@ main {
   left: 37vw;
   font-family: "Bebas", sans-serif;
   font-weight: bold;
-  z-index: 110;
+  z-index: 10;
   font-size: 300%;
 }
 .help .stone {
@@ -520,9 +628,8 @@ main {
   height: auto;
 }
 .mineContainer .woodTab {
-  border: 1px solid red;
   position: absolute;
-  top: 5vw;
+  top: 5.5vw;
   left: 15.5vw;
 }
 .mineContainer .woodTab .signUp {
@@ -530,15 +637,11 @@ main {
   position: absolute;
   top: -0.5vw;
   left: 3vw;
-  z-index: 15;
+  z-index: 10;
   font-family: "Sanek";
   font-size: 650%;
   text-transform: uppercase;
   cursor: pointer;
-}
-.mineContainer .woodTab .signUp:hover, .mineContainer .woodTab .signUp:hover {
-  color: #F8CC08;
-  text-shadow: black 0 0 4px;
 }
 .mineContainer .woodTab .username {
   margin: 0;
@@ -546,7 +649,7 @@ main {
   position: absolute;
   top: 3vw;
   left: 1vw;
-  z-index: 15;
+  z-index: 10;
   font-family: "Sanek";
   font-size: 850%;
   text-transform: uppercase;
@@ -570,8 +673,8 @@ main {
   width: 6vw;
   margin-bottom: 0.5vw;
   background-color: #F8CC08;
-  border: 3px solid #ffffff;
-  border-radius: 5px;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
   outline: none;
 }
 .mineContainer .loginForm label, .mineContainer .loginForm p {
@@ -593,8 +696,8 @@ main {
 .mineContainer .custom-checkbox + label::before {
   content: "";
   display: inline-block;
-  width: 13px;
-  height: 13px;
+  width: 1vw;
+  height: 1vw;
   flex-shrink: 0;
   flex-grow: 0;
   border: 1px solid #ffffff;
@@ -612,7 +715,7 @@ main {
   position: absolute;
   bottom: 9vw;
   left: 1vw;
-  z-index: 15;
+  z-index: 10;
   font-family: "Sanek";
   font-size: 650%;
   text-transform: uppercase;
@@ -621,12 +724,17 @@ main {
   border: none;
   cursor: pointer;
 }
+.mineContainer .signUp:hover,
+.mineContainer .signIn:hover {
+  color: #F8CC08;
+  text-shadow: black 0 0 4px;
+}
 
 .statsPlateContainer {
   position: absolute;
   bottom: 3vw;
   right: 5vw;
-  z-index: 10;
+  z-index: 20;
 }
 .statsPlateContainer .statsPlate {
   width: 15vw;
@@ -634,7 +742,7 @@ main {
 }
 .statsPlateContainer .stats {
   position: absolute;
-  z-index: 15;
+  z-index: 20;
   top: 1vw;
   left: 2.5vw;
   display: flex;
@@ -661,7 +769,7 @@ main {
 
 footer {
   position: relative;
-  z-index: 100;
+  z-index: 0;
   height: 20vh;
   width: 100vw;
   display: flex;
@@ -715,14 +823,14 @@ footer .footerNav .footerMenuSocialLang .socialElement {
   padding-right: 0.5vw;
 }
 footer .footerNav .footerMenuSocialLang .lang {
-  width: 4, 5vw;
+  min-width: 3vw;
   height: auto;
   background: rgba(255, 255, 255, 0.5) 50% 50% no-repeat;
 }
 footer .footerNav .footerMenuSocialLang .lang .langFlag {
   width: 1.5vw;
   height: auto;
-  padding: 5px;
+  padding: 0.2vw;
 }
 footer .footerNav .logoContainer {
   padding-right: 50px;

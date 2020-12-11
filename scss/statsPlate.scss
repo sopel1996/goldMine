@@ -2,7 +2,7 @@
     position: absolute;
     bottom: 3vw;
     right: 5vw;
-    z-index: 10;
+    z-index: 20;
     
     .statsPlate{
         width: 15vw;
@@ -11,7 +11,7 @@
         
         .stats{
             position: absolute;
-            z-index: 15;
+            z-index: 20;
             top:1vw;
             left:2.5vw;
             display: flex;

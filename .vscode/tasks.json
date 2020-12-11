@@ -6,13 +6,12 @@
         {
             "label": "compil",
             "type": "shell",
-            "command": "sass scssUP/style.scss:css/styleUP.css",
+            "command": "sass scss/style.scss:css/style.css",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
-   
         }
     ]
 }
