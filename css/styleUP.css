@@ -523,15 +523,15 @@ main {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 ._sumMargin {
-  margin-top: 0.25vw;
+  margin-top: 0.25vw !important;
 }
 
 ._sumSize {
-  font-size: 100%;
+  font-size: 100% !important;
 }
 
 .modal {
@@ -579,6 +579,7 @@ main {
 }
 .columns .column {
   position: relative;
+  z-index: 0;
 }
 .columns .column .woodColumn {
   width: 14vw;
@@ -711,6 +712,137 @@ main {
 .columns .myGold {
   bottom: 6vw;
   right: -1.2vw;
+}
+.columns .bigBanner {
+  bottom: 7vw;
+  left: 5vw;
+  z-index: 1000;
+}
+.columns .bigBanner .woodDesk {
+  z-index: 1000;
+  width: 60vw;
+  height: auto;
+}
+.columns .bigBanner .refContainer {
+  position: absolute;
+  top: 2vw;
+  left: 0vw;
+  width: 90%;
+  height: 80%;
+  font-size: 120%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.columns .bigBanner .refContainer .refTitle {
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 340%;
+  color: #400800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.columns .bigBanner .refContainer .refTitle .refSeconLine {
+  font-weight: normal;
+  font-size: 60%;
+}
+.columns .bigBanner .refContainer .refActitives {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.columns .bigBanner .refContainer .refActitives .refLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.columns .bigBanner .refContainer .refActitives .refLink .refLinkInput {
+  width: 10vw;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 140%;
+  color: #400800;
+  background-color: #F8CC08;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  outline: none;
+}
+.columns .bigBanner .refContainer .refActitives .refID {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.columns .bigBanner .refContainer .refActitives .refID .refIDInput {
+  width: 7vw;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 140%;
+  color: #400800;
+  background-color: #F8CC08;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  outline: none;
+}
+.columns .bigBanner .refContainer .refActitives .refLabel {
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 200%;
+  color: #400800;
+}
+.columns .bigBanner .refContainer .refActitives .refBanner {
+  width: 15vw;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 140%;
+  color: #400800;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #400800;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+.columns .bigBanner .refContainer .refActitives .refBanner .refBannerText {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 3vw;
+}
+.columns .bigBanner .refContainer .refActitives .refBanner .refBannerText::after {
+  content: " ";
+  display: inline-block;
+  background: url("../img/svg/iconImg.svg") 50% 50% no-repeat;
+  background-size: contain;
+  width: 2vw;
+  height: 2vw;
+  vertical-align: middle;
+  margin-left: 0.5vw;
+}
+.columns .bigBanner .refContainer .refBtn {
+  width: 12vw;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 250%;
+  color: #400800;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #400800;
+  outline: none;
+}
+.columns .bigBanner .refContainer .refBanner:hover,
+.columns .bigBanner .refContainer .refBtn:hover {
+  color: #F8CC08;
+  text-shadow: black 0 0 4px;
 }
 
 footer {

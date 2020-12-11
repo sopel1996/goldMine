@@ -171,12 +171,12 @@ main{
 }
 
 .hide{
-    display:none;
+    display:none !important;
 }
 
 ._sumMargin{
-    margin-top: 0.25vw;
+    margin-top: 0.25vw !important;
 }
 ._sumSize{
-    font-size:100%;
+    font-size:100% !important;
 }
