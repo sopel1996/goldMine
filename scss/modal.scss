@@ -153,6 +153,98 @@
                 }
             }
         }
+
+        .popupNews,
+        .popupAboutUs,
+        .popupContacts,
+        .popupHelp{
+            width: 90%;
+            height: 100%;
+            position: absolute;
+            bottom: 1vw;
+            left: 5.5vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .popupTitle{
+                flex-grow: 0.01;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-family: "Bebas";
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 500%;
+                color: #400800;
+            }
+            .popupContent{
+                flex-grow: 1;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "Bebas";
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 250%;
+                color: #400800;
+            }
+        }
+
+        .forgotPassContainer{
+            position: absolute;
+            top: 1vw;
+            left: 1vw;
+            width: 95%;
+            height: 95%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            .title{
+                flex-grow: 0.01;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-family: "Bebas";
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 300%;
+                line-height: 0;
+                color: #400800;
+            }
+            .emailImput{
+                border: none;
+                border-bottom: 2px solid #400800;
+                outline: none;
+                background-color: rgba(0,0,0,0);
+                font-size: 300%;
+
+                &::placeholder{
+                    text-align: center;
+                    color: #400800;
+                }
+
+            }
+            .submitImput{
+                border: none;
+                border-bottom: 4px solid #400800;
+                border-top: 4px solid #400800;
+                outline: none;
+                background-color: rgba(0,0,0,0);
+                font-weight: bold;
+                color: #400800;
+                font-size: 300%;
+            }
+        }
     }
 
     .modalSignUp{

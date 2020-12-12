@@ -369,6 +369,10 @@ main {
   background-size: cover;
 }
 
+.hide {
+  display: none !important;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -502,6 +506,95 @@ main {
   background-position: center center;
   background-size: 45% 50%;
   background: url("../img/svg/rulesOn.svg") 50% no-repeat;
+}
+.modal .popup .popupNews,
+.modal .popup .popupAboutUs,
+.modal .popup .popupContacts,
+.modal .popup .popupHelp {
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  bottom: 1vw;
+  left: 5.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal .popup .popupNews .popupTitle,
+.modal .popup .popupAboutUs .popupTitle,
+.modal .popup .popupContacts .popupTitle,
+.modal .popup .popupHelp .popupTitle {
+  flex-grow: 0.01;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 500%;
+  color: #400800;
+}
+.modal .popup .popupNews .popupContent,
+.modal .popup .popupAboutUs .popupContent,
+.modal .popup .popupContacts .popupContent,
+.modal .popup .popupHelp .popupContent {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 250%;
+  color: #400800;
+}
+.modal .popup .forgotPassContainer {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.modal .popup .forgotPassContainer .title {
+  flex-grow: 0.01;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 300%;
+  line-height: 0;
+  color: #400800;
+}
+.modal .popup .forgotPassContainer .emailImput {
+  border: none;
+  border-bottom: 2px solid #400800;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 300%;
+}
+.modal .popup .forgotPassContainer .emailImput::placeholder {
+  text-align: center;
+  color: #400800;
+}
+.modal .popup .forgotPassContainer .submitImput {
+  border: none;
+  border-bottom: 4px solid #400800;
+  border-top: 4px solid #400800;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  color: #400800;
+  font-size: 300%;
 }
 .modal .modalSignUp {
   width: 40vw;
@@ -677,11 +770,13 @@ main {
   border-radius: 2px;
   outline: none;
 }
-.mineContainer .loginForm label, .mineContainer .loginForm p {
+.mineContainer .loginForm .rememberMe,
+.mineContainer .loginForm .forgotPass {
   font-size: 130%;
   color: #ffffff;
   font-family: "Bebas", sans-serif;
   font-weight: bold;
+  cursor: pointer;
 }
 .mineContainer .custom-checkbox {
   position: absolute;
@@ -812,6 +907,7 @@ footer .footerNav .footerMenuSocialLang .footerMenu .footerMenuElement {
   font-size: 350%;
   display: block;
   text-transform: uppercase;
+  cursor: pointer;
 }
 footer .footerNav .footerMenuSocialLang .footerMenuElement:hover {
   color: #F8CC08;

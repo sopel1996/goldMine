@@ -57,7 +57,7 @@
         align-items: center;
         
         
-        & input:not([type="checkbox"]):not([type="submit"]){
+        input:not([type="checkbox"]):not([type="submit"]){
             font-size: 220%;
             text-align: center;
             width: 6vw; 
@@ -69,12 +69,13 @@
             
         }
         
-        & label, 
-        & p{
+        .rememberMe, 
+        .forgotPass{
             font-size: 130%;
             color: #ffffff;
             font-family: 'Bebas', sans-serif;
             font-weight: bold;
+            cursor: pointer;
         }
     }
 
