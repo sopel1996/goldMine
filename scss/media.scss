@@ -1,88 +1,107 @@
-@media (min-width: 200px){
+@media (min-width: 320px){
     body{
-        font-size: 3px;
+        font-size: 2px;
     }   
-    .username{
+    .mineContainer .woodTab .username{
+        
         top:3.5vw;
     }
-    .signIn{
-        bottom: 11.5vw;
+    .mineContainer .woodTab .signUp{
+        left: 4vw;
+    }
+    .mineContainer .signIn{
+        bottom: 9vw;
+    }
+    .visible{
+        display: none;
+    }
+    .mineContainer{
+        left: 25vw;
     }
 }
-@media (min-width: 640px){
+@media (min-width: 500px){
     body{
         font-size: 3px;
     }
-    .username{
+    .mineContainer .woodTab .signUp{
+        left: 3vw;
+    }
+    .mineContainer .woodTab .username{
         top:3.7vw;
     }
-    .signIn{
-        bottom: 10.5vw;
+    .mineContainer .signIn{
+        bottom: 9vw;
+    }
+    .visible{
+        display: block;
+    }
+    .mineContainer{
+        left: 45vw;
     }
 }
 @media (min-width: 720px){
     body{
         font-size: 4px;
     }
-    .username{
+    .mineContainer .woodTab .username{
         top:3.6vw;
     }
-    .signIn{
-        bottom: 10.5vw;
+    .mineContainer .signIn{
+        bottom: 9vw;
     }
 }
 @media (min-width: 860px){
     body{
         font-size: 5px;
     }
-    .username{
+    .mineContainer .woodTab .username{
         top:3.3vw;
     }
-    .signIn{
-        bottom: 9.6vw;
+    .mineContainer .signIn{
+        bottom: 9vw;
     }
 }
 @media (min-width: 1024px){
     body{
         font-size: 6px;
     }
-    .username{
+    .mineContainer .woodTab .username{
         top:3.3vw;
     }
-    .signIn{
-        bottom: 9.6vw;
+    .mineContainer .signIn{
+        bottom: 9vw;
     }
 }
 @media (min-width: 1200px){
     body{
         font-size: 7px;
     }
-    .username{
+    .mineContainer .woodTab .username{
         top:3.3vw;
     }
-    .signIn{
-        bottom: 9.6vw;
+    .mineContainer .signIn{
+        bottom: 9vw;
     }
 }
 @media (min-width: 1370px){
     body{
         font-size: 8px;
     }
-    .username{
+    .mineContainer .woodTab .username{
         top:3.3vw;
     }
-    .signIn{
-        bottom: 9.6vw;
+    .mineContainer .signIn{
+        bottom: 9vw;
     }
 }
 @media (min-width: 1700px){
     body{
         font-size: 10px;
     }
-    .username{
+    .mineContainer .woodTab .username{
         top:3.5vw;
     }
-    .signIn{
+    .mineContainer .signIn{
         bottom: 8.5vw;
     }
 }
@@ -90,10 +109,10 @@
     body{
         font-size: 11px;
     }
-    .username{
+    .mineContainer .woodTab .username{
         top:3vw;
     }
-    .signIn{
+    .mineContainer .signIn{
         bottom: 8.5vw;
     }
 }
@@ -102,10 +121,10 @@
     body{
         font-size: 12px;
     }
-    .username{
+    .mineContainer .woodTab .username{
         top:3.5vw;
     }
-    .signIn{
+    .mineContainer .signIn{
         bottom: 8.5vw;
     }
 }
@@ -113,10 +132,10 @@
     body{
         font-size: 13px;
     }
-    .username{
+    .mineContainer .woodTab .username{
         top:4vw;
     }
-    .signIn{
+    .mineContainer .signIn{
         bottom: 8vw;
     }
 }

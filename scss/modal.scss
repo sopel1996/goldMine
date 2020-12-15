@@ -7,7 +7,7 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.8);
 
     font-family: 'Bebas', sans-serif;
     font-weight: bold;
@@ -26,7 +26,7 @@
             position: absolute;
             top: 4vw;
             right:  5vw;
-            z-index: 110;
+            z-index: 150;
             width: 1.5vw;
             height: 1.5vw;            
             background: url("../img/svg/x.svg") no-repeat; 
@@ -158,6 +158,10 @@
         .popupAboutUs,
         .popupContacts,
         .popupHelp{
+            overflow: scroll;
+
+
+            
             width: 90%;
             height: 100%;
             position: absolute;
@@ -182,6 +186,11 @@
                 color: #400800;
             }
             .popupContent{
+                overflow-y: scroll;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+
+
                 flex-grow: 1;
                 width: 100%;
                 display: flex;
@@ -192,6 +201,12 @@
                 text-transform: uppercase;
                 font-size: 250%;
                 color: #400800;
+
+                &::-webkit-scrollbar{
+                    width: 0;
+                    background-color: transparent;
+                }
+
             }
         }
 

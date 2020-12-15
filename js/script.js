@@ -20,70 +20,72 @@ const popUp = evt => {
     const target = evt.target;
 
     if (target.textContent.toLowerCase()=="забыли пароль?"){
-        modal.classList.add('modalActive');
+        signUpPopUp.classList.add('hide');
+        newsPopUp.classList.add('hide');
+        aboutUsPopUp.classList.add('hide');
+        contactsPopUp.classList.add('hide');
+        helpPopUp.classList.add('hide');
+        
         popUpDesk[1].classList.add('modalSignUp');
         popUpDesk[0].classList.add('modalSignUp');
         closeModal.classList.add('closeModalSignUp');
 
         forgotPassContainer.classList.remove('hide');
-        signUpPopUp.classList.add('hide');
-        newsPopUp.classList.add('hide');
-        aboutUsPopUp.classList.add('hide');
-        contactsPopUp.classList.add('hide');
-        helpPopUp.classList.add('hide');
+
+        modal.classList.add('modalActive');
     }
     if (target.textContent.toLowerCase()=="новости") {
-        modal.classList.add('modalActive');
-
         forgotPassContainer.classList.add('hide');
         signUpPopUp.classList.add('hide');
-        newsPopUp.classList.remove('hide');
         aboutUsPopUp.classList.add('hide');
         contactsPopUp.classList.add('hide');
         helpPopUp.classList.add('hide');
+        newsPopUp.classList.remove('hide');
+
+        modal.classList.add('modalActive');
     }
     if (target.textContent.toLowerCase()=="о нас") {
-        modal.classList.add('modalActive');
-
         forgotPassContainer.classList.add('hide');
         signUpPopUp.classList.add('hide');
         newsPopUp.classList.add('hide');
-        aboutUsPopUp.classList.remove('hide');
         contactsPopUp.classList.add('hide');
         helpPopUp.classList.add('hide');
+        aboutUsPopUp.classList.remove('hide');
+
+        modal.classList.add('modalActive');
     }
     if (target.textContent.toLowerCase()=="контакты") {
-        modal.classList.add('modalActive');
-
         forgotPassContainer.classList.add('hide');
         signUpPopUp.classList.add('hide');
         newsPopUp.classList.add('hide');
         aboutUsPopUp.classList.add('hide');
-        contactsPopUp.classList.remove('hide');
         helpPopUp.classList.add('hide');
+        contactsPopUp.classList.remove('hide');
+
+        modal.classList.add('modalActive');
     }
     if (target.textContent.toLowerCase()=="помощь") {
-        modal.classList.add('modalActive');
-
         forgotPassContainer.classList.add('hide');
         signUpPopUp.classList.add('hide');
         newsPopUp.classList.add('hide');
         aboutUsPopUp.classList.add('hide');
         contactsPopUp.classList.add('hide');
         helpPopUp.classList.remove('hide');
+
+        modal.classList.add('modalActive');
     }
     if (target.textContent.toLowerCase()=="регистрация") {
-        modal.classList.add('modalActive');
-        popUpDesk[1].classList.add('modalSignUp');
-        popUpDesk[0].classList.add('modalSignUp');
-        closeModal.classList.add('closeModalSignUp');
-
         forgotPassContainer.classList.add('hide');
-        signUpPopUp.classList.remove('hide');
         newsPopUp.classList.add('hide');
         aboutUsPopUp.classList.add('hide');
         contactsPopUp.classList.add('hide');
         helpPopUp.classList.add('hide');
+        signUpPopUp.classList.remove('hide');
+
+        popUpDesk[1].classList.add('modalSignUp');
+        popUpDesk[0].classList.add('modalSignUp');
+        closeModal.classList.add('closeModalSignUp');
+        modal.classList.add('modalActive');
     }
     if (target.classList.contains('cancel') || target.classList.contains('modal')){
         modal.classList.remove('modalActive');
