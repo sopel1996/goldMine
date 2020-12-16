@@ -45,6 +45,7 @@ footer{
                     font-size: 350%;
                     display: block;
                     text-transform: uppercase;
+                    cursor: pointer;
                 }
             }
         
@@ -60,14 +61,14 @@ footer{
             }
             
             .lang{
-                width: 4,5vw;
+                min-width: 3vw;
                 height: auto;
                 background: rgba(255,255,255,0.5) 50% 50% no-repeat;
                 
                 .langFlag{
                     width: 1.5vw;
                     height: auto;
-                    padding: 5px;
+                    padding: 0.2vw;
                 }
             }
         }

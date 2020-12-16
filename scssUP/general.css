@@ -1,0 +1,237 @@
+body {
+  background: url("../img/svg/bgUP.svg") 50% 50% no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  font-size: 17px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+}
+
+.trolley {
+  position: absolute;
+  bottom: 1.3vw;
+  left: 30vw;
+  width: 8vw;
+  height: auto;
+}
+
+.goldContainer {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0vw;
+  bottom: 1.3vw;
+  z-index: 20;
+}
+
+.gold {
+  margin: 0;
+  padding: 0;
+  width: 35vw;
+  height: auto;
+}
+
+.balanceContainer {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 4vw;
+  right: 1.5vw;
+}
+
+.level {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 1.5vw;
+  right: 11.5vw;
+}
+
+.title {
+  color: #000000;
+  font-family: "Bebas";
+  font-weight: bold;
+  font-size: 250%;
+  margin: 0;
+}
+
+.value {
+  color: #400800;
+  font-family: "Bebas";
+  font-size: 300%;
+}
+
+.exitSignContainer {
+  position: absolute;
+  right: 0vw;
+  top: 0vw;
+}
+
+.exitSignContainer .exitSign {
+  width: 15vw;
+  height: auto;
+}
+
+.signText {
+  -webkit-transform: rotate(-38deg);
+          transform: rotate(-38deg);
+  text-transform: uppercase;
+  color: #FAB523;
+  position: absolute;
+  top: 4vw;
+  left: 2.8vw;
+  z-index: 5;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 250%;
+  font-weight: bold;
+  font-family: "Lato";
+}
+
+.signText::before {
+  content: '';
+  display: inline-block;
+  background: url("../img/svg/exitBefore.svg") 50% 50% no-repeat;
+  background-size: cover;
+  width: 2.5vw;
+  height: 2.5vw;
+  z-index: 5;
+  margin-right: 0.5vw;
+}
+
+.sectionInner {
+  padding-bottom: 2.5vw;
+  position: relative;
+  height: 100%;
+  width: 70vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navContainer {
+  width: 100%;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Sanek";
+  font-weight: bold;
+  font-size: 300%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navItem {
+  width: 14vw;
+  height: 6.5vw;
+  line-height: 9.3vw;
+  display: inline;
+  background: url("../img/svg/wood.svg") 50% 60% no-repeat;
+  background-size: contain;
+  text-align: center;
+  vertical-align: bottom;
+  color: #fff;
+  text-shadow: black 0 0 4px;
+}
+
+.navItem:hover,
+.navItem .active {
+  background-image: url("../img/svg/woodHover.svg");
+  color: #F8CC08;
+}
+
+.user {
+  width: 22vw;
+  height: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Bebas";
+  font-weight: bold;
+  font-size: 200%;
+  text-transform: uppercase;
+  color: #400800;
+  background-color: #F8CC08;
+}
+
+.hide {
+  display: none !important;
+}
+
+._sumMargin {
+  margin-top: 0.25vw !important;
+}
+
+._sumSize {
+  font-size: 100% !important;
+}
+/*# sourceMappingURL=general.css.map */

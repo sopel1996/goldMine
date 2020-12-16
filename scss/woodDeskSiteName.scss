@@ -14,4 +14,13 @@
         font-size: 500%;
         text-transform: uppercase;
     }
+    .videoHead{
+        position: absolute;
+        top: 10vw;
+        left: 3.9vw;
+        z-index: 30;
+        border: 1px solid black;
+        width: 14vw;
+        height: auto;
+    }
 }

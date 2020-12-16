@@ -7,7 +7,11 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.8);
+
+    font-family: 'Bebas', sans-serif;
+    font-weight: bold;
+
     
     .popup{
         position: relative;
@@ -22,13 +26,247 @@
             position: absolute;
             top: 4vw;
             right:  5vw;
+            z-index: 150;
+            width: 1.5vw;
+            height: 1.5vw;            
+            background: url("../img/svg/x.svg") no-repeat; 
+            background-size: contain;
+        }
+        .closeModalSignUp{
+            top: 7.5vw;
+            right: 3vw;
+            width: 1vw;
+            height: 1vw;
+        }
+
+        .popupContainer{
+            position: absolute;
+            top: 8vw;
+            left: 3vw;
+            width: 85%;
+            height: 75%;
             z-index: 120;
-            width: 20px;
-            height: 20px;            
-            background: url("../img/svg/x.svg")no-repeat; 
-            background-size: cover;
+
+            .popupSignUp{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                height: 100%;
+                
+                .popupSignUpImg{
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .signUpTrolley{
+                        width: 15vw;
+                        height: auto;
+                    }
+                }
+                .popupSignUpForm{
+                    font-size: 200%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .formTitle{
+                        padding: 0;
+                        margin: 0;
+                        width: 10vw;
+                        text-align: center;
+                        font-size: 150%;
+                        color: #400800;
+                    }
+
+                    .signUpFormInput{
+                        border: none;
+                        border-bottom: 2px solid #400800;
+                        outline: none;
+                        background-color: rgba(0,0,0,0);
+
+                        &::placeholder{
+                            text-align: center;
+                            color: #400800;
+                        }
+                    }
+                    
+                    .signUpSubmit{
+                        border: none;
+                        border-bottom: 4px solid #400800;
+                        border-top: 4px solid #400800;
+                        outline: none;
+                        background-color: rgba(0,0,0,0);
+                        font-weight: bold;
+                        color: #400800;
+                    }
+
+
+                    .rulesCheckbox {
+                        position: absolute;
+                        z-index: -1;
+                        opacity: 0;
+                        
+                        &+label {
+                            display: inline-flex;
+                            align-items: center;
+                            user-select: none;
+                            width: 100%;
+                            transition: all .3s ;
+
+                            a,
+                            a:hover,
+                            a:link,
+                            a:visited {
+                                text-decoration: none;
+                                color: #FAB523;
+                                text-shadow: black 0 0 4px; 
+                            }
+                        }
+                        
+                        &+label::after {
+                            content: '';
+                            display: inline-block;
+                            width: 1.5vw;
+                            height: 2.5vw;
+                            flex-shrink: 0;
+                            flex-grow: 0;
+                            // border: 1px solid #ffffff;
+                            // border-radius: 3px;
+                            margin-left: 7px;
+                            background: url("../img/svg/rulesOff.svg") 50% no-repeat;
+                        }
+                        
+                        &:checked+label::after {
+                            background-image: url("../img/svg/x.svg");
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            background-size: 45% 50%;
+                            background: url("../img/svg/rulesOn.svg") 50% no-repeat;
+                        }
+                
+                    }
+
+                    
+                }
+            }
+        }
+
+        .popupNews,
+        .popupAboutUs,
+        .popupContacts,
+        .popupHelp{
+            overflow: scroll;
+
+
+            
+            width: 90%;
+            height: 100%;
+            position: absolute;
+            bottom: 1vw;
+            left: 5.5vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .popupTitle{
+                flex-grow: 0.01;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-family: "Bebas";
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 500%;
+                color: #400800;
+            }
+            .popupContent{
+                overflow-y: scroll;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+
+
+                flex-grow: 1;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "Bebas";
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 250%;
+                color: #400800;
+
+                &::-webkit-scrollbar{
+                    width: 0;
+                    background-color: transparent;
+                }
+
+            }
+        }
+
+        .forgotPassContainer{
+            position: absolute;
+            top: 1vw;
+            left: 1vw;
+            width: 95%;
+            height: 95%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            .title{
+                flex-grow: 0.01;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-family: "Bebas";
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 300%;
+                line-height: 0;
+                color: #400800;
+            }
+            .emailImput{
+                border: none;
+                border-bottom: 2px solid #400800;
+                outline: none;
+                background-color: rgba(0,0,0,0);
+                font-size: 300%;
+
+                &::placeholder{
+                    text-align: center;
+                    color: #400800;
+                }
+
+            }
+            .submitImput{
+                border: none;
+                border-bottom: 4px solid #400800;
+                border-top: 4px solid #400800;
+                outline: none;
+                background-color: rgba(0,0,0,0);
+                font-weight: bold;
+                color: #400800;
+                font-size: 300%;
+            }
         }
     }
+
+    .modalSignUp{
+        width: 40vw;
+        top: 5vw;
+    }
+    
 }
 
 .modalActive{
