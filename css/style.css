@@ -810,6 +810,8 @@ main {
   font-family: "Bebas", sans-serif;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 6px;
+  line-height: 100%;
 }
 .mineContainer .signUp:hover,
 .mineContainer .signIn:hover {
@@ -1014,6 +1016,14 @@ footer .footerCopyright::before {
 
   .mobileStatsDesk {
     display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .statsPlateContainer {
+    top: 0;
+    right: 0;
   }
 
   .statsPlateContainer .statsPlate {
@@ -1021,8 +1031,13 @@ footer .footerCopyright::before {
   }
 
   .statsPlateContainer .stats {
-    top: 1vw;
-    left: 2.5vw;
+    top: 4vw;
+    left: 13vw;
+  }
+
+  .mineContainer .loginForm {
+    top: 36vw;
+    left: 42vw;
   }
 
   .mineContainer {
@@ -1048,12 +1063,129 @@ footer .footerCopyright::before {
   }
 
   .mineContainer .signIn {
-    bottom: -3vw;
-    left: 23vw;
+    bottom: 18.5vw;
+    left: 2vw;
   }
 
   .visible {
     display: none;
+  }
+
+  .mineContainer .loginForm input:not([type=checkbox]):not([type=submit]) {
+    width: 10vw;
+  }
+
+  .mineContainer .loginForm .rememberMe,
+.mineContainer .loginForm .forgotPass {
+    font-size: 160%;
+    letter-spacing: 0.6px;
+  }
+
+  .mineContainer .custom-checkbox + label::before {
+    width: 2vw;
+    height: 2vw;
+  }
+}
+@media (min-width: 390px) {
+  body {
+    font-size: 4px;
+    height: 560px;
+  }
+
+  main {
+    height: 80%;
+  }
+
+  footer {
+    height: 20%;
+  }
+
+  .woodDesk {
+    width: 40vw;
+  }
+
+  .woodDesk .siteHead {
+    top: 6vw;
+    left: 5vw;
+  }
+
+  .woodDesk .videoHead {
+    top: 15.5vw;
+    left: 5vw;
+    width: 24vw;
+    height: 13.5vw;
+  }
+
+  .mobileStatsDesk {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .statsPlateContainer {
+    top: 0;
+    right: 0;
+  }
+
+  .statsPlateContainer .statsPlate {
+    display: none;
+  }
+
+  .statsPlateContainer .stats {
+    top: 4vw;
+    left: 13vw;
+  }
+
+  .mineContainer .loginForm {
+    top: 36vw;
+    left: 42vw;
+  }
+
+  .mineContainer {
+    left: 0vw;
+  }
+
+  .mineContainer .mine {
+    width: 90vw;
+  }
+
+  .mineContainer .woodTab .username {
+    top: 12vw;
+    left: 20vw;
+  }
+
+  .mineContainer .woodTab .username .diamond {
+    width: 27vw;
+  }
+
+  .mineContainer .woodTab .signUp {
+    top: 4.5vw;
+    left: 23vw;
+  }
+
+  .mineContainer .signIn {
+    bottom: 18.5vw;
+    left: 2vw;
+  }
+
+  .visible {
+    display: none;
+  }
+
+  .mineContainer .loginForm input:not([type=checkbox]):not([type=submit]) {
+    width: 10vw;
+  }
+
+  .mineContainer .loginForm .rememberMe,
+.mineContainer .loginForm .forgotPass {
+    font-size: 160%;
+    letter-spacing: 0.6px;
+  }
+
+  .mineContainer .custom-checkbox + label::before {
+    width: 2vw;
+    height: 2vw;
   }
 }
 @media (min-width: 450px) {
@@ -1090,6 +1222,11 @@ footer .footerCopyright::before {
     left: 2.5vw;
   }
 
+  .mineContainer .loginForm {
+    top: 18vw;
+    left: 21vw;
+  }
+
   .mineContainer .mine {
     width: 45vw;
   }
@@ -1119,6 +1256,26 @@ footer .footerCopyright::before {
 
   .mineContainer {
     left: 45vw;
+  }
+
+  .statsPlateContainer {
+    top: auto;
+    bottom: 3vw;
+    right: 5vw;
+  }
+
+  .mineContainer .loginForm input:not([type=checkbox]):not([type=submit]) {
+    width: 6vw;
+  }
+
+  .mineContainer .loginForm .rememberMe,
+.mineContainer .loginForm .forgotPass {
+    font-size: 130%;
+  }
+
+  .mineContainer .custom-checkbox + label::before {
+    width: 1vw;
+    height: 1vw;
   }
 }
 @media (min-width: 720px) {
