@@ -540,11 +540,9 @@ main {
 .modal .popup .popupAboutUs .popupContent,
 .modal .popup .popupContacts .popupContent,
 .modal .popup .popupHelp .popupContent {
-  overflow-y: scroll;
+  overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-
-
   flex-grow: 1;
   width: 100%;
   display: flex;
@@ -559,7 +557,7 @@ main {
 .modal .popup .popupNews .popupContent::-webkit-scrollbar,
 .modal .popup .popupAboutUs .popupContent::-webkit-scrollbar,
 .modal .popup .popupContacts .popupContent::-webkit-scrollbar,
-.modal .popup .popupHelp .popupContent::-webkit-scrollbar{
+.modal .popup .popupHelp .popupContent::-webkit-scrollbar {
   width: 0;
   background-color: transparent;
 }
@@ -640,6 +638,16 @@ main {
   z-index: 30;
   border: 1px solid black;
   width: 14vw;
+  height: 8.5vw;
+}
+
+.mobileStatsDesk {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.mobileStatsDesk .mobileStats {
+  width: 38vw;
   height: auto;
 }
 
@@ -802,6 +810,11 @@ main {
   font-family: "Bebas", sans-serif;
   font-weight: bold;
   cursor: pointer;
+}
+.mineContainer .signUp:hover,
+.mineContainer .signIn:hover {
+  color: #F8CC08;
+  text-shadow: black 0 0 4px;
 }
 .mineContainer .custom-checkbox {
   position: absolute;
@@ -971,44 +984,133 @@ footer .footerCopyright::before {
 
 @media (min-width: 320px) {
   body {
-    font-size: 2px;
+    font-size: 4px;
+    height: 560px;
+  }
+
+  main {
+    height: 80%;
+  }
+
+  footer {
+    height: 20%;
+  }
+
+  .woodDesk {
+    width: 40vw;
+  }
+
+  .woodDesk .siteHead {
+    top: 6vw;
+    left: 5vw;
+  }
+
+  .woodDesk .videoHead {
+    top: 15.5vw;
+    left: 5vw;
+    width: 24vw;
+    height: 13.5vw;
+  }
+
+  .mobileStatsDesk {
+    display: block;
+  }
+
+  .statsPlateContainer .statsPlate {
+    display: none;
+  }
+
+  .statsPlateContainer .stats {
+    top: 1vw;
+    left: 2.5vw;
+  }
+
+  .mineContainer {
+    left: 0vw;
+  }
+
+  .mineContainer .mine {
+    width: 90vw;
   }
 
   .mineContainer .woodTab .username {
-    top: 3.5vw;
+    top: 12vw;
+    left: 20vw;
+  }
+
+  .mineContainer .woodTab .username .diamond {
+    width: 27vw;
   }
 
   .mineContainer .woodTab .signUp {
-    left: 4vw;
+    top: 4.5vw;
+    left: 23vw;
   }
 
   .mineContainer .signIn {
-    bottom: 9vw;
+    bottom: -3vw;
+    left: 23vw;
   }
 
   .visible {
     display: none;
   }
-
-  .mineContainer {
-    left: 25vw;
-  }
 }
-@media (min-width: 500px) {
+@media (min-width: 450px) {
   body {
     font-size: 3px;
+    height: 100vh;
+  }
+
+  .woodDesk {
+    width: 25vw;
+  }
+
+  .woodDesk .videoHead {
+    top: 10vw;
+    left: 4vw;
+    width: 14vw;
+    height: 8.5vw;
+  }
+
+  .mobileStatsDesk {
+    display: none;
+  }
+
+  .woodDesk .siteHead {
+    top: 4vw;
+  }
+
+  .statsPlateContainer .statsPlate {
+    display: block;
+  }
+
+  .statsPlateContainer .stats {
+    top: 1vw;
+    left: 2.5vw;
+  }
+
+  .mineContainer .mine {
+    width: 45vw;
   }
 
   .mineContainer .woodTab .signUp {
+    top: -0.5vw;
     left: 3vw;
   }
 
   .mineContainer .woodTab .username {
     top: 3.7vw;
+    left: 1vw;
+  }
+
+  .mineContainer .woodTab .username .diamond {
+    width: 15vw;
   }
 
   .mineContainer .signIn {
     bottom: 9vw;
+    left: 1vw;
   }
 
   .visible {

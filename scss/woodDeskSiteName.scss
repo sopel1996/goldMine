@@ -21,6 +21,17 @@
         z-index: 30;
         border: 1px solid black;
         width: 14vw;
-        height: auto;
+        height: 8.5vw;
     }
+}
+.mobileStatsDesk{
+    position: absolute;
+    top:0;
+    right:0;
+    .mobileStats{
+        width: 38vw;
+        height: auto;
+
+    }
+
 }

@@ -158,10 +158,6 @@
         .popupAboutUs,
         .popupContacts,
         .popupHelp{
-            overflow: scroll;
-
-
-            
             width: 90%;
             height: 100%;
             position: absolute;
@@ -186,7 +182,7 @@
                 color: #400800;
             }
             .popupContent{
-                overflow-y: scroll;
+                overflow: scroll;
                 -ms-overflow-style: none;
                 scrollbar-width: none;
 
@@ -195,7 +191,7 @@
                 width: 100%;
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: flex-start;
                 font-family: "Bebas";
                 font-weight: bold;
                 text-transform: uppercase;
