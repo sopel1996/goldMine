@@ -1,9 +1,6 @@
-//TODO: добавить еще 1-2 точки media
-
-@media (min-width: 320px){
+@media (min-width: 260px){
     body{
-        font-size: 4px;
-        height: 560px;
+        font-size: 3px;
     }
     main{
         height: 80%;
@@ -91,98 +88,43 @@
         width: 2vw;
         height: 2vw;
     }
+
+    footer {
+        font-size: 145%;
+    }
+    footer .footerNav {
+        width: 85%;
+        justify-content: space-between;
+    }
+    footer .footerNav .logoContainer {
+        padding-right: 20px;
+    }
+    footer .footerNav .logoContainer .logo {
+        width: 20vw;
+    }
+    footer .footerNav .footerMenuSocialLang {
+        flex-grow: 1;
+    }
+    footer .footerNav .footerMenuSocialLang .socialElement {
+        width: 3vw;
+    }
+    footer .footerNav .footerMenuSocialLang .lang .langFlag {
+        width: 3vw;
+        padding: 1vw;
+    }
+
+
 }
-@media (min-width: 390px){
+
+@media (min-width: 350px){
     body{
         font-size: 4px;
-        height: 560px;
-    }
-    main{
-        height: 80%;
-    }
-    footer{
-        height: 20%;
-    }
-    
-    .woodDesk{
-        width: 40vw;
     }
 
-    .woodDesk .siteHead{
-        top: 6vw;
-        left: 5vw;
-    }
-    .woodDesk .videoHead{
-        top: 15.5vw;
-        left:5vw;
-        width: 24vw;
-        height: 13.5vw;  
-    }
-    .mobileStatsDesk{
-        display: block;
-        position: relative;
-        top:0;
-        right:0;
-    }
-    .statsPlateContainer{
-        top:0;
-        right:0;
-    }
-    .statsPlateContainer .statsPlate{
-        display: none;
+    footer {
+        font-size: 125%;
     }
 
-    .statsPlateContainer .stats {
-        top: 4vw;
-        left: 13vw;
-    }
-    .mineContainer .loginForm {
-        top: 36vw;
-        left: 42vw;
-    }
-    .mineContainer{
-        left: 0vw;
-    }
-    
-    .mineContainer .mine{   
-        width:90vw;
-    }
-
-    .mineContainer .woodTab .username{
-        top: 12vw;
-        left: 20vw;
-    }
-
-    .mineContainer .woodTab .username .diamond{
-        width: 27vw;
-    }
-
-    .mineContainer .woodTab .signUp{
-        top: 4.5vw;
-        left: 23vw;
-    }
-    .mineContainer .signIn{
-        bottom: 18.5vw;
-        left: 2vw;
-    }
-    
-    .visible{
-        display: none;
-    }
-
-    .mineContainer .loginForm input:not([type=checkbox]):not([type=submit]) {
-        width: 10vw;
-    }
-
-    .mineContainer .loginForm .rememberMe,
-    .mineContainer .loginForm .forgotPass {
-        font-size: 160%;
-        letter-spacing: 0.6px;
-    }
-    .mineContainer .custom-checkbox + label::before {
-        width: 2vw;
-        height: 2vw;
-    }
 }
 @media (min-width: 450px){
     body{
@@ -206,6 +148,7 @@
 
     .woodDesk .siteHead{
         top: 4vw;
+        left: 3.5vw;
     }
     .statsPlateContainer .statsPlate{
         display: block;
@@ -258,6 +201,30 @@
    .mineContainer .custom-checkbox + label::before {
     width: 1vw;
     height: 1vw;
+    }
+
+    footer {
+        font-size: 100%;
+    }
+    footer .footerNav {
+        width: 100%;
+        justify-content: center;
+    }
+    footer .footerNav .logoContainer {
+        padding-right: 50px;
+    }
+    footer .footerNav .logoContainer .logo {
+        width: 10vw;
+    }
+    footer .footerNav .footerMenuSocialLang {
+        flex-grow: 0.1;
+    }
+    footer .footerNav .footerMenuSocialLang .socialElement {
+        width: 1.3vw;
+    }
+    footer .footerNav .footerMenuSocialLang .lang .langFlag {
+        width: 1.5vw;
+        padding: 0.2vw;
     }
 }
 @media (min-width: 720px){

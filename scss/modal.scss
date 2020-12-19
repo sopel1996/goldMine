@@ -22,6 +22,14 @@
         margin-top: 2vh;
         z-index: 110;
         
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      
+      @keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+      }
+        
         .cancel{
             position: absolute;
             top: 4vw;
@@ -232,7 +240,7 @@
                 line-height: 0;
                 color: #400800;
             }
-            .emailImput{
+            .emailInput{
                 border: none;
                 border-bottom: 2px solid #400800;
                 outline: none;
@@ -245,7 +253,7 @@
                 }
 
             }
-            .submitImput{
+            .submitInput{
                 border: none;
                 border-bottom: 4px solid #400800;
                 border-top: 4px solid #400800;
