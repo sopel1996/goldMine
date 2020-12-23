@@ -543,7 +543,9 @@ main {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: "Bebas", sans-serif;
+  font-weight: bold;
 }
 .modal .popup {
   position: relative;
@@ -553,16 +555,231 @@ main {
   margin-right: auto;
   margin-top: 2vh;
   z-index: 110;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 .modal .popup .cancel {
   position: absolute;
   top: 4vw;
   right: 5vw;
-  z-index: 110;
-  width: 20px;
-  height: 20px;
+  z-index: 150;
+  width: 1.5vw;
+  height: 1.5vw;
   background: url("../img/svg/x.svg") no-repeat;
-  background-size: cover;
+  background-size: contain;
+}
+.modal .popup .closeModalSignUp {
+  top: 7.5vw;
+  right: 3vw;
+  width: 1vw;
+  height: 1vw;
+}
+.modal .popup .popupContainer {
+  position: absolute;
+  top: 8vw;
+  left: 3vw;
+  width: 85%;
+  height: 75%;
+  z-index: 120;
+}
+.modal .popup .popupContainer .popupSignUp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpImg {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpImg .signUpTrolley {
+  width: 15vw;
+  height: auto;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm {
+  font-size: 200%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .formTitle {
+  padding: 0;
+  margin: 0;
+  width: 10vw;
+  text-align: center;
+  font-size: 150%;
+  color: #400800;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .signUpFormInput {
+  border: none;
+  border-bottom: 2px solid #400800;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .signUpFormInput::placeholder {
+  text-align: center;
+  color: #400800;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .signUpSubmit {
+  border: none;
+  border-bottom: 4px solid #400800;
+  border-top: 4px solid #400800;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  color: #400800;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  width: 100%;
+  transition: all 0.3s;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label a,
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label a:hover,
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label a:link,
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label a:visited {
+  text-decoration: none;
+  color: #FAB523;
+  text-shadow: black 0 0 4px;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label::after {
+  content: "";
+  display: inline-block;
+  width: 1.5vw;
+  height: 2.5vw;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-left: 7px;
+  background: url("../img/svg/rulesOff.svg") 50% no-repeat;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox:checked + label::after {
+  background-image: url("../img/svg/x.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 45% 50%;
+  background: url("../img/svg/rulesOn.svg") 50% no-repeat;
+}
+.modal .popup .popupNews,
+.modal .popup .popupAboutUs,
+.modal .popup .popupContacts,
+.modal .popup .popupHelp {
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  bottom: 1vw;
+  left: 5.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal .popup .popupNews .popupTitle,
+.modal .popup .popupAboutUs .popupTitle,
+.modal .popup .popupContacts .popupTitle,
+.modal .popup .popupHelp .popupTitle {
+  flex-grow: 0.01;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 500%;
+  color: #400800;
+}
+.modal .popup .popupNews .popupContent,
+.modal .popup .popupAboutUs .popupContent,
+.modal .popup .popupContacts .popupContent,
+.modal .popup .popupHelp .popupContent {
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 250%;
+  color: #400800;
+}
+.modal .popup .popupNews .popupContent::-webkit-scrollbar,
+.modal .popup .popupAboutUs .popupContent::-webkit-scrollbar,
+.modal .popup .popupContacts .popupContent::-webkit-scrollbar,
+.modal .popup .popupHelp .popupContent::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+.modal .popup .forgotPassContainer {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.modal .popup .forgotPassContainer .title {
+  flex-grow: 0.01;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 300%;
+  line-height: 0;
+  color: #400800;
+}
+.modal .popup .forgotPassContainer .emailInput {
+  border: none;
+  border-bottom: 2px solid #400800;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 300%;
+}
+.modal .popup .forgotPassContainer .emailInput::placeholder {
+  text-align: center;
+  color: #400800;
+}
+.modal .popup .forgotPassContainer .submitInput {
+  border: none;
+  border-bottom: 4px solid #400800;
+  border-top: 4px solid #400800;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  color: #400800;
+  font-size: 300%;
+}
+.modal .modalSignUp {
+  width: 40vw;
+  top: 5vw;
 }
 
 .modalActive {
@@ -723,6 +940,49 @@ main {
   width: 60vw;
   height: auto;
 }
+.columns .bigBanner .accountingContainer {
+  font-size: 100%;
+}
+.columns .bigBanner .accountingContainer .allOperation {
+  background: url("img/svg/tableHeadBg.svg") 50% 50% no-repeat;
+  background-size: cover;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 340%;
+  color: #400800;
+  width: 12vw;
+  height: auto;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 2vw;
+  right: 10.5vw;
+  z-index: 1000;
+}
+.columns .bigBanner .accountingContainer .tableStats {
+  position: absolute;
+  top: 2vw;
+  left: 0;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 340%;
+  color: #400800;
+  width: 60vw;
+  height: auto;
+  text-align: center;
+}
+.columns .bigBanner .accountingContainer .tableStats .captionFirsLine {
+  font-weight: bold;
+}
+.columns .bigBanner .accountingContainer .tableStats .captionSecondLine {
+  font-size: 70%;
+}
+.columns .bigBanner .accountingContainer .tableStats .tableData {
+  background: url("img/svg/tableHeadBg.svg") 50% 50% no-repeat;
+  background-size: contain;
+}
 .columns .bigBanner .refContainer {
   position: absolute;
   top: 2vw;
@@ -774,6 +1034,7 @@ main {
   border: 3px solid #fff;
   border-radius: 3px;
   outline: none;
+  line-height: 200%;
 }
 .columns .bigBanner .refContainer .refActitives .refID {
   display: flex;
@@ -792,6 +1053,7 @@ main {
   border: 3px solid #fff;
   border-radius: 3px;
   outline: none;
+  line-height: 200%;
 }
 .columns .bigBanner .refContainer .refActitives .refLabel {
   font-family: "Bebas";
@@ -844,6 +1106,153 @@ main {
   color: #F8CC08;
   text-shadow: black 0 0 4px;
 }
+.columns .bigBanner .optionsContainer {
+  position: absolute;
+  top: 2vw;
+  left: 0vw;
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.columns .bigBanner .optionsContainer .optionTitle {
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 340%;
+  color: #400800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.columns .bigBanner .optionsContainer .userDataInput {
+  width: 8vw;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 140%;
+  color: #400800;
+  background-color: #F8CC08;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  outline: none;
+  margin-bottom: 0.5vw;
+  line-height: 200%;
+}
+.columns .bigBanner .optionsContainer .userDataTitle {
+  align-self: center;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 200%;
+  color: #400800;
+}
+.columns .bigBanner .optionsContainer .optionsActives {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userData,
+.columns .bigBanner .optionsContainer .optionsActives .userPassword,
+.columns .bigBanner .optionsContainer .optionsActives .userPay,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userData .optionsLabel {
+  font-family: "Bebas";
+  font-size: 150%;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userPassword .userDataInput {
+  text-align: center;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userPassword .saveChange {
+  width: 15vw;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 250%;
+  color: #400800;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #400800;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  position: absolute;
+  top: 17vw;
+  right: 22vw;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userPay {
+  justify-content: flex-start;
+  align-items: center;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userPay .userDataForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userPay .savePayInfo {
+  width: 7vw;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 250%;
+  color: #400800;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #400800;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userSocial {
+  height: 50%;
+  width: 10vw;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialTelegram,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialVk,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialInstagram,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .googleAuth {
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 200%;
+  color: #400800;
+  margin-bottom: 1vw;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialTelegram:before,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialVk:before,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialInstagram:before,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .googleAuth:before {
+  content: "";
+  display: inline-block;
+  width: 2vw;
+  height: 2vw;
+  background: url(img/svg/googleAuth.svg) 50% 50% no-repeat;
+  background-size: cover;
+  margin-right: 0.5vw;
+  vertical-align: middle;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialTelegram::before {
+  background: url("../img/svg/telegram.svg") 50% 50% no-repeat;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialVk::before {
+  background: url("../img/svg/vk.svg") 50% 50% no-repeat;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialInstagram::before {
+  background: url("../img/svg/instagram.svg") 50% 50% no-repeat;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .googleAuth::before {
+  background: url("../img/svg/googleAuth.svg") 50% 50% no-repeat;
+}
 
 footer {
   position: relative;
@@ -890,6 +1299,7 @@ footer .footerNav .footerMenuSocialLang .footerMenu .footerMenuElement {
   font-size: 350%;
   display: block;
   text-transform: uppercase;
+  cursor: pointer;
 }
 footer .footerNav .footerMenuSocialLang .footerMenuElement:hover {
   color: #F8CC08;
@@ -901,14 +1311,14 @@ footer .footerNav .footerMenuSocialLang .socialElement {
   padding-right: 0.5vw;
 }
 footer .footerNav .footerMenuSocialLang .lang {
-  width: 4, 5vw;
+  min-width: 3vw;
   height: auto;
   background: rgba(255, 255, 255, 0.5) 50% 50% no-repeat;
 }
 footer .footerNav .footerMenuSocialLang .lang .langFlag {
   width: 1.5vw;
   height: auto;
-  padding: 5px;
+  padding: 0.2vw;
 }
 footer .footerNav .logoContainer {
   padding-right: 50px;

@@ -81,17 +81,26 @@
     z-index: 10;
     font-size: 300%;
     
-    & .stone{  
+    .stone{  
         height: auto;
         width: 6.5vw;
+        // TODO: подобное через JS на событие stoneTitle:hover
+        // &:hover{
+        //     width: 7vw;
+        //     &+.stoneTitle{
+        //         top: 1.8vw;
+        //         left: 0.8vw;
+        //     }
+        // }
     }
     
-    & .stoneTitle{
+    .stoneTitle{
         margin: 0;
         position: absolute;
         top: 1.6vw;
         left: 0.6vw;
         cursor: pointer;
+
     }
 }
 

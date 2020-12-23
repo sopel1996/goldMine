@@ -998,7 +998,7 @@ label{
 .userData,
 .userPassword,
 .userPay,
-.userSodial{
+.userSocial{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1057,14 +1057,14 @@ label{
 }
 
 
-.userSodial{
+.userSocial{
   height: 50%;
   width: 10vw;
 }
 
-.userSodialTelegram,
-.userSodialVk,
-.userSodialInstagram,
+.userSocialTelegram,
+.userSocialVk,
+.userSocialInstagram,
 .googleAuth{
   /* width: 9vw; */
   font-family: "Bebas";
@@ -1075,7 +1075,7 @@ label{
   margin-bottom: 1vw;
 }
 
-.userSodialTelegram::before{
+.userSocialTelegram::before{
   content: "";
   display: inline-block;
   width: 1vw;
@@ -1084,7 +1084,7 @@ label{
   background-size: contain;
   margin-right: 0.5vw;
 }
-.userSodialVk::before{
+.userSocialVk::before{
   content: "";
   display: inline-block;
   width: 1vw;
@@ -1093,7 +1093,7 @@ label{
   background-size: contain;
   margin-right: 0.5vw;
 }
-.userSodialInstagram::before{
+.userSocialInstagram::before{
   content: "";
   display: inline-block;
   width: 1vw;
