@@ -1,4 +1,5 @@
 const stone = document.querySelectorAll('.stoneTitle');
+const stoneContainer = document.querySelectorAll('.stone');
 const footerNav = document.querySelector('.footerMenuSocialLang').children[0];
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.cancel');
@@ -102,8 +103,24 @@ const popUp = evt => {
     }
 }
 
+const resize = evt =>{
+    const target = evt.target;
+    // console.log(evt.relatedTarget.tagName);
+    let tmp = target.offsetWidth; 
+
+    if(evt.type == "mouseover" && (evt.relatedTarget.tagName=="MAIN" ||evt.relatedTarget.tagName=="OBJECT" )){
+        
+        target.style.width=`calc(${tmp}px + 1vw)`;
+    
+    }else if(evt.type == "mouseout" && (evt.relatedTarget.tagName=="MAIN" ||evt.relatedTarget.tagName=="OBJECT" )){
+        target.style.width=`calc(${tmp}px - 1vw)`;
+    }
+}
+
 for (var i=0; i<stone.length; i++){
     stone[i].addEventListener('click', popUp);
+    stoneContainer[i].addEventListener('mouseover', resize);
+    stoneContainer[i].addEventListener('mouseout', resize);
 }
 
 footerNav.addEventListener('click', popUp);
