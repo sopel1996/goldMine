@@ -1,23 +1,14 @@
-@media (min-width: 425px) {
+
+@media (min-width: 370px) {
     body{
-        font-size: 3px;
+        font-size: 2px;
     }
-    
     .refContainer{
       font-size: 106%;
     }
     .accountingContainer{
       font-size: 95%;
     }
-    /* .sectionInner{
-      padding-bottom: 3.5vw;
-    } */
-    /* .trolley{
-      bottom: 1.9vw;
-    }
-    .goldContainer{
-      bottom: 1.8vw;
-     } */
      .refBtn{
        font-size: 200%;
      }
@@ -28,81 +19,118 @@
      .savePayInfo{
       font-size: 200%;
      }
+     .columns .bigBanner .optionsContainer .optionsActives .userPassword .saveChange,
+     .columns .bigBanner .optionsContainer .optionsActives .userPay .savePayInfo,
+     .columns .bigBanner .refContainer .refActitives .refBanner,
+     .columns .bigBanner .refContainer .refBtn,
+     .columns .bigBanner .optionsContainer .userDataInput,
+     .columns .bigBanner .refContainer .refActitives .refID .refIDInput,
+     .columns .bigBanner .refContainer .refActitives .refLink .refLinkInput{
+       border-width: 2px;
+  }
+}
+@media (min-width: 490px) {
+    body{
+        font-size: 3px;
+    }
+    .refContainer{
+      font-size: 106%;
+    }
+    .accountingContainer{
+      font-size: 95%;
+    }
+     .refBtn{
+       font-size: 200%;
+     }
+     .saveChange{
+       font-size: 200%;
+       top: 18vw;
+     }
+     .savePayInfo{
+      font-size: 200%;
+     }
+}
+  @media (min-width: 620px) {
+    body{
+        font-size: 4px;
+    }
   }
   @media (min-width: 768px) {
     body{
         font-size: 5px;
     }
-    
-    .refContainer{
-      font-size: 106%;
+  }
+  @media (min-width: 900px) {
+    body{
+        font-size: 6px;
     }
-    .accountingContainer{
-      font-size: 95%;
-    }
-    /* .sectionInner{
-      padding-bottom: 3.5vw;
-    } */
-    /* .trolley{
-      bottom: 1.9vw;
-    }
-    .goldContainer{
-      bottom: 1.8vw;
-     } */
-     .refBtn{
-       font-size: 200%;
-     }
-     .saveChange{
-       font-size: 200%;
-       top: 18vw;
-     }
-     .savePayInfo{
-      font-size: 200%;
-     }
   }
   @media (min-width: 1024px) {
     body{
         font-size: 7px;
     }
-    
-    .refContainer{
-      font-size: 106%;
+    .columns .bigBanner .optionsContainer .optionsActives .userPassword .saveChange,
+    .columns .bigBanner .optionsContainer .optionsActives .userPay .savePayInfo,
+    .columns .bigBanner .refContainer .refActitives .refBanner,
+    .columns .bigBanner .refContainer .refBtn,
+    .columns .bigBanner .optionsContainer .userDataInput,
+    .columns .bigBanner .refContainer .refActitives .refID .refIDInput,
+    .columns .bigBanner .refContainer .refActitives .refLink .refLinkInput{
+      border-width: 3px;
     }
-    .accountingContainer{
-      font-size: 95%;
+  } 
+    @media (min-width: 1170px) {
+    body{
+        font-size: 8px;
     }
-    /* .sectionInner{
-      padding-bottom: 3.5vw;
-    } */
-    /* .trolley{
-      bottom: 1.9vw;
+  }
+  @media (min-width: 1300px) {
+    body{
+        font-size: 9px;
     }
-    .goldContainer{
-      bottom: 1.8vw;
-    }*/
-     } 
+  }
   @media (min-width: 1440px) {
     body{
         font-size: 10px;
     }
-    
+  }
+  @media (min-width: 1580px) {
+    body{
+        font-size: 11px;
+    }
+  }
+  @media (min-width: 1675px) {
+    body{
+        font-size: 12px;
+    }
+  }
+  @media (min-width: 1810px) {
+    body{
+        font-size: 13px;
+    }
+  }
+  @media (min-width: 1980px) {
+    body{
+        font-size: 14px;
+    }
+  }
+  @media (min-width: 2100px) {
+    body{
+        font-size: 15px;
+    }
+  }
+  @media (min-width: 2225px) {
+    body{
+        font-size: 16px;
+    }
     .refContainer{
       font-size: 109%;
     }
     .accountingContainer{
       font-size: 100%;
     }
-    /* .sectionInner{
-      padding-bottom: 2.5vw;
-    } */
-    /* .trolley{
-      bottom: 1.3vw;
-    }
-    .goldContainer{
-      bottom: 1.3vw;
-    }*/
      } 
-  @media (min-width: 2550px) {
+  @media (min-width: 2300px) {
     body{
         font-size: 17px;
     }
@@ -112,13 +140,4 @@
     .accountingContainer{
       font-size: 100%;
     }
-    /* .sectionInner{
-      padding-bottom: 2.5vw;
-    } */
-    /* .trolley{
-      bottom: 1.3vw;
-    }
-    .goldContainer{
-      bottom: 1.3vw;
-     } */
   }

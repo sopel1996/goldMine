@@ -4,11 +4,11 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    z-index: 0;
+    z-index: 30;
     
     .column{
         position: relative;
-        z-index: 0;
+        z-index: 10;
         
         .woodColumn{
             width: 14vw;
@@ -20,6 +20,7 @@
         position: absolute;
         bottom: 14vw;
         right: -1.1vw;
+        z-index: 50;
         
         .woodDesk{
             width: 17vw;
@@ -36,6 +37,7 @@
             left: 3.7vw;
             text-transform: uppercase;
             font-size: 300%;
+            // z-index: 50;
             .firstLine{
                 margin:0;
                 padding: 0;
@@ -60,7 +62,7 @@
                 line-height: 2.1vw;;
                 font-weight: normal;
                 font-family: "Bebas";
-                Color: #400800;
+                color: #400800;
             }
         }
 
@@ -71,6 +73,7 @@
             left: 3.5vw;
             text-align: center;
             text-transform: uppercase;
+            z-index: 50;
             
             .title{
                 width: 10vw;
@@ -163,12 +166,12 @@
 
 
     .bigBanner{
-        bottom: 7vw;
+        bottom: 5.5vw;
         left: 5vw;
-        z-index: 1000;
+        z-index: 50;
         
         .woodDesk{
-            z-index: 1000;
+            z-index: 50;
             width: 60vw;
             height: auto;
         }
@@ -177,7 +180,7 @@
             font-size: 100%;
 
             .allOperation{
-                background: url("img/svg/tableHeadBg.svg") 50% 50% no-repeat;
+                background: url("../img/svg/tableHeadBg.svg") 50% 50% no-repeat;
                 background-size: cover;
                 
                 font-family: "Bebas";
@@ -196,7 +199,7 @@
                 top: 2vw;
                 right: 10.5vw;
               
-                z-index:1000;
+                // z-index:1000;
             }
             .tableStats{
                 position: absolute;
@@ -219,7 +222,7 @@
                     font-size: 70%;
                 }
                 .tableData{
-                    background: url("img/svg/tableHeadBg.svg") 50% 50% no-repeat;
+                    background: url("../img/svg/tableHeadBg.svg") 50% 50% no-repeat;
                     background-size: contain;;
                 }
             }
@@ -356,7 +359,7 @@
                 font-family: "Bebas";
                 font-weight: bold;
                 text-transform: uppercase;
-                font-size: 250%;
+                font-size: 200%;
                 color: #400800;
                 background-color: rgba(255,255,255,0);
                 border: 3px solid #400800;
@@ -433,7 +436,10 @@
                     align-items: flex-start;
                     height: 100%;
                 }
-
+                .imgPayeer{
+                    width: 10vw;
+                    height: auto;
+                }
                 .userData{
                     .optionsLabel{
                         font-family: 'Bebas';
@@ -459,7 +465,7 @@
 
                         
                         position: absolute;
-                        top: 17vw;
+                        top: 18.5vw;
                         right: 22vw;
                     }
                 }
@@ -490,42 +496,38 @@
                 }
                 .userSocial{
                     height: 50%;
-                    width: 10vw;
+                    width: 12vw;
 
-                    .userSocialTelegram,
-                    .userSocialVk,
-                    .userSocialInstagram,
-                    .googleAuth{
+                    .userSocialContainer{
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 0.5vw;
+                    }
+
+                    .userSocialTelegramText,
+                    .userSocialVkText,
+                    .userSocialInstagramText,
+                    .googleAuthText{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         font-family: "Bebas";
                         font-weight: normal;
                         text-transform: uppercase;
                         font-size: 200%;
                         color: #400800;
-                        margin-bottom: 1vw;
-                        
-                        &:before{
-                            content: "";
-                            display: inline-block;
-                            width: 2vw;
-                            height: 2vw;
-                            background: url(img/svg/googleAuth.svg) 50% 50% no-repeat;
-                            background-size: cover;
-                            margin-right: 0.5vw;
-                            vertical-align: middle;
-                        }
+                        height: 2vw; 
                     }
-                    .userSocialTelegram::before{
-                        background: url("../img/svg/telegram.svg") 50% 50%no-repeat;
+                    .userSocialTelegramImg,
+                    .userSocialVkImg,
+                    .userSocialInstagramImg,
+                    .googleAuthImg{
+                        margin-right: 0.5vw;
+                        vertical-align: middle;
+                        width: 2vw;
+                        height: 2vw;
                     }
-                    .userSocialVk::before{
-                        background: url("../img/svg/vk.svg") 50% 50% no-repeat;
-                    }
-                    .userSocialInstagram::before{
-                        background: url("../img/svg/instagram.svg") 50% 50% no-repeat;
-                    }
-                    .googleAuth::before{
-                        background: url("../img/svg/googleAuth.svg") 50% 50% no-repeat;
-                    }
+
                     
                 }
             }

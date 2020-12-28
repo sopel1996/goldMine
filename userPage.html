@@ -86,7 +86,7 @@
                             </form>
                             <div class="userPay">
                                 <div class="userDataTitle">Способы оплаты</div>
-                                <img src="img/svg/payeer.svg" alt="payeerLogo">
+                                <img src="img/svg/payeer.svg" alt="payeerLogo" class="imgPayeer">
                                 <form action="" class="userDataForm">
                                     <input type="text" name="payInfo" id="payInfo" class="userDataInput"><br>
                                     <input type="submit" value="Сохранить" class="savePayInfo"></input>
@@ -94,10 +94,25 @@
 
                             </div>
                             <div class="userSocial">
-                                <div class="userSocialTelegram">@andr2222</div>
-                                <div class="userSocialVk">adnr2222</div>
-                                <div class="userSocialInstagram">@andr2222</div>
-                                <div class="googleAuth">Двухфакторная аутентификация</div>
+                                <div class="userSocialContainer">
+                                    <img src="img/svg/telegram.svg" class="userSocialTelegramImg">
+                                    <span class="userSocialTelegramText">@andr2222</span>
+                                </div>
+                                <div class="userSocialContainer">
+                                    <img src="img/svg/vk.svg" class="userSocialVkImg"></img>
+                                    <span class="userSocialVkText">andr2222</span>
+                                 </div>                                               
+                                <div class="userSocialContainer">
+                                    <img src="img/svg/instagram.svg" class="userSocialInstagramImg"></img>
+                                    <span class="userSocialInstagramText">@andr2222</span>
+                                </div>
+                                <div class="userSocialContainer">
+                                    <img src="img/svg/googleAuth.svg" class="googleAuthImg"></img>
+                                    <span class="googleAuthText">Двухфакторная аутентификация</span>
+                                 </div>
+                                <!-- <div class="userSocialVkImg">adnr2222</div>
+                                <div class="userSocialInstagramImg">@andr2222</div>
+                                <div class="googleAuthImg">Двухфакторная аутентификация</div> -->
                             </div>
                         </div>
                     </div>
@@ -125,9 +140,7 @@
                                 <input type="text" name="refID" id="refID" class="refIDInput" readonly value="123">
                             </div>
                             <button class="refBanner">
-                                <div class="refBannerText">
-                                    ваши реферальные баннеры
-                                </div>
+                                <div class="refBannerText">ваши реферальные баннеры</div>
                             </button>
 
                         </div>
@@ -146,29 +159,29 @@
                                 <th class="tableData">расход</th>
                             </tr>
                             <tr>
-                                <td class="tableData">10.10.10</td>
-                                <td class="tableData">1000</td>
-                                <td class="tableData">500</td>
+                                <td class="">10.10.10</td>
+                                <td class="">1000</td>
+                                <td class="">500</td>
                             </tr>
                             <tr>
-                                <td class="tableData">10.10.10</td>
-                                <td class="tableData">1000</td>
-                                <td class="tableData">500</td>
+                                <td class="">10.10.10</td>
+                                <td class="">1000</td>
+                                <td class="">500</td>
                             </tr>
                             <tr>
-                                <td class="tableData">10.10.10</td>
-                                <td class="tableData">1000</td>
-                                <td class="tableData">500</td>
+                                <td class="">10.10.10</td>
+                                <td class="">1000</td>
+                                <td class="">500</td>
                             </tr>
                             <tr>
-                                <td class="tableData">10.10.10</td>
-                                <td class="tableData">1000</td>
-                                <td class="tableData">500</td>
+                                <td class="">10.10.10</td>
+                                <td class="">1000</td>
+                                <td class="">500</td>
                             </tr>
                             <tr>
-                                <td class="tableData">10.10.10</td>
-                                <td class="tableData">1000</td>
-                                <td class="tableData">500</td>
+                                <td class="">10.10.10</td>
+                                <td class="">1000</td>
+                                <td class="">500</td>
                             </tr>
                         </table>
                     </div>
@@ -192,7 +205,7 @@
                         <div class="goldMining">
                             <p class="title">Пополнить счет</p>
                             <p class="inputTitle">сумма</p>
-                            <form action="">
+                            <form action="" class="infoContainer _sumSize _marginNull">
                                 <input type="number" name="inputSum" id="inputSum" class="inputRow" value="0" min="0">
                                 <input type="submit" value="пополнить"class="myMineSubmit">
                             </form>
@@ -223,7 +236,7 @@
                         <div class="goldMining">
                             <p class="title">Вывести золото</p>
                             <p class="inputTitle">сумма</p>
-                            <form action="">
+                            <form action="" class="infoContainer _sumSize _marginNull">
                                 <input type="number" name="outputSum" id="outputSum" class="inputRow" value="0" min="0">
                                 <input type="submit" value="вывести"class="myMineSubmit">
                             </form>
@@ -254,10 +267,10 @@
                         <div class="goldMining">
                             <p class="title">Перевести золото</p>
                             <p class="inputTitle">Логин</p>
-                            <form action="">
+                            <form action="" class="infoContainer _sumSize _marginNull">
                                 <input type="text" name="transactionName" id="transactionName" class="inputRow">
                                 <p class="inputTitle _sumMargin">сумма</p>
-                                <input type="number" name="transactionSum" id="transactionSum" class="inputRow infoContainer _sumMargin _sumSize" value="0" min="0">
+                                <input type="number" name="transactionSum" id="transactionSum" class="inputRow _sumMargin _sumSize" value="0" min="0">
                                 <input type="submit" value="пополнить"class="myMineSubmit">
                             </form>
                         </div>

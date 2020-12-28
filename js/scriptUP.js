@@ -22,23 +22,22 @@ const showItem = evt => {
     const target = evt.target;
 
     // console.log(target);
-    
-    if (target.textContent.toLowerCase()=="моя шахта") {
-        if (!target.classList.contains('active')){
+
+    if (target.textContent.toLowerCase() == "моя шахта") {
+        if (!target.classList.contains('active')) {
             target.classList.add('active');
         }
-        for (var i=0; i<nav.children.length; i++){
-            if(nav.children[i].textContent.toLowerCase()!="моя шахта")
-                {
-                    nav.children[i].classList.remove('active');
-                }
+        for (var i = 0; i < nav.children.length; i++) {
+            if (nav.children[i].textContent.toLowerCase() != "моя шахта") {
+                nav.children[i].classList.remove('active');
+            }
         }
 
         user.classList.remove('hide');
-        for (var i=0; i<myMine.length; i++){
+        for (var i = 0; i < myMine.length; i++) {
             myMine[i].classList.remove('hide');
         }
-        for (var i=0; i<columns.length; i++){
+        for (var i = 0; i < columns.length; i++) {
             columns[i].classList.remove('hide');
         }
 
@@ -46,27 +45,26 @@ const showItem = evt => {
         optionsContainer.classList.add('hide');
         refContainer.classList.add('hide');
         accountingContainer.classList.add('hide');
-        for (var i=0; i<myGold.length; i++){
+        for (var i = 0; i < myGold.length; i++) {
             myGold[i].classList.add('hide');
         }
 
     }
-    if (target.textContent.toLowerCase()=="золото") {
-        if (!target.classList.contains('active')){
+    if (target.textContent.toLowerCase() == "золото") {
+        if (!target.classList.contains('active')) {
             target.classList.add('active');
         }
-        for (var i=0; i<nav.children.length; i++){
-            if(nav.children[i].textContent.toLowerCase()!="золото")
-            {
+        for (var i = 0; i < nav.children.length; i++) {
+            if (nav.children[i].textContent.toLowerCase() != "золото") {
                 nav.children[i].classList.remove('active');
             }
         }
 
-        
-        for (var i=0; i<myGold.length; i++){
+
+        for (var i = 0; i < myGold.length; i++) {
             myGold[i].classList.remove('hide');
         }
-        for (var i=0; i<columns.length; i++){
+        for (var i = 0; i < columns.length; i++) {
             columns[i].classList.remove('hide');
         }
 
@@ -75,18 +73,17 @@ const showItem = evt => {
         optionsContainer.classList.add('hide');
         refContainer.classList.add('hide');
         accountingContainer.classList.add('hide');
-        for (var i=0; i<myMine.length; i++){
+        for (var i = 0; i < myMine.length; i++) {
             myMine[i].classList.add('hide');
         }
 
     }
-    if (target.textContent.toLowerCase()=="учет") {
-        if (!target.classList.contains('active')){
+    if (target.textContent.toLowerCase() == "учет") {
+        if (!target.classList.contains('active')) {
             target.classList.add('active');
         }
-        for (var i=0; i<nav.children.length; i++){
-            if(nav.children[i].textContent.toLowerCase()!="учет")
-            {
+        for (var i = 0; i < nav.children.length; i++) {
+            if (nav.children[i].textContent.toLowerCase() != "учет") {
                 nav.children[i].classList.remove('active');
             }
         }
@@ -98,21 +95,20 @@ const showItem = evt => {
         user.classList.add('hide');
         optionsContainer.classList.add('hide');
         refContainer.classList.add('hide');
-        for (var i=0; i<myMine.length; i++){
+        for (var i = 0; i < myMine.length; i++) {
             myMine[i].classList.add('hide');
         }
-        for (var i=0; i<myGold.length; i++){
+        for (var i = 0; i < myGold.length; i++) {
             myGold[i].classList.add('hide');
         }
 
     }
-    if (target.textContent.toLowerCase()=="работники") {
-        if (!target.classList.contains('active')){
+    if (target.textContent.toLowerCase() == "работники") {
+        if (!target.classList.contains('active')) {
             target.classList.add('active');
         }
-        for (var i=0; i<nav.children.length; i++){
-            if(nav.children[i].textContent.toLowerCase()!="работники")
-            {
+        for (var i = 0; i < nav.children.length; i++) {
+            if (nav.children[i].textContent.toLowerCase() != "работники") {
                 nav.children[i].classList.remove('active');
             }
         }
@@ -124,21 +120,20 @@ const showItem = evt => {
         user.classList.add('hide');
         optionsContainer.classList.add('hide');
         accountingContainer.classList.add('hide');
-        for (var i=0; i<myMine.length; i++){
+        for (var i = 0; i < myMine.length; i++) {
             myMine[i].classList.add('hide');
         }
-        for (var i=0; i<myGold.length; i++){
+        for (var i = 0; i < myGold.length; i++) {
             myGold[i].classList.add('hide');
         }
 
     }
-    if (target.textContent.toLowerCase()=="настройки") {
-        if (!target.classList.contains('active')){
+    if (target.textContent.toLowerCase() == "настройки") {
+        if (!target.classList.contains('active')) {
             target.classList.add('active');
         }
-        for (var i=0; i<nav.children.length; i++){
-            if(nav.children[i].textContent.toLowerCase()!="настройки")
-            {
+        for (var i = 0; i < nav.children.length; i++) {
+            if (nav.children[i].textContent.toLowerCase() != "настройки") {
                 nav.children[i].classList.remove('active');
             }
         }
@@ -150,10 +145,10 @@ const showItem = evt => {
         user.classList.add('hide');
         refContainer.classList.add('hide');
         accountingContainer.classList.add('hide');
-        for (var i=0; i<myMine.length; i++){
+        for (var i = 0; i < myMine.length; i++) {
             myMine[i].classList.add('hide');
         }
-        for (var i=0; i<myGold.length; i++){
+        for (var i = 0; i < myGold.length; i++) {
             myGold[i].classList.add('hide');
         }
 
@@ -163,26 +158,24 @@ const showItem = evt => {
 const popUp = evt => {
     evt.preventDefault();
 
-    const target = evt.target;
-
-    
-    if (target.textContent.toLowerCase()=="ваши реферальные баннеры") {
+    console.log(target.textContent.toLowerCase());
+    if (target.textContent.toLowerCase() == "ваши реферальные баннеры") {
         modal.classList.add('modalActive');
     }
-    if (target.textContent.toLowerCase()=="все операции") {
+    if (target.textContent.toLowerCase() == "все операции") {
         modal.classList.add('modalActive');
     }
-    if (target.textContent.toLowerCase()=="ваши работники") {
+    if (target.textContent.toLowerCase() == "ваши работники") {
         modal.classList.add('modalActive');
     }
-    if (target.classList.contains('cancel') || target.classList.contains('modal')){
+    if (target.classList.contains('cancel') || target.classList.contains('modal')) {
         modal.classList.remove('modalActive');
     }
 
-    
+
 }
 
-for (var i=0; i<nav.children.length; i++){
+for (var i = 0; i < nav.children.length; i++) {
     nav.children[i].addEventListener('click', showItem);
 }
 

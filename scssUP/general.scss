@@ -14,15 +14,16 @@ main{
     justify-content: center;
     position: relative;
     width: 100vw;
-    height: 80vh;
+    height: 80%;
 }
 
 .trolley{
     position: absolute;
-    bottom: 1.3vw;
+    bottom: 0vw;
     left: 30vw;
     width: 8vw;
     height: auto;
+    z-index: 70;
 }
 
 .goldContainer{
@@ -30,7 +31,7 @@ main{
     padding: 0;
     position: absolute;
     right: 0vw;
-    bottom: 1.3vw;
+    bottom: 0vw;
     z-index: 20;
 }
 
@@ -92,7 +93,7 @@ main{
     position: absolute;
     top: 4vw;
     left: 2.8vw;
-    z-index: 5;
+    z-index: 20;
     display: inline-flex;
     align-items: center;
 
@@ -107,14 +108,13 @@ main{
         background-size: cover;
         width: 2.5vw;
         height: 2.5vw;
-        z-index: 5;
+        z-index: 20;
         margin-right: 0.5vw;
     }
 }
 
 
 .sectionInner{
-    padding-bottom: 2.5vw;
     position: relative;
     height: 100%;
     width: 70vw;
@@ -176,6 +176,9 @@ main{
 
 ._sumMargin{
     margin-top: 0.25vw !important;
+}
+._marginNull{
+    margin-top: 0 !important;
 }
 ._sumSize{
     font-size:100% !important;

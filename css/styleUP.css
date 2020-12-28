@@ -368,15 +368,16 @@ main {
   justify-content: center;
   position: relative;
   width: 100vw;
-  height: 80vh;
+  height: 80%;
 }
 
 .trolley {
   position: absolute;
-  bottom: 1.3vw;
+  bottom: 0vw;
   left: 30vw;
   width: 8vw;
   height: auto;
+  z-index: 70;
 }
 
 .goldContainer {
@@ -384,7 +385,7 @@ main {
   padding: 0;
   position: absolute;
   right: 0vw;
-  bottom: 1.3vw;
+  bottom: 0vw;
   z-index: 20;
 }
 
@@ -446,7 +447,7 @@ main {
   position: absolute;
   top: 4vw;
   left: 2.8vw;
-  z-index: 5;
+  z-index: 20;
   display: inline-flex;
   align-items: center;
   font-size: 250%;
@@ -460,12 +461,11 @@ main {
   background-size: cover;
   width: 2.5vw;
   height: 2.5vw;
-  z-index: 5;
+  z-index: 20;
   margin-right: 0.5vw;
 }
 
 .sectionInner {
-  padding-bottom: 2.5vw;
   position: relative;
   height: 100%;
   width: 70vw;
@@ -528,6 +528,10 @@ main {
 
 ._sumMargin {
   margin-top: 0.25vw !important;
+}
+
+._marginNull {
+  margin-top: 0 !important;
 }
 
 ._sumSize {
@@ -792,11 +796,11 @@ main {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  z-index: 0;
+  z-index: 30;
 }
 .columns .column {
   position: relative;
-  z-index: 0;
+  z-index: 10;
 }
 .columns .column .woodColumn {
   width: 14vw;
@@ -806,6 +810,7 @@ main {
   position: absolute;
   bottom: 14vw;
   right: -1.1vw;
+  z-index: 50;
 }
 .columns .woodDeskContainer .woodDesk {
   width: 17vw;
@@ -852,7 +857,7 @@ main {
   line-height: 2.1vw;
   font-weight: normal;
   font-family: "Bebas";
-  Color: #400800;
+  color: #400800;
 }
 .columns .woodDeskContainer .goldMining {
   position: absolute;
@@ -860,6 +865,7 @@ main {
   left: 3.5vw;
   text-align: center;
   text-transform: uppercase;
+  z-index: 50;
 }
 .columns .woodDeskContainer .goldMining .title {
   width: 10vw;
@@ -931,12 +937,12 @@ main {
   right: -1.2vw;
 }
 .columns .bigBanner {
-  bottom: 7vw;
+  bottom: 5.5vw;
   left: 5vw;
-  z-index: 1000;
+  z-index: 50;
 }
 .columns .bigBanner .woodDesk {
-  z-index: 1000;
+  z-index: 50;
   width: 60vw;
   height: auto;
 }
@@ -944,7 +950,7 @@ main {
   font-size: 100%;
 }
 .columns .bigBanner .accountingContainer .allOperation {
-  background: url("img/svg/tableHeadBg.svg") 50% 50% no-repeat;
+  background: url("../img/svg/tableHeadBg.svg") 50% 50% no-repeat;
   background-size: cover;
   font-family: "Bebas";
   font-weight: bold;
@@ -958,7 +964,6 @@ main {
   position: absolute;
   top: 2vw;
   right: 10.5vw;
-  z-index: 1000;
 }
 .columns .bigBanner .accountingContainer .tableStats {
   position: absolute;
@@ -980,7 +985,7 @@ main {
   font-size: 70%;
 }
 .columns .bigBanner .accountingContainer .tableStats .tableData {
-  background: url("img/svg/tableHeadBg.svg") 50% 50% no-repeat;
+  background: url("../img/svg/tableHeadBg.svg") 50% 50% no-repeat;
   background-size: contain;
 }
 .columns .bigBanner .refContainer {
@@ -1095,7 +1100,7 @@ main {
   font-family: "Bebas";
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 250%;
+  font-size: 200%;
   color: #400800;
   background-color: rgba(255, 255, 255, 0);
   border: 3px solid #400800;
@@ -1167,6 +1172,10 @@ main {
   align-items: flex-start;
   height: 100%;
 }
+.columns .bigBanner .optionsContainer .optionsActives .imgPayeer {
+  width: 10vw;
+  height: auto;
+}
 .columns .bigBanner .optionsContainer .optionsActives .userData .optionsLabel {
   font-family: "Bebas";
   font-size: 150%;
@@ -1187,7 +1196,7 @@ main {
   border-right: none;
   outline: none;
   position: absolute;
-  top: 17vw;
+  top: 18.5vw;
   right: 22vw;
 }
 .columns .bigBanner .optionsContainer .optionsActives .userPay {
@@ -1215,49 +1224,41 @@ main {
 }
 .columns .bigBanner .optionsContainer .optionsActives .userSocial {
   height: 50%;
-  width: 10vw;
+  width: 12vw;
 }
-.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialTelegram,
-.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialVk,
-.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialInstagram,
-.columns .bigBanner .optionsContainer .optionsActives .userSocial .googleAuth {
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5vw;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialTelegramText,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialVkText,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialInstagramText,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .googleAuthText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Bebas";
   font-weight: normal;
   text-transform: uppercase;
   font-size: 200%;
   color: #400800;
-  margin-bottom: 1vw;
-}
-.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialTelegram:before,
-.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialVk:before,
-.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialInstagram:before,
-.columns .bigBanner .optionsContainer .optionsActives .userSocial .googleAuth:before {
-  content: "";
-  display: inline-block;
-  width: 2vw;
   height: 2vw;
-  background: url(img/svg/googleAuth.svg) 50% 50% no-repeat;
-  background-size: cover;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialTelegramImg,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialVkImg,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialInstagramImg,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .googleAuthImg {
   margin-right: 0.5vw;
   vertical-align: middle;
-}
-.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialTelegram::before {
-  background: url("../img/svg/telegram.svg") 50% 50% no-repeat;
-}
-.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialVk::before {
-  background: url("../img/svg/vk.svg") 50% 50% no-repeat;
-}
-.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialInstagram::before {
-  background: url("../img/svg/instagram.svg") 50% 50% no-repeat;
-}
-.columns .bigBanner .optionsContainer .optionsActives .userSocial .googleAuth::before {
-  background: url("../img/svg/googleAuth.svg") 50% 50% no-repeat;
+  width: 2vw;
+  height: 2vw;
 }
 
 footer {
   position: relative;
   z-index: 0;
-  height: 20vh;
+  height: 20%;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -1336,7 +1337,43 @@ footer .footerCopyright::before {
   content: "©";
 }
 
-@media (min-width: 425px) {
+@media (min-width: 370px) {
+  body {
+    font-size: 2px;
+  }
+
+  .refContainer {
+    font-size: 106%;
+  }
+
+  .accountingContainer {
+    font-size: 95%;
+  }
+
+  .refBtn {
+    font-size: 200%;
+  }
+
+  .saveChange {
+    font-size: 200%;
+    top: 18vw;
+  }
+
+  .savePayInfo {
+    font-size: 200%;
+  }
+
+  .columns .bigBanner .optionsContainer .optionsActives .userPassword .saveChange,
+.columns .bigBanner .optionsContainer .optionsActives .userPay .savePayInfo,
+.columns .bigBanner .refContainer .refActitives .refBanner,
+.columns .bigBanner .refContainer .refBtn,
+.columns .bigBanner .optionsContainer .userDataInput,
+.columns .bigBanner .refContainer .refActitives .refID .refIDInput,
+.columns .bigBanner .refContainer .refActitives .refLink .refLinkInput {
+    border-width: 2px;
+  }
+}
+@media (min-width: 490px) {
   body {
     font-size: 3px;
   }
@@ -1349,15 +1386,6 @@ footer .footerCopyright::before {
     font-size: 95%;
   }
 
-  /* .sectionInner{
-    padding-bottom: 3.5vw;
-  } */
-  /* .trolley{
-    bottom: 1.9vw;
-  }
-  .goldContainer{
-    bottom: 1.8vw;
-   } */
   .refBtn {
     font-size: 200%;
   }
@@ -1371,39 +1399,19 @@ footer .footerCopyright::before {
     font-size: 200%;
   }
 }
+@media (min-width: 620px) {
+  body {
+    font-size: 4px;
+  }
+}
 @media (min-width: 768px) {
   body {
     font-size: 5px;
   }
-
-  .refContainer {
-    font-size: 106%;
-  }
-
-  .accountingContainer {
-    font-size: 95%;
-  }
-
-  /* .sectionInner{
-    padding-bottom: 3.5vw;
-  } */
-  /* .trolley{
-    bottom: 1.9vw;
-  }
-  .goldContainer{
-    bottom: 1.8vw;
-   } */
-  .refBtn {
-    font-size: 200%;
-  }
-
-  .saveChange {
-    font-size: 200%;
-    top: 18vw;
-  }
-
-  .savePayInfo {
-    font-size: 200%;
+}
+@media (min-width: 900px) {
+  body {
+    font-size: 6px;
   }
 }
 @media (min-width: 1024px) {
@@ -1411,27 +1419,59 @@ footer .footerCopyright::before {
     font-size: 7px;
   }
 
-  .refContainer {
-    font-size: 106%;
+  .columns .bigBanner .optionsContainer .optionsActives .userPassword .saveChange,
+.columns .bigBanner .optionsContainer .optionsActives .userPay .savePayInfo,
+.columns .bigBanner .refContainer .refActitives .refBanner,
+.columns .bigBanner .refContainer .refBtn,
+.columns .bigBanner .optionsContainer .userDataInput,
+.columns .bigBanner .refContainer .refActitives .refID .refIDInput,
+.columns .bigBanner .refContainer .refActitives .refLink .refLinkInput {
+    border-width: 3px;
   }
-
-  .accountingContainer {
-    font-size: 95%;
+}
+@media (min-width: 1170px) {
+  body {
+    font-size: 8px;
   }
-
-  /* .sectionInner{
-    padding-bottom: 3.5vw;
-  } */
-  /* .trolley{
-    bottom: 1.9vw;
+}
+@media (min-width: 1300px) {
+  body {
+    font-size: 9px;
   }
-  .goldContainer{
-    bottom: 1.8vw;
-  }*/
 }
 @media (min-width: 1440px) {
   body {
     font-size: 10px;
+  }
+}
+@media (min-width: 1580px) {
+  body {
+    font-size: 11px;
+  }
+}
+@media (min-width: 1675px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1810px) {
+  body {
+    font-size: 13px;
+  }
+}
+@media (min-width: 1980px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media (min-width: 2100px) {
+  body {
+    font-size: 15px;
+  }
+}
+@media (min-width: 2225px) {
+  body {
+    font-size: 16px;
   }
 
   .refContainer {
@@ -1441,18 +1481,8 @@ footer .footerCopyright::before {
   .accountingContainer {
     font-size: 100%;
   }
-
-  /* .sectionInner{
-    padding-bottom: 2.5vw;
-  } */
-  /* .trolley{
-    bottom: 1.3vw;
-  }
-  .goldContainer{
-    bottom: 1.3vw;
-  }*/
 }
-@media (min-width: 2550px) {
+@media (min-width: 2300px) {
   body {
     font-size: 17px;
   }
@@ -1464,16 +1494,6 @@ footer .footerCopyright::before {
   .accountingContainer {
     font-size: 100%;
   }
-
-  /* .sectionInner{
-    padding-bottom: 2.5vw;
-  } */
-  /* .trolley{
-    bottom: 1.3vw;
-  }
-  .goldContainer{
-    bottom: 1.3vw;
-   } */
 }
 
 /*# sourceMappingURL=styleUP.css.map */
