@@ -657,7 +657,7 @@ main {
   right: 0;
 }
 .mobileStatsDesk .mobileStats {
-  width: 38vw;
+  width: 50vw;
   height: auto;
 }
 
@@ -1008,19 +1008,20 @@ footer .footerCopyright::before {
   }
 
   .woodDesk {
-    width: 40vw;
+    width: 50vw;
   }
 
   .woodDesk .siteHead {
-    top: 6vw;
-    left: 5vw;
+    top: 7vw;
+    left: 6vw;
+    font-size: 590%;
   }
 
   .woodDesk .videoHead {
-    top: 15.5vw;
-    left: 5vw;
-    width: 24vw;
-    height: 13.5vw;
+    top: 20.5vw;
+    left: 7.5vw;
+    width: 28vw;
+    height: 16.5vw;
   }
 
   .mobileStatsDesk {
@@ -1040,40 +1041,50 @@ footer .footerCopyright::before {
   }
 
   .statsPlateContainer .stats {
-    top: 4vw;
-    left: 13vw;
+    top: 4.5vw;
+    left: 18vw;
+  }
+
+  .statsPlateContainer .stats .titleRow {
+    font-size: 400%;
+  }
+
+  .statsPlateContainer .stats .statsRow {
+    font-size: 420%;
   }
 
   .mineContainer .loginForm {
-    top: 36vw;
-    left: 42vw;
+    top: 49vw;
+    left: 56vw;
   }
 
   .mineContainer {
-    left: 0vw;
+    left: -13vw;
   }
 
   .mineContainer .mine {
-    width: 90vw;
+    width: 123vw;
   }
 
   .mineContainer .woodTab .username {
-    top: 12vw;
-    left: 20vw;
+    top: 20vw;
+    left: 33vw;
   }
 
   .mineContainer .woodTab .username .diamond {
-    width: 27vw;
+    width: 36vw;
   }
 
   .mineContainer .woodTab .signUp {
-    top: 4.5vw;
-    left: 23vw;
+    top: 8vw;
+    left: 37vw;
+    font-size: 826%;
   }
 
   .mineContainer .signIn {
-    bottom: 18.5vw;
-    left: 2vw;
+    bottom: 24.5vw;
+    left: 4vw;
+    font-size: 826%;
   }
 
   .visible {
@@ -1081,12 +1092,13 @@ footer .footerCopyright::before {
   }
 
   .mineContainer .loginForm input:not([type=checkbox]):not([type=submit]) {
-    width: 10vw;
+    width: 15vw;
+    font-size: 310%;
   }
 
   .mineContainer .loginForm .rememberMe,
 .mineContainer .loginForm .forgotPass {
-    font-size: 160%;
+    font-size: 262%;
     letter-spacing: 0.6px;
   }
 
@@ -1151,6 +1163,14 @@ footer .footerCopyright::before {
     height: 8.5vw;
   }
 
+  .statsPlateContainer .stats .titleRow {
+    font-size: 250%;
+  }
+
+  .statsPlateContainer .stats .statsRow {
+    font-size: 350%;
+  }
+
   .mobileStatsDesk {
     display: none;
   }
@@ -1158,6 +1178,7 @@ footer .footerCopyright::before {
   .woodDesk .siteHead {
     top: 4vw;
     left: 3.5vw;
+    font-size: 500%;
   }
 
   .statsPlateContainer .statsPlate {
@@ -1176,11 +1197,13 @@ footer .footerCopyright::before {
 
   .mineContainer .mine {
     width: 45vw;
+    height: auto;
   }
 
   .mineContainer .woodTab .signUp {
     top: -0.5vw;
     left: 3vw;
+    font-size: 650%;
   }
 
   .mineContainer .woodTab .username {
@@ -1195,6 +1218,7 @@ footer .footerCopyright::before {
   .mineContainer .signIn {
     bottom: 9vw;
     left: 1vw;
+    font-size: 650%;
   }
 
   .visible {
@@ -1213,6 +1237,7 @@ footer .footerCopyright::before {
 
   .mineContainer .loginForm input:not([type=checkbox]):not([type=submit]) {
     width: 6vw;
+    font-size: 220%;
   }
 
   .mineContainer .loginForm .rememberMe,
