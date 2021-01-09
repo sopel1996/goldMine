@@ -56,11 +56,14 @@
     }
     .mineContainer{
         left: -13vw;
+        width: 113vw;
+        overflow: hidden;
     }
     
     .mineContainer .mine{   
         width:123vw;
         // height: 80vh;
+        object-fit: cover;
     }
 
     .mineContainer .woodTab .username{
@@ -210,6 +213,8 @@
     }
     .mineContainer{
         left: 45vw;
+        width: auto;
+        overflow: auto;
     }
     .statsPlateContainer{
         top:auto;

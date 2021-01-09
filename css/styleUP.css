@@ -82,7 +82,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -353,24 +354,189 @@ template {
   font-weight: normal;
 }
 body {
-  background: url("../img/svg/bodyBgMainOneScreen.svg") no-repeat;
+  background: url("../img/svg/bgUP.svg") 50% 50% no-repeat;
   background-size: cover;
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100vw;
-  font-size: 13px;
+  font-size: 17px;
 }
 
 main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  height: 80%;
   width: 100vw;
+  height: 80%;
+}
+
+.trolley {
+  position: absolute;
+  bottom: 0vw;
+  left: 30vw;
+  width: 8vw;
+  height: auto;
+  z-index: 70;
+}
+
+.goldContainer {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0vw;
+  bottom: 0vw;
+  z-index: 20;
+}
+
+.gold {
+  margin: 0;
+  padding: 0;
+  width: 35vw;
+  height: auto;
+}
+
+.balanceContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 4vw;
+  right: 1.5vw;
+}
+
+.level {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  bottom: 1.5vw;
+  right: 11.5vw;
+}
+
+.title {
+  color: #000000;
+  font-family: "Bebas";
+  font-weight: bold;
+  font-size: 250%;
+  margin: 0;
+}
+
+.value {
+  color: #400800;
+  font-family: "Bebas";
+  font-size: 300%;
+}
+
+.exitSignContainer {
+  position: absolute;
+  right: 0vw;
+  top: 0vw;
+}
+.exitSignContainer .exitSign {
+  width: 15vw;
+  height: auto;
+}
+
+.signText {
+  transform: rotate(-38deg);
+  text-transform: uppercase;
+  color: #FAB523;
+  position: absolute;
+  top: 4vw;
+  left: 2.8vw;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  font-size: 250%;
+  font-weight: bold;
+  font-family: "Lato";
+}
+.signText::before {
+  content: "";
+  display: inline-block;
+  background: url("../img/svg/exitBefore.svg") 50% 50% no-repeat;
   background-size: cover;
+  width: 2.5vw;
+  height: 2.5vw;
+  z-index: 20;
+  margin-right: 0.5vw;
+}
+
+.sectionInner {
+  position: relative;
+  height: 100%;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navContainer {
+  width: 100%;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Sanek";
+  font-weight: bold;
+  font-size: 300%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navItem {
+  width: 14vw;
+  height: 6.5vw;
+  line-height: 9.3vw;
+  display: inline;
+  background: url("../img/svg/wood.svg") 50% 60% no-repeat;
+  background-size: contain;
+  text-align: center;
+  vertical-align: bottom;
+  color: #fff;
+  text-shadow: black 0 0 4px;
+}
+.navItem:hover,
+.navItem .active {
+  background-image: url("../img/svg/woodHover.svg");
+  color: #F8CC08;
+}
+
+.user {
+  width: 22vw;
+  height: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas";
+  font-weight: bold;
+  font-size: 200%;
+  text-transform: uppercase;
+  color: #400800;
+  background-color: #F8CC08;
 }
 
 .hide {
   display: none !important;
+}
+
+._sumMargin {
+  margin-top: 0.25vw !important;
+}
+
+._marginNull {
+  margin-top: 0 !important;
+}
+
+._sumSize {
+  font-size: 100% !important;
 }
 
 .modal {
@@ -394,8 +560,18 @@ main {
   margin-right: auto;
   margin-top: 2vh;
   z-index: 110;
-  animation-name: zoom;
-  animation-duration: 0.6s;
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 @keyframes zoom {
   from {
@@ -467,6 +643,14 @@ main {
   outline: none;
   background-color: rgba(0, 0, 0, 0);
 }
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .signUpFormInput::-moz-placeholder {
+  text-align: center;
+  color: #400800;
+}
+.modal .popup .popupContainer .popupSignUp .popupSignUpForm .signUpFormInput:-ms-input-placeholder {
+  text-align: center;
+  color: #400800;
+}
 .modal .popup .popupContainer .popupSignUp .popupSignUpForm .signUpFormInput::placeholder {
   text-align: center;
   color: #400800;
@@ -488,7 +672,10 @@ main {
 .modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label {
   display: inline-flex;
   align-items: center;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   width: 100%;
   transition: all 0.3s;
 }
@@ -602,6 +789,14 @@ main {
   background-color: rgba(0, 0, 0, 0);
   font-size: 300%;
 }
+.modal .popup .forgotPassContainer .emailInput::-moz-placeholder {
+  text-align: center;
+  color: #400800;
+}
+.modal .popup .forgotPassContainer .emailInput:-ms-input-placeholder {
+  text-align: center;
+  color: #400800;
+}
 .modal .popup .forgotPassContainer .emailInput::placeholder {
   text-align: center;
   color: #400800;
@@ -625,291 +820,470 @@ main {
   display: block;
 }
 
-.woodDesk {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 25vw;
-  height: auto;
-}
-.woodDesk .siteHead {
-  margin: 0;
-  position: absolute;
-  top: 4vw;
-  left: 4vw;
-  font-family: "Sanek";
-  font-size: 500%;
-  text-transform: uppercase;
-}
-.woodDesk .videoHead {
-  position: absolute;
-  top: 10vw;
-  left: 3.9vw;
+.columns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   z-index: 30;
-  border: 1px solid black;
+}
+.columns .column {
+  position: relative;
+  z-index: 10;
+}
+.columns .column .woodColumn {
   width: 14vw;
-  height: 8.5vw;
-}
-
-.mobileStatsDesk {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.mobileStatsDesk .mobileStats {
-  width: 38vw;
   height: auto;
 }
-
-.visible {
-  display: block;
-}
-
-.news {
+.columns .woodDeskContainer {
   position: absolute;
-  bottom: 5vw;
-  left: 5vw;
-  font-family: "Bebas", sans-serif;
-  font-weight: bold;
-  z-index: 10;
-  font-size: 450%;
+  bottom: 14vw;
+  right: -1.1vw;
+  z-index: 50;
 }
-.news .stone {
+.columns .woodDeskContainer .woodDesk {
+  width: 17vw;
   height: auto;
-  width: calc(12vw+1) 12vw;
 }
-.news .stoneTitle {
-  margin: 0;
+.columns .woodDeskContainer .goldMining,
+.columns .woodDeskContainer .goldExport,
+.columns .woodDeskContainer .goldCosts {
   position: absolute;
-  top: 3vw;
-  left: 3vw;
-  cursor: pointer;
-}
-
-.aboutUs {
-  position: absolute;
-  bottom: 3vw;
-  left: 18vw;
-  font-family: "Bebas", sans-serif;
-  font-weight: bold;
-  z-index: 10;
-  font-size: 450%;
-}
-.aboutUs .stone {
-  height: auto;
-  width: 9vw;
-}
-.aboutUs .stoneTitle {
-  margin: 0;
-  position: absolute;
-  top: 2vw;
-  left: 2vw;
-  cursor: pointer;
-}
-
-.contacts {
-  position: absolute;
-  bottom: 3vw;
-  left: 28vw;
-  font-family: "Bebas", sans-serif;
-  font-weight: bold;
-  z-index: 10;
-  font-size: 350%;
-}
-.contacts .stone {
-  height: auto;
   width: 10vw;
-}
-.contacts .stoneTitle {
-  margin: 0;
-  position: absolute;
-  top: 3vw;
-  left: 1.5vw;
-  cursor: pointer;
-}
-
-.help {
-  position: absolute;
-  bottom: 3vw;
-  left: 37vw;
-  font-family: "Bebas", sans-serif;
-  font-weight: bold;
-  z-index: 10;
+  text-align: center;
+  bottom: 1vw;
+  left: 3.7vw;
+  text-transform: uppercase;
   font-size: 300%;
 }
-.help .stone {
-  height: auto;
-  width: 6.5vw;
-}
-.help .stoneTitle {
-  margin: 0;
-  position: absolute;
-  top: 1.6vw;
-  left: 0.6vw;
-  cursor: pointer;
-}
-
-.stoneTitle:hover {
-  color: #F8CC08;
-  text-shadow: black 0 0 4px;
-}
-
-.mineContainer {
-  position: absolute;
-  bottom: 0vw;
-  left: 45vw;
-}
-.mineContainer .mine {
-  width: 45vw;
-  height: auto;
-}
-.mineContainer .woodTab {
-  position: absolute;
-  top: 5.5vw;
-  left: 15.5vw;
-}
-.mineContainer .woodTab .signUp {
-  margin: 0;
-  position: absolute;
-  top: -0.5vw;
-  left: 3vw;
-  z-index: 10;
-  font-family: "Sanek";
-  font-size: 650%;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.mineContainer .woodTab .username {
+.columns .woodDeskContainer .goldMining .firstLine,
+.columns .woodDeskContainer .goldExport .firstLine,
+.columns .woodDeskContainer .goldCosts .firstLine {
   margin: 0;
   padding: 0;
+  line-height: 1.5vw;
+  font-weight: normal;
+  font-family: "Bebas";
+  color: #400800;
+}
+.columns .woodDeskContainer .goldMining .secondLine,
+.columns .woodDeskContainer .goldExport .secondLine,
+.columns .woodDeskContainer .goldCosts .secondLine {
+  margin: 0.5vw 0;
+  padding: 0.5vw 0;
+  border-top: 2px solid #250C03;
+  border-bottom: 2px solid #250C03;
+  line-height: 2.4vw;
+  font-weight: bold;
+  font-family: "Bebas";
+  color: #400800;
+}
+.columns .woodDeskContainer .goldMining .thirdLine,
+.columns .woodDeskContainer .goldExport .thirdLine,
+.columns .woodDeskContainer .goldCosts .thirdLine {
+  margin: 0;
+  padding: 0;
+  line-height: 2.1vw;
+  font-weight: normal;
+  font-family: "Bebas";
+  color: #400800;
+}
+.columns .woodDeskContainer .goldMining {
   position: absolute;
   top: 3vw;
-  left: 1vw;
-  z-index: 10;
-  font-family: "Sanek";
-  font-size: 850%;
-  text-transform: uppercase;
-}
-.mineContainer .woodTab .username .diamond {
-  width: 15vw;
-  height: auto;
-}
-.mineContainer .loginForm {
-  position: absolute;
-  top: 18vw;
-  left: 21vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.mineContainer .loginForm input:not([type=checkbox]):not([type=submit]) {
-  font-size: 220%;
+  left: 3.5vw;
   text-align: center;
-  width: 6vw;
-  margin-bottom: 0.5vw;
-  background-color: #F8CC08;
-  border: 1px solid #ffffff;
-  border-radius: 2px;
-  outline: none;
-}
-.mineContainer .loginForm .rememberMe,
-.mineContainer .loginForm .forgotPass {
-  font-size: 130%;
-  color: #ffffff;
-  font-family: "Bebas", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 6px;
-  line-height: 100%;
-}
-.mineContainer .signUp:hover,
-.mineContainer .signIn:hover {
-  color: #F8CC08;
-  text-shadow: black 0 0 4px;
-}
-.mineContainer .custom-checkbox {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-.mineContainer .custom-checkbox + label {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-}
-.mineContainer .custom-checkbox + label::before {
-  content: "";
-  display: inline-block;
-  width: 1vw;
-  height: 1vw;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: 1px solid #ffffff;
-  border-radius: 3px;
-  margin-right: 4px;
-  background-color: #F8CC08;
-}
-.mineContainer .custom-checkbox:checked + label::before {
-  background-image: url("../img/svg/x.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 45% 50%;
-}
-.mineContainer .signIn {
-  position: absolute;
-  bottom: 9vw;
-  left: 1vw;
-  z-index: 10;
-  font-family: "Sanek";
-  font-size: 650%;
   text-transform: uppercase;
-  background-color: rgba(255, 255, 255, 0);
+  z-index: 50;
+}
+.columns .woodDeskContainer .goldMining .title {
+  width: 10vw;
+  text-align: center;
+  font-size: 100%;
+  color: #400800;
+}
+.columns .woodDeskContainer .goldMining .inputTitle {
+  font-family: "Bebas";
+  width: 10vw;
+  text-align: center;
+  font-size: 80%;
+  color: #400800;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+.columns .woodDeskContainer .goldMining .inputRow {
+  width: 10vw;
+  height: auto;
+  vertical-align: middle;
+  background-color: #F8CC08;
+  border: 2px solid #fff;
+  border-radius: 5px;
   outline: none;
+  font-family: "Bebas";
+  font-weight: bold;
+  font-size: 90%;
+  color: #400800;
+  /* line-height: 1vw; */
+  text-align: right;
+}
+.columns .woodDeskContainer .goldMining .myMineSubmit {
+  margin-top: 1vw;
+  padding: 0.5vw;
   border: none;
-  cursor: pointer;
-}
-.mineContainer .signUp:hover,
-.mineContainer .signIn:hover {
-  color: #F8CC08;
-  text-shadow: black 0 0 4px;
-}
-
-.statsPlateContainer {
+  border-top: 2px solid #400800;
+  border-bottom: 2px solid #400800;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "Bebas";
+  font-weight: bold;
+  font-size: 100%;
+  color: #400800;
+  line-height: 2vw;
+  width: 8vw;
+  height: auto;
   position: absolute;
-  bottom: 3vw;
-  right: 5vw;
-  z-index: 20;
+  bottom: 2vw;
+  left: 1vw;
 }
-.statsPlateContainer .statsPlate {
-  width: 15vw;
+.columns .woodDeskContainer .goldMining .infoContainer {
+  margin-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 65%;
+}
+.columns .woodDeskContainer .goldMining .infoContainer .infoContent {
+  font-weight: bold;
+  font-size: 110%;
+}
+.columns .myGold {
+  bottom: 6vw;
+  right: -1.2vw;
+}
+.columns .bigBanner {
+  bottom: 5.5vw;
+  left: 5vw;
+  z-index: 50;
+}
+.columns .bigBanner .woodDesk {
+  z-index: 50;
+  width: 60vw;
   height: auto;
 }
-.statsPlateContainer .stats {
+.columns .bigBanner .accountingContainer {
+  font-size: 100%;
+}
+.columns .bigBanner .accountingContainer .allOperation {
+  background: url("../img/svg/tableHeadBg.svg") 50% 50% no-repeat;
+  background-size: cover;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 340%;
+  color: #400800;
+  width: 12vw;
+  height: auto;
+  border: none;
+  outline: none;
   position: absolute;
-  z-index: 20;
-  top: 1vw;
-  left: 2.5vw;
+  top: 2vw;
+  right: 10.5vw;
+}
+.columns .bigBanner .accountingContainer .tableStats {
+  position: absolute;
+  top: 2vw;
+  left: 0;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 340%;
+  color: #400800;
+  width: 60vw;
+  height: auto;
+  text-align: center;
+}
+.columns .bigBanner .accountingContainer .tableStats .captionFirsLine {
+  font-weight: bold;
+}
+.columns .bigBanner .accountingContainer .tableStats .captionSecondLine {
+  font-size: 70%;
+}
+.columns .bigBanner .accountingContainer .tableStats .tableData {
+  background: url("../img/svg/tableHeadBg.svg") 50% 50% no-repeat;
+  background-size: contain;
+}
+.columns .bigBanner .refContainer {
+  position: absolute;
+  top: 2vw;
+  left: 0vw;
+  width: 90%;
+  height: 80%;
+  font-size: 120%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.columns .bigBanner .refContainer .refTitle {
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 340%;
+  color: #400800;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.statsPlateContainer .stats .titleRow {
-  margin: 0;
-  padding: 0;
-  font-family: "Bebas", sans-serif;
-  font-weight: bold;
-  font-size: 250%;
-  text-transform: uppercase;
+.columns .bigBanner .refContainer .refTitle .refSeconLine {
+  font-weight: normal;
+  font-size: 60%;
 }
-.statsPlateContainer .stats .statsRow {
-  margin: 0;
-  padding: 0;
-  font-family: "Bebas", sans-serif;
-  font-weight: bold;
-  font-size: 350%;
+.columns .bigBanner .refContainer .refActitives {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.columns .bigBanner .refContainer .refActitives .refLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.columns .bigBanner .refContainer .refActitives .refLink .refLinkInput {
+  width: 10vw;
+  font-family: "Bebas";
+  font-weight: normal;
   text-transform: uppercase;
+  font-size: 140%;
+  color: #400800;
+  background-color: #F8CC08;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  outline: none;
+  line-height: 200%;
+}
+.columns .bigBanner .refContainer .refActitives .refID {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.columns .bigBanner .refContainer .refActitives .refID .refIDInput {
+  width: 7vw;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 140%;
+  color: #400800;
+  background-color: #F8CC08;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  outline: none;
+  line-height: 200%;
+}
+.columns .bigBanner .refContainer .refActitives .refLabel {
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 200%;
+  color: #400800;
+}
+.columns .bigBanner .refContainer .refActitives .refBanner {
+  width: 15vw;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 140%;
+  color: #400800;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #400800;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+.columns .bigBanner .refContainer .refActitives .refBanner .refBannerText {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 3vw;
+}
+.columns .bigBanner .refContainer .refActitives .refBanner .refBannerText::after {
+  content: " ";
+  display: inline-block;
+  background: url("../img/svg/iconImg.svg") 50% 50% no-repeat;
+  background-size: contain;
+  width: 2vw;
+  height: 2vw;
+  vertical-align: middle;
+  margin-left: 0.5vw;
+}
+.columns .bigBanner .refContainer .refBtn {
+  width: 12vw;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 200%;
+  color: #400800;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #400800;
+  outline: none;
+}
+.columns .bigBanner .refContainer .refBanner:hover,
+.columns .bigBanner .refContainer .refBtn:hover {
+  color: #F8CC08;
+  text-shadow: black 0 0 4px;
+}
+.columns .bigBanner .optionsContainer {
+  position: absolute;
+  top: 2vw;
+  left: 0vw;
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.columns .bigBanner .optionsContainer .optionTitle {
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 340%;
+  color: #400800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.columns .bigBanner .optionsContainer .userDataInput {
+  width: 8vw;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 140%;
+  color: #400800;
+  background-color: #F8CC08;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  outline: none;
+  margin-bottom: 0.5vw;
+  line-height: 200%;
+}
+.columns .bigBanner .optionsContainer .userDataTitle {
+  -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 200%;
+  color: #400800;
+}
+.columns .bigBanner .optionsContainer .optionsActives {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userData,
+.columns .bigBanner .optionsContainer .optionsActives .userPassword,
+.columns .bigBanner .optionsContainer .optionsActives .userPay,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+.columns .bigBanner .optionsContainer .optionsActives .imgPayeer {
+  width: 10vw;
+  height: auto;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userData .optionsLabel {
+  font-family: "Bebas";
+  font-size: 150%;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userPassword .userDataInput {
+  text-align: center;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userPassword .saveChange {
+  width: 15vw;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 250%;
+  color: #400800;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #400800;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  position: absolute;
+  top: 18.5vw;
+  right: 22vw;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userPay {
+  justify-content: flex-start;
+  align-items: center;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userPay .userDataForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userPay .savePayInfo {
+  width: 7vw;
+  font-family: "Bebas";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 250%;
+  color: #400800;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #400800;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userSocial {
+  height: 50%;
+  width: 12vw;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5vw;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialTelegramText,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialVkText,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialInstagramText,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .googleAuthText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 200%;
+  color: #400800;
+  height: 2vw;
+}
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialTelegramImg,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialVkImg,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .userSocialInstagramImg,
+.columns .bigBanner .optionsContainer .optionsActives .userSocial .googleAuthImg {
+  margin-right: 0.5vw;
+  vertical-align: middle;
+  width: 2vw;
+  height: 2vw;
 }
 
 footer {
@@ -994,383 +1368,162 @@ footer .footerCopyright::before {
   content: "©";
 }
 
-@media (min-width: 260px) {
+@media (min-width: 370px) {
   body {
-    font-size: 3px;
+    font-size: 2px;
   }
 
-  main {
-    height: 80%;
+  .refContainer {
+    font-size: 106%;
   }
 
-  footer {
-    height: 20%;
+  .accountingContainer {
+    font-size: 95%;
   }
 
-  .woodDesk {
-    width: 40vw;
+  .refBtn {
+    font-size: 200%;
   }
 
-  .woodDesk .siteHead {
-    top: 6vw;
-    left: 5vw;
-  }
-
-  .woodDesk .videoHead {
-    top: 15.5vw;
-    left: 5vw;
-    width: 24vw;
-    height: 13.5vw;
-  }
-
-  .mobileStatsDesk {
-    display: block;
-    position: relative;
-    top: 0;
-    right: 0;
-  }
-
-  .statsPlateContainer {
-    top: 0;
-    right: 0;
-  }
-
-  .statsPlateContainer .statsPlate {
-    display: none;
-  }
-
-  .statsPlateContainer .stats {
-    top: 4vw;
-    left: 13vw;
-  }
-
-  .mineContainer .loginForm {
-    top: 36vw;
-    left: 42vw;
-  }
-
-  .mineContainer {
-    left: 0vw;
-  }
-
-  .mineContainer .mine {
-    width: 90vw;
-  }
-
-  .mineContainer .woodTab .username {
-    top: 12vw;
-    left: 20vw;
-  }
-
-  .mineContainer .woodTab .username .diamond {
-    width: 27vw;
-  }
-
-  .mineContainer .woodTab .signUp {
-    top: 4.5vw;
-    left: 23vw;
-  }
-
-  .mineContainer .signIn {
-    bottom: 18.5vw;
-    left: 2vw;
-  }
-
-  .visible {
-    display: none;
-  }
-
-  .mineContainer .loginForm input:not([type=checkbox]):not([type=submit]) {
-    width: 10vw;
-  }
-
-  .mineContainer .loginForm .rememberMe,
-.mineContainer .loginForm .forgotPass {
-    font-size: 160%;
-    letter-spacing: 0.6px;
-  }
-
-  .mineContainer .custom-checkbox + label::before {
-    width: 2vw;
-    height: 2vw;
-  }
-
-  footer {
-    font-size: 145%;
-  }
-
-  footer .footerNav {
-    width: 85%;
-    justify-content: space-between;
-  }
-
-  footer .footerNav .logoContainer {
-    padding-right: 20px;
-  }
-
-  footer .footerNav .logoContainer .logo {
-    width: 20vw;
-  }
-
-  footer .footerNav .footerMenuSocialLang {
-    flex-grow: 1;
-  }
-
-  footer .footerNav .footerMenuSocialLang .socialElement {
-    width: 3vw;
-  }
-
-  footer .footerNav .footerMenuSocialLang .lang .langFlag {
-    width: 3vw;
-    padding: 1vw;
-  }
-}
-@media (min-width: 350px) {
-  body {
-    font-size: 4px;
-  }
-
-  footer {
-    font-size: 125%;
-  }
-}
-@media (min-width: 450px) {
-  body {
-    font-size: 3px;
-    height: 100vh;
-  }
-
-  .woodDesk {
-    width: 25vw;
-  }
-
-  .woodDesk .videoHead {
-    top: 10vw;
-    left: 4vw;
-    width: 14vw;
-    height: 8.5vw;
-  }
-
-  .mobileStatsDesk {
-    display: none;
-  }
-
-  .woodDesk .siteHead {
-    top: 4vw;
-    left: 3.5vw;
-  }
-
-  .statsPlateContainer .statsPlate {
-    display: block;
-  }
-
-  .statsPlateContainer .stats {
-    top: 1vw;
-    left: 2.5vw;
-  }
-
-  .mineContainer .loginForm {
+  .saveChange {
+    font-size: 200%;
     top: 18vw;
-    left: 21vw;
   }
 
-  .mineContainer .mine {
-    width: 45vw;
+  .savePayInfo {
+    font-size: 200%;
   }
 
-  .mineContainer .woodTab .signUp {
-    top: -0.5vw;
-    left: 3vw;
-  }
-
-  .mineContainer .woodTab .username {
-    top: 3.7vw;
-    left: 1vw;
-  }
-
-  .mineContainer .woodTab .username .diamond {
-    width: 15vw;
-  }
-
-  .mineContainer .signIn {
-    bottom: 9vw;
-    left: 1vw;
-  }
-
-  .visible {
-    display: block;
-  }
-
-  .mineContainer {
-    left: 45vw;
-  }
-
-  .statsPlateContainer {
-    top: auto;
-    bottom: 3vw;
-    right: 5vw;
-  }
-
-  .mineContainer .loginForm input:not([type=checkbox]):not([type=submit]) {
-    width: 6vw;
-  }
-
-  .mineContainer .loginForm .rememberMe,
-.mineContainer .loginForm .forgotPass {
-    font-size: 130%;
-  }
-
-  .mineContainer .custom-checkbox + label::before {
-    width: 1vw;
-    height: 1vw;
-  }
-
-  footer {
-    font-size: 100%;
-  }
-
-  footer .footerNav {
-    width: 100%;
-    justify-content: center;
-  }
-
-  footer .footerNav .logoContainer {
-    padding-right: 50px;
-  }
-
-  footer .footerNav .logoContainer .logo {
-    width: 10vw;
-  }
-
-  footer .footerNav .footerMenuSocialLang {
-    flex-grow: 0.1;
-  }
-
-  footer .footerNav .footerMenuSocialLang .socialElement {
-    width: 1.3vw;
-  }
-
-  footer .footerNav .footerMenuSocialLang .lang .langFlag {
-    width: 1.5vw;
-    padding: 0.2vw;
+  .columns .bigBanner .optionsContainer .optionsActives .userPassword .saveChange,
+.columns .bigBanner .optionsContainer .optionsActives .userPay .savePayInfo,
+.columns .bigBanner .refContainer .refActitives .refBanner,
+.columns .bigBanner .refContainer .refBtn,
+.columns .bigBanner .optionsContainer .userDataInput,
+.columns .bigBanner .refContainer .refActitives .refID .refIDInput,
+.columns .bigBanner .refContainer .refActitives .refLink .refLinkInput {
+    border-width: 2px;
   }
 }
-@media (min-width: 720px) {
+@media (min-width: 490px) {
+  body {
+    font-size: 3px;
+  }
+
+  .refContainer {
+    font-size: 106%;
+  }
+
+  .accountingContainer {
+    font-size: 95%;
+  }
+
+  .refBtn {
+    font-size: 200%;
+  }
+
+  .saveChange {
+    font-size: 200%;
+    top: 18vw;
+  }
+
+  .savePayInfo {
+    font-size: 200%;
+  }
+}
+@media (min-width: 620px) {
   body {
     font-size: 4px;
   }
-
-  .mineContainer .woodTab .username {
-    top: 3.6vw;
-  }
-
-  .mineContainer .signIn {
-    bottom: 9vw;
-  }
 }
-@media (min-width: 860px) {
+@media (min-width: 768px) {
   body {
     font-size: 5px;
   }
-
-  .mineContainer .woodTab .username {
-    top: 3.3vw;
-  }
-
-  .mineContainer .signIn {
-    bottom: 9vw;
+}
+@media (min-width: 900px) {
+  body {
+    font-size: 6px;
   }
 }
 @media (min-width: 1024px) {
   body {
-    font-size: 6px;
-  }
-
-  .mineContainer .woodTab .username {
-    top: 3.3vw;
-  }
-
-  .mineContainer .signIn {
-    bottom: 9vw;
-  }
-}
-@media (min-width: 1200px) {
-  body {
     font-size: 7px;
   }
 
-  .mineContainer .woodTab .username {
-    top: 3.3vw;
-  }
-
-  .mineContainer .signIn {
-    bottom: 9vw;
+  .columns .bigBanner .optionsContainer .optionsActives .userPassword .saveChange,
+.columns .bigBanner .optionsContainer .optionsActives .userPay .savePayInfo,
+.columns .bigBanner .refContainer .refActitives .refBanner,
+.columns .bigBanner .refContainer .refBtn,
+.columns .bigBanner .optionsContainer .userDataInput,
+.columns .bigBanner .refContainer .refActitives .refID .refIDInput,
+.columns .bigBanner .refContainer .refActitives .refLink .refLinkInput {
+    border-width: 3px;
   }
 }
-@media (min-width: 1370px) {
+@media (min-width: 1170px) {
   body {
     font-size: 8px;
   }
-
-  .mineContainer .woodTab .username {
-    top: 3.3vw;
-  }
-
-  .mineContainer .signIn {
-    bottom: 9vw;
+}
+@media (min-width: 1300px) {
+  body {
+    font-size: 9px;
   }
 }
-@media (min-width: 1700px) {
+@media (min-width: 1440px) {
   body {
     font-size: 10px;
   }
-
-  .mineContainer .woodTab .username {
-    top: 3.5vw;
-  }
-
-  .mineContainer .signIn {
-    bottom: 8.5vw;
-  }
 }
-@media (min-width: 1900px) {
+@media (min-width: 1580px) {
   body {
     font-size: 11px;
   }
-
-  .mineContainer .woodTab .username {
-    top: 3vw;
-  }
-
-  .mineContainer .signIn {
-    bottom: 8.5vw;
-  }
 }
-@media (min-width: 2250px) {
+@media (min-width: 1675px) {
   body {
     font-size: 12px;
   }
-
-  .mineContainer .woodTab .username {
-    top: 3.5vw;
-  }
-
-  .mineContainer .signIn {
-    bottom: 8.5vw;
-  }
 }
-@media (min-width: 2250px) {
+@media (min-width: 1810px) {
   body {
     font-size: 13px;
   }
-
-  .mineContainer .woodTab .username {
-    top: 4vw;
-  }
-
-  .mineContainer .signIn {
-    bottom: 8vw;
+}
+@media (min-width: 1980px) {
+  body {
+    font-size: 14px;
   }
 }
+@media (min-width: 2100px) {
+  body {
+    font-size: 15px;
+  }
+}
+@media (min-width: 2225px) {
+  body {
+    font-size: 16px;
+  }
 
-/*# sourceMappingURL=styleUP.css.map */
+  .refContainer {
+    font-size: 109%;
+  }
+
+  .accountingContainer {
+    font-size: 100%;
+  }
+}
+@media (min-width: 2300px) {
+  body {
+    font-size: 17px;
+  }
+
+  .refContainer {
+    font-size: 120%;
+  }
+
+  .accountingContainer {
+    font-size: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

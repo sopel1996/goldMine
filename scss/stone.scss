@@ -12,7 +12,6 @@
     
     & .stone{  
         height: auto;
-        // width: calc(12vw + 1vw);
         width: 12vw;
         
     }
@@ -23,6 +22,17 @@
         top: 3vw;
         left: 3vw;
         cursor: pointer;
+    }
+    &:hover{
+        .stone{ 
+            width: 13vw;
+            }
+        .stoneTitle {
+            color: #F8CC08;
+            text-shadow: black 0 0 4px;
+            top:3vw;
+            left:3.5vw;
+        }
     }
 }
 
@@ -48,6 +58,17 @@
         left: 2vw;
         cursor: pointer;
     }
+    &:hover{
+        .stone{ 
+            width: 10vw;
+            }
+        .stoneTitle {
+            color: #F8CC08;
+            text-shadow: black 0 0 4px;
+            top:3vw;
+            left:2.5vw;
+        }
+    }
 }
 
 .contacts{
@@ -71,6 +92,18 @@
         left: 1.5vw;
         cursor: pointer;
     }
+
+    &:hover{
+        .stone{ 
+            width: 11vw;
+            }
+        .stoneTitle {
+            color: #F8CC08;
+            text-shadow: black 0 0 4px;
+            top:3.5vw;
+            left:2.5vw;
+        }
+    }
 }
 
 .help{
@@ -85,14 +118,6 @@
     .stone{  
         height: auto;
         width: 6.5vw;
-        // TODO: подобное через JS на событие stoneTitle:hover
-        // &:hover{
-        //     width: 7vw;
-        //     &+.stoneTitle{
-        //         top: 1.8vw;
-        //         left: 0.8vw;
-        //     }
-        // }
     }
     
     .stoneTitle{
@@ -103,9 +128,15 @@
         cursor: pointer;
 
     }
-}
-
-.stoneTitle:hover{
-    color: #F8CC08;
-    text-shadow: black 0 0 4px;
+    &:hover{
+        .stone{ 
+            width: 7.5vw;
+            }
+        .stoneTitle {
+            color: #F8CC08;
+            text-shadow: black 0 0 4px;
+            top:2.5vw;
+            left:1.3vw;
+        }
+    }
 }

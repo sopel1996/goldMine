@@ -685,6 +685,15 @@ main {
   left: 3vw;
   cursor: pointer;
 }
+.news:hover .stone {
+  width: 13vw;
+}
+.news:hover .stoneTitle {
+  color: #F8CC08;
+  text-shadow: black 0 0 4px;
+  top: 3vw;
+  left: 3.5vw;
+}
 
 .aboutUs {
   position: absolute;
@@ -705,6 +714,15 @@ main {
   top: 2vw;
   left: 2vw;
   cursor: pointer;
+}
+.aboutUs:hover .stone {
+  width: 10vw;
+}
+.aboutUs:hover .stoneTitle {
+  color: #F8CC08;
+  text-shadow: black 0 0 4px;
+  top: 3vw;
+  left: 2.5vw;
 }
 
 .contacts {
@@ -727,6 +745,15 @@ main {
   left: 1.5vw;
   cursor: pointer;
 }
+.contacts:hover .stone {
+  width: 11vw;
+}
+.contacts:hover .stoneTitle {
+  color: #F8CC08;
+  text-shadow: black 0 0 4px;
+  top: 3.5vw;
+  left: 2.5vw;
+}
 
 .help {
   position: absolute;
@@ -748,10 +775,14 @@ main {
   left: 0.6vw;
   cursor: pointer;
 }
-
-.stoneTitle:hover {
+.help:hover .stone {
+  width: 7.5vw;
+}
+.help:hover .stoneTitle {
   color: #F8CC08;
   text-shadow: black 0 0 4px;
+  top: 2.5vw;
+  left: 1.3vw;
 }
 
 .mineContainer {
@@ -1060,10 +1091,13 @@ footer .footerCopyright::before {
 
   .mineContainer {
     left: -13vw;
+    width: 113vw;
+    overflow: hidden;
   }
 
   .mineContainer .mine {
     width: 123vw;
+    object-fit: cover;
   }
 
   .mineContainer .woodTab .username {
@@ -1227,6 +1261,8 @@ footer .footerCopyright::before {
 
   .mineContainer {
     left: 45vw;
+    width: auto;
+    overflow: auto;
   }
 
   .statsPlateContainer {

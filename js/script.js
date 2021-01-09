@@ -117,11 +117,11 @@ const resize = evt =>{
     }
 }
 
-for (var i=0; i<stone.length; i++){
-    stone[i].addEventListener('click', popUp);
-    stoneContainer[i].addEventListener('mouseover', resize);
-    stoneContainer[i].addEventListener('mouseout', resize);
-}
+// for (var i=0; i<stone.length; i++){
+//     stone[i].addEventListener('click', popUp);
+//     stoneContainer[i].addEventListener('mouseover', resize);
+//     stoneContainer[i].addEventListener('mouseout', resize);
+// }
 
 footerNav.addEventListener('click', popUp);
 closeModal.addEventListener('click', popUp);
