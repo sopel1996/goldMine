@@ -15,6 +15,16 @@ const forgotPassContainer= document.querySelector(".forgotPassContainer");
 
 const forgotPass= document.querySelector(".forgotPass");
 
+
+window.onload = function () {
+    document.body.classList.add('loadedHiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loadedHiding');
+    }, 500);
+  }
+
+
 const popUp = evt => {
     // evt.preventDefault();
 
