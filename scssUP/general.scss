@@ -20,10 +20,29 @@ main{
 .trolley{
     position: absolute;
     bottom: 0vw;
-    left: 30vw;
+    left: 00vw;
     width: 8vw;
     height: auto;
     z-index: 70;
+    animation: slide 10s infinite linear;
+}
+
+@keyframes slide {
+  from {
+    left:0;
+  }
+  5% {
+      left: 0;
+  }
+    50% {
+        left: 70vw;
+    }
+    55% {
+        left: 70vw;
+    }
+  to {
+    left: 0;
+  }
 }
 
 .goldContainer{

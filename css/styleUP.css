@@ -82,8 +82,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -375,12 +374,30 @@ main {
 .trolley {
   position: absolute;
   bottom: 0vw;
-  left: 30vw;
+  left: 0vw;
   width: 8vw;
   height: auto;
   z-index: 70;
+  animation: slide 10s infinite linear;
 }
 
+@keyframes slide {
+  from {
+    left: 0;
+  }
+  5% {
+    left: 0;
+  }
+  50% {
+    left: 70vw;
+  }
+  55% {
+    left: 70vw;
+  }
+  to {
+    left: 0;
+  }
+}
 .goldContainer {
   margin: 0;
   padding: 0;
@@ -560,18 +577,8 @@ main {
   margin-right: auto;
   margin-top: 2vh;
   z-index: 110;
-  -webkit-animation-name: zoom;
-          animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-}
-@-webkit-keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
+  animation-name: zoom;
+  animation-duration: 0.6s;
 }
 @keyframes zoom {
   from {
@@ -643,14 +650,6 @@ main {
   outline: none;
   background-color: rgba(0, 0, 0, 0);
 }
-.modal .popup .popupContainer .popupSignUp .popupSignUpForm .signUpFormInput::-moz-placeholder {
-  text-align: center;
-  color: #400800;
-}
-.modal .popup .popupContainer .popupSignUp .popupSignUpForm .signUpFormInput:-ms-input-placeholder {
-  text-align: center;
-  color: #400800;
-}
 .modal .popup .popupContainer .popupSignUp .popupSignUpForm .signUpFormInput::placeholder {
   text-align: center;
   color: #400800;
@@ -672,10 +671,7 @@ main {
 .modal .popup .popupContainer .popupSignUp .popupSignUpForm .rulesCheckbox + label {
   display: inline-flex;
   align-items: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   width: 100%;
   transition: all 0.3s;
 }
@@ -788,14 +784,6 @@ main {
   outline: none;
   background-color: rgba(0, 0, 0, 0);
   font-size: 300%;
-}
-.modal .popup .forgotPassContainer .emailInput::-moz-placeholder {
-  text-align: center;
-  color: #400800;
-}
-.modal .popup .forgotPassContainer .emailInput:-ms-input-placeholder {
-  text-align: center;
-  color: #400800;
 }
 .modal .popup .forgotPassContainer .emailInput::placeholder {
   text-align: center;
@@ -1178,8 +1166,7 @@ main {
   line-height: 200%;
 }
 .columns .bigBanner .optionsContainer .userDataTitle {
-  -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   font-family: "Bebas";
   font-weight: bold;
   text-transform: uppercase;
@@ -1526,4 +1513,5 @@ footer .footerCopyright::before {
     font-size: 100%;
   }
 }
-/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=styleUP.css.map */
