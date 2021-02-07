@@ -1,0 +1,62 @@
+@charset "UTF-8";
+a,
+a:visited,
+a:active,
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+body {
+  background: url("../img/svg/bodyBgMainOneScreen.svg") no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  font-size: 13px;
+}
+
+main {
+  position: relative;
+  height: 80%;
+  width: 100vw;
+  background-size: cover;
+}
+
+.hide {
+  display: none !important;
+}
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #fff;
+  z-index: 1001;
+}
+
+.preloaderImage {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 300px;
+  height: 200px;
+  background: url("../img/gif/preloader.gif") no-repeat 50% 50%;
+  /*расположение (url) изображения gif и др. параметры*/
+  border-radius: 50%;
+}
+
+.loadedHiding .preloader {
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+/*# sourceMappingURL=general.css.map */

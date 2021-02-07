@@ -1,0 +1,39 @@
+.woodDesk {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25vw;
+  height: auto;
+}
+
+.woodDesk .siteHead {
+  margin: 0;
+  position: absolute;
+  top: 4vw;
+  left: 4vw;
+  font-family: 'Sanek';
+  font-size: 500%;
+  text-transform: uppercase;
+}
+
+.woodDesk .videoHead {
+  position: absolute;
+  top: 10vw;
+  left: 3.9vw;
+  z-index: 30;
+  border: 1px solid black;
+  width: 14vw;
+  height: 8.5vw;
+}
+
+.mobileStatsDesk {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.mobileStatsDesk .mobileStats {
+  width: 50vw;
+  height: auto;
+}
+/*# sourceMappingURL=woodDeskSiteName.css.map */

@@ -199,7 +199,7 @@
                 top: 2vw;
                 right: 10.5vw;
               
-                // z-index:1000;
+                z-index:100;
             }
             .tableStats{
                 position: absolute;
@@ -215,6 +215,7 @@
                 height: auto;
                 text-align: center;
                 .captionFirsLine{
+                    position:relative;
                     font-weight: bold;
                 }
                 

@@ -14,7 +14,9 @@
         top: 5.5vw;
         left: 15.5vw;
         
-        .signUp{
+        .signUp,
+        .cabinet,
+        .username{
             margin: 0;
             position: absolute;
             top: -0.5vw;
@@ -25,10 +27,21 @@
             text-transform: uppercase;
             cursor: pointer;
 
+
         }
-        
-        
+        .cabinet{
+            left: 5.5vw;
+            top: 7vw;
+        }
+
         .username{
+            left: 5vw;
+        }
+
+
+        
+        
+        .diamonds{
             margin: 0;
             padding: 0;
             position: absolute;

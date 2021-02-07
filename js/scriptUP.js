@@ -157,7 +157,7 @@ const showItem = evt => {
 
 const popUp = evt => {
     evt.preventDefault();
-
+    const target = evt.target;
     console.log(target.textContent.toLowerCase());
     if (target.textContent.toLowerCase() == "ваши реферальные баннеры") {
         modal.classList.add('modalActive');

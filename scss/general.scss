@@ -1,3 +1,10 @@
+a,
+a:visited,
+a:active,
+a:hover{
+  color: #fff;
+  text-decoration: none;
+}
 body{  
     background: url("../img/svg/bodyBgMainOneScreen.svg") no-repeat;
     background-size: cover; 
@@ -35,8 +42,8 @@ main{
   position: absolute;
   top: 40%;
   left: 40%;
-  width: 20%;
-  height: 20%;
+  width: 300px;
+  height: 200px;
   background: url('../img/gif/preloader.gif') no-repeat 50% 50%; /*расположение (url) изображения gif и др. параметры*/
   border-radius: 50%;
 }
