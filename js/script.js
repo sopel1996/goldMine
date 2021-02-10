@@ -2,7 +2,7 @@ const stone = document.querySelectorAll('.stoneTitle');
 const stoneContainer = document.querySelectorAll('.stone');
 const footerNav = document.querySelector('.footerMenuSocialLang').children[0];
 const modal = document.querySelector('.modal');
-const closeModal = document.querySelector('.cancel');
+const closeModal = document.querySelectorAll('.cancel');
 const signUp = document.querySelector('.signUp');
 const popUpDesk = document.querySelectorAll('.popup');
 //наполнение popup
@@ -115,7 +115,6 @@ const popUp = evt => {
 
 for (var i = 0; i < stone.length; i++) {
     stone[i].addEventListener('click', popUp);
-
 }
 
 footerNav.addEventListener('click', popUp);
