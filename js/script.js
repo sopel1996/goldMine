@@ -5,38 +5,37 @@ const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.cancel');
 const signUp = document.querySelector('.signUp');
 const popUpDesk = document.querySelectorAll('.popup');
+//наполнение popup
+const signUpPopUp = document.querySelector(".popupSignUp");
+const newsPopUp = document.querySelector(".popupNews");
+const aboutUsPopUp = document.querySelector(".popupAboutUs");
+const contactsPopUp = document.querySelector(".popupContacts");
+const helpPopUp = document.querySelector(".popupHelp");
+const forgotPassContainer = document.querySelector(".forgotPassContainer");
 
-const signUpPopUp= document.querySelector(".popupSignUp");
-const newsPopUp= document.querySelector(".popupNews");
-const aboutUsPopUp= document.querySelector(".popupAboutUs");
-const contactsPopUp= document.querySelector(".popupContacts");
-const helpPopUp= document.querySelector(".popupHelp");
-const forgotPassContainer= document.querySelector(".forgotPassContainer");
-
-const forgotPass= document.querySelector(".forgotPass");
+const forgotPass = document.querySelector(".forgotPass");
 
 
 window.onload = function () {
     document.body.classList.add('loadedHiding');
     window.setTimeout(function () {
-      document.body.classList.add('loaded');
-      document.body.classList.remove('loadedHiding');
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loadedHiding');
     }, 500);
-  }
+}
 
 
 const popUp = evt => {
-    // evt.preventDefault();
 
     const target = evt.target;
 
-    if (target.textContent.toLowerCase()=="забыли пароль?"){
+    if (target.textContent.toLowerCase() == "забыли пароль?") {
         signUpPopUp.classList.add('hide');
         newsPopUp.classList.add('hide');
         aboutUsPopUp.classList.add('hide');
         contactsPopUp.classList.add('hide');
         helpPopUp.classList.add('hide');
-        
+
         popUpDesk[1].classList.add('modalSignUp');
         popUpDesk[0].classList.add('modalSignUp');
         closeModal.classList.add('closeModalSignUp');
@@ -45,7 +44,7 @@ const popUp = evt => {
 
         modal.classList.add('modalActive');
     }
-    if (target.textContent.toLowerCase()=="новости") {
+    if (target.textContent.toLowerCase() == "новости") {
         forgotPassContainer.classList.add('hide');
         signUpPopUp.classList.add('hide');
         aboutUsPopUp.classList.add('hide');
@@ -55,7 +54,7 @@ const popUp = evt => {
 
         modal.classList.add('modalActive');
     }
-    if (target.textContent.toLowerCase()=="о нас") {
+    if (target.textContent.toLowerCase() == "о нас") {
         forgotPassContainer.classList.add('hide');
         signUpPopUp.classList.add('hide');
         newsPopUp.classList.add('hide');
@@ -65,7 +64,7 @@ const popUp = evt => {
 
         modal.classList.add('modalActive');
     }
-    if (target.textContent.toLowerCase()=="контакты") {
+    if (target.textContent.toLowerCase() == "контакты") {
         forgotPassContainer.classList.add('hide');
         signUpPopUp.classList.add('hide');
         newsPopUp.classList.add('hide');
@@ -75,7 +74,7 @@ const popUp = evt => {
 
         modal.classList.add('modalActive');
     }
-    if (target.textContent.toLowerCase()=="помощь") {
+    if (target.textContent.toLowerCase() == "помощь") {
         forgotPassContainer.classList.add('hide');
         signUpPopUp.classList.add('hide');
         newsPopUp.classList.add('hide');
@@ -85,7 +84,7 @@ const popUp = evt => {
 
         modal.classList.add('modalActive');
     }
-    if (target.textContent.toLowerCase()=="регистрация") {
+    if (target.textContent.toLowerCase() == "регистрация") {
         forgotPassContainer.classList.add('hide');
         newsPopUp.classList.add('hide');
         aboutUsPopUp.classList.add('hide');
@@ -98,7 +97,7 @@ const popUp = evt => {
         closeModal.classList.add('closeModalSignUp');
         modal.classList.add('modalActive');
     }
-    if (target.classList.contains('cancel') || target.classList.contains('modal')){
+    if (target.classList.contains('cancel') || target.classList.contains('modal')) {
         modal.classList.remove('modalActive');
         popUpDesk[1].classList.remove('modalSignUp');
         popUpDesk[0].classList.remove('modalSignUp');
@@ -113,25 +112,11 @@ const popUp = evt => {
     }
 }
 
-const resize = evt =>{
-    const target = evt.target;
-    // console.log(evt.relatedTarget.tagName);
-    let tmp = target.offsetWidth; 
 
-    if(evt.type == "mouseover" && (evt.relatedTarget.tagName=="MAIN" ||evt.relatedTarget.tagName=="OBJECT" )){
-        
-        target.style.width=`calc(${tmp}px + 1vw)`;
-    
-    }else if(evt.type == "mouseout" && (evt.relatedTarget.tagName=="MAIN" ||evt.relatedTarget.tagName=="OBJECT" )){
-        target.style.width=`calc(${tmp}px - 1vw)`;
-    }
+for (var i = 0; i < stone.length; i++) {
+    stone[i].addEventListener('click', popUp);
+
 }
-
-// for (var i=0; i<stone.length; i++){
-//     stone[i].addEventListener('click', popUp);
-//     stoneContainer[i].addEventListener('mouseover', resize);
-//     stoneContainer[i].addEventListener('mouseout', resize);
-// }
 
 footerNav.addEventListener('click', popUp);
 closeModal.addEventListener('click', popUp);
