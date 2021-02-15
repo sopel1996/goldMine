@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Page</title>
-    <link rel="stylesheet" href="css/styleUP.css">
+    <link rel="stylesheet" href="scssUP/styleUP.css">
     <script src="js/scriptUP.js" defer></script>
 </head>
 
@@ -20,42 +20,95 @@
 
                 <div class="popupContainer">
                     <div class="popupAllOperation hide">
-                        <div class="popupTitle">О нас</div>
+                        <!-- <div class="popupTitle">О нас</div> -->
                         <div class="popupContent">
-                            <table></table>
+                            <table>
+                                <tr>
+                                    <th class="tableData">дата</th>
+                                    <th class="tableData">доход</th>
+                                    <th class="tableData">расход</th>
+                                </tr>
+                                <tr>
+                                    <td class="">10.10.10</td>
+                                    <td class="">1000</td>
+                                    <td class="">500</td>
+                                </tr>
+
+                            </table>
                         </div>
                     </div>
 
                     <form class="forgotPassContainer ">
                         <p class="title">Восстановление пароля</p>
-                        <input type="email" name="emailInput" id="emailInput" class="emailInput" placeholder="Введите ваш email">
+                        <input type="email" name="emailInput" id="emailInput" class="emailInput"
+                            placeholder="Введите ваш email">
                         <input type="submit" value="Продолжить" class="submitInput">
                     </form>
 
                     <div class="popupNews hide">
                         <div class="popupTitle">Новости</div>
                         <div class="popupContent">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam? Vitae at mollitia atque hic enim et?
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni sint! Quos, optio provident!
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam? Vitae at mollitia atque hic enim et?
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni sint! Quos, optio provident!
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam? Vitae at mollitia atque hic enim et?
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni sint! Quos, optio provident!
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam? Vitae at mollitia atque hic enim et?
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni sint! Quos, optio provident!
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam? Vitae at mollitia atque hic enim et?
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni sint! Quos, optio provident!
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam? Vitae at mollitia atque hic enim et?
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni sint! Quos, optio provident!
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam? Vitae at mollitia atque hic enim et?
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni sint! Quos, optio provident!
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam? Vitae at mollitia atque hic enim et?
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni sint! Quos, optio provident!
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam? Vitae at mollitia atque hic enim et?
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni sint! Quos, optio provident!
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam? Vitae at mollitia atque hic enim et?
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni sint! Quos, optio provident!
-                            
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis
+                            tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam?
+                            Vitae at mollitia atque hic enim et?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita
+                            odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni
+                            sint! Quos, optio provident!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis
+                            tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam?
+                            Vitae at mollitia atque hic enim et?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita
+                            odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni
+                            sint! Quos, optio provident!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis
+                            tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam?
+                            Vitae at mollitia atque hic enim et?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita
+                            odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni
+                            sint! Quos, optio provident!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis
+                            tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam?
+                            Vitae at mollitia atque hic enim et?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita
+                            odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni
+                            sint! Quos, optio provident!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis
+                            tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam?
+                            Vitae at mollitia atque hic enim et?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita
+                            odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni
+                            sint! Quos, optio provident!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis
+                            tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam?
+                            Vitae at mollitia atque hic enim et?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita
+                            odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni
+                            sint! Quos, optio provident!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis
+                            tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam?
+                            Vitae at mollitia atque hic enim et?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita
+                            odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni
+                            sint! Quos, optio provident!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis
+                            tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam?
+                            Vitae at mollitia atque hic enim et?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita
+                            odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni
+                            sint! Quos, optio provident!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis
+                            tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam?
+                            Vitae at mollitia atque hic enim et?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita
+                            odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni
+                            sint! Quos, optio provident!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nisi cupiditate quis
+                            tempora, dolorem cumque sed veniam. Eveniet necessitatibus eligendi ipsam unde laboriosam?
+                            Vitae at mollitia atque hic enim et?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum inventore aliquam expedita
+                            odio commodi quam vero atque, sit quas? Numquam eum nemo similique accusantium facilis magni
+                            sint! Quos, optio provident!
+
                         </div>
                     </div>
                     <div class="popupAboutUs hide">
@@ -65,7 +118,7 @@
                     <div class="popupContacts hide">
                         <div class="popupTitle">Контакты</div>
                         <div class="popupContent">
-                        ТУТ БУДЕТ КОНТЕНТ     
+                            ТУТ БУДЕТ КОНТЕНТ
                         </div>
                     </div>
                     <div class="popupHelp">
@@ -78,11 +131,11 @@
 
             </div>
 
-            
+
 
         </div>
-        
-        <object type="image/svg+xml" data="img/svg/trolley.svg" class="trolley">
+
+        <object type="image/svg+xml" class="trolley">
         </object>
 
         <div class="goldContainer">
@@ -102,7 +155,7 @@
             </object>
             <p class="signText">выход</p>
         </div>
-       
+
         <div class="sectionInner">
             <div class="navContainer">
                 <ul class="nav">
@@ -116,33 +169,39 @@
             <div class="user">Доброй пожаловать в шахту, юзер</div>
             <div class="columns">
                 <div class="woodDeskContainer bigBanner hide">
-                    
+
                     <object type="image/svg+xml" data="img/svg/banner2Column.svg" class="woodDesk">
                     </object>
 
                     <div class="optionsContainer hide">
                         <div class="optionTitle">
-                                Настройки
+                            Настройки
                         </div>
 
                         <div class="optionsActives">
                             <div class="userData">
                                 <div class="userDataTitle">Общие данные</div>
                                 <label class="optionsLabel" for="userName">Имя</label>
-                                <input type="text" name="userName" id="userName" class="userDataInput" readonly value="123">
+                                <input type="text" name="userName" id="userName" class="userDataInput" readonly
+                                    value="123">
                                 <label class="optionsLabel" for="userLogin">Логин</label>
-                                <input type="text" name="userLogin" id="userLogin" class="userDataInput" readonly value="123">
+                                <input type="text" name="userLogin" id="userLogin" class="userDataInput" readonly
+                                    value="123">
                                 <label class="optionsLabel" for="userEmail">Email</label>
-                                <input type="text" name="userEmail" id="userEmail" class="userDataInput" readonly value="123">
+                                <input type="text" name="userEmail" id="userEmail" class="userDataInput" readonly
+                                    value="123">
                             </div>
                             <form action="" class="userPassword">
                                 <div class="userDataTitle">Смена пароля</div>
-                                
-                                <input type="password" name="oldPass" id="oldPass" class="userDataInput" placeholder="старый пароль">
-                                
-                                <input type="password" name="newPass" id="newPass" class="userDataInput" placeholder="новый пароль">
-                                
-                                <input type="password" name="repeatNewPass" id="repeatNewPass" class="userDataInput" placeholder="повторите новый пароль">
+
+                                <input type="password" name="oldPass" id="oldPass" class="userDataInput"
+                                    placeholder="старый пароль">
+
+                                <input type="password" name="newPass" id="newPass" class="userDataInput"
+                                    placeholder="новый пароль">
+
+                                <input type="password" name="repeatNewPass" id="repeatNewPass" class="userDataInput"
+                                    placeholder="повторите новый пароль">
                                 <input type="submit" value="Сохранить настройки" class="saveChange"></input>
                             </form>
                             <div class="userPay">
@@ -162,7 +221,7 @@
                                 <div class="userSocialContainer">
                                     <img src="img/svg/vk.svg" class="userSocialVkImg"></img>
                                     <span class="userSocialVkText">andr2222</span>
-                                 </div>                                               
+                                </div>
                                 <div class="userSocialContainer">
                                     <img src="img/svg/instagram.svg" class="userSocialInstagramImg"></img>
                                     <span class="userSocialInstagramText">@andr2222</span>
@@ -170,7 +229,7 @@
                                 <div class="userSocialContainer">
                                     <img src="img/svg/googleAuth.svg" class="googleAuthImg"></img>
                                     <span class="googleAuthText">Двухфакторная аутентификация</span>
-                                 </div>
+                                </div>
                                 <!-- <div class="userSocialVkImg">adnr2222</div>
                                 <div class="userSocialInstagramImg">@andr2222</div>
                                 <div class="googleAuthImg">Двухфакторная аутентификация</div> -->
@@ -184,17 +243,18 @@
                         <div class="refTitle">
                             <div class="refFirstLine">
                                 партнерская программа
-                            </div> 
+                            </div>
                             <div class="refSeconLine">
                                 Описание партнерской программы
-                            </div> 
-                        
+                            </div>
+
                         </div>
 
                         <div class="refActitives">
                             <div class="refLink">
                                 <label class="refLabel" for="refLink">ваша реферальная ссылка</label>
-                                <input type="text" name="refLink" id="refLink" class="refLinkInput" readonly value="123">
+                                <input type="text" name="refLink" id="refLink" class="refLinkInput" readonly
+                                    value="123">
                             </div>
                             <div class="refID">
                                 <label class="refLabel" for="refID">код игрока</label>
@@ -258,9 +318,9 @@
                             <p class="secondLine">3345673</p>
                             <p class="thirdLine">слитков</p>
                         </div>
-                    </div>  
+                    </div>
 
-                    <div class="woodDeskContainer hide myGold">    
+                    <div class="woodDeskContainer hide myGold">
                         <object type="image/svg+xml" data="img/svg/woodDeskWithPaperBig.svg" class="woodDesk">
                         </object>
                         <div class="goldMining">
@@ -268,7 +328,7 @@
                             <p class="inputTitle">сумма</p>
                             <form action="" class="infoContainer _sumSize _marginNull">
                                 <input type="number" name="inputSum" id="inputSum" class="inputRow" value="0" min="0">
-                                <input type="submit" value="пополнить"class="myMineSubmit">
+                                <input type="submit" value="пополнить" class="myMineSubmit">
                             </form>
                             <div class="infoContainer">
                                 <div class="infoTitle">курс игровой валюты</div>
@@ -276,7 +336,7 @@
                             </div>
                         </div>
                     </div>
-                        
+
                 </div>
                 <div class="column">
                     <object type="image/svg+xml" data="img/svg/woodColumn.svg" class="woodColumn">
@@ -289,9 +349,9 @@
                             <p class="secondLine">3345673</p>
                             <p class="thirdLine">слитков</p>
                         </div>
-                    </div> 
-                    
-                    <div class="woodDeskContainer hide myGold">    
+                    </div>
+
+                    <div class="woodDeskContainer hide myGold">
                         <object type="image/svg+xml" data="img/svg/woodDeskWithPaperBig.svg" class="woodDesk">
                         </object>
                         <div class="goldMining">
@@ -299,7 +359,7 @@
                             <p class="inputTitle">сумма</p>
                             <form action="" class="infoContainer _sumSize _marginNull">
                                 <input type="number" name="outputSum" id="outputSum" class="inputRow" value="0" min="0">
-                                <input type="submit" value="вывести"class="myMineSubmit">
+                                <input type="submit" value="вывести" class="myMineSubmit">
                             </form>
                             <div class="infoContainer">
                                 <div class="infoTitle">курс игровой валюты</div>
@@ -319,10 +379,10 @@
                             <p class="firstLine">расходы</p>
                             <p class="secondLine">3345673</p>
                             <p class="thirdLine">слитков</p>
-                        </div>  
+                        </div>
                     </div>
 
-                    <div class="woodDeskContainer hide myGold">    
+                    <div class="woodDeskContainer hide myGold">
                         <object type="image/svg+xml" data="img/svg/woodDeskWithPaperBig.svg" class="woodDesk">
                         </object>
                         <div class="goldMining">
@@ -331,19 +391,20 @@
                             <form action="" class="infoContainer _sumSize _marginNull">
                                 <input type="text" name="transactionName" id="transactionName" class="inputRow">
                                 <p class="inputTitle _sumMargin">сумма</p>
-                                <input type="number" name="transactionSum" id="transactionSum" class="inputRow _sumMargin _sumSize" value="0" min="0">
-                                <input type="submit" value="пополнить"class="myMineSubmit">
+                                <input type="number" name="transactionSum" id="transactionSum"
+                                    class="inputRow _sumMargin _sumSize" value="0" min="0">
+                                <input type="submit" value="пополнить" class="myMineSubmit">
                             </form>
                         </div>
                     </div>
 
                 </div>
-                
+
             </div>
-            
+
         </div>
-                
-        
+
+
     </main>
 
     <footer class="footer">
@@ -356,7 +417,9 @@
             </div>
             <div class="footerMenuSocialLang">
                 <ul class="footerMenu">
-                    <a href="#"><li class="footerMenuElement">ГЛАВНАЯ</li></a>
+                    <a href="#">
+                        <li class="footerMenuElement">ГЛАВНАЯ</li>
+                    </a>
                     <li class="footerMenuElement">НОВОСТИ</li>
                     <li class="footerMenuElement">О НАС</li>
                     <li class="footerMenuElement">КОНТАКТЫ</li>

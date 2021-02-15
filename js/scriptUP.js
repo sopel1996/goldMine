@@ -37,6 +37,7 @@ const contactsPopUp = document.querySelector(".popupContacts");
 const helpPopUp = document.querySelector(".popupHelp");
 const forgotPass = document.querySelector(".forgotPass");
 const forgotPassContainer = document.querySelector(".forgotPassContainer");
+const allOperationContainer = document.querySelector(".popupAllOperation");
 
 
 window.onload = function () {
@@ -184,7 +185,7 @@ const showItem = evt => {
 
     }
 }
-
+//TODO: signUpPopUp - убрать где не надо или добавить if
 const popUp = evt => {
     evt.preventDefault();
     const target = evt.target;
@@ -192,7 +193,16 @@ const popUp = evt => {
         modal.classList.add('modalActive');
     }
     if (target.textContent.toLowerCase() == "все операции") {
+        forgotPassContainer.classList.add('hide');
+        //signUpPopUp.classList.add('hide');
+        aboutUsPopUp.classList.add('hide');
+        contactsPopUp.classList.add('hide');
+        helpPopUp.classList.add('hide');
+        newsPopUp.classList.add('hide');
+        allOperationContainer.classList.remove('hide');
+
         modal.classList.add('modalActive');
+
     }
     if (target.textContent.toLowerCase() == "ваши работники") {
         modal.classList.add('modalActive');

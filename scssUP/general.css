@@ -40,41 +40,58 @@ main {
   z-index: 70;
   -webkit-animation: slide 10s infinite linear;
           animation: slide 10s infinite linear;
+  background: transparent url("/img/svg/trolley.svg") 50% 50% no-repeat;
 }
 
 @-webkit-keyframes slide {
   from {
     left: 0;
+    background-image: url("/img/svg/trolley.svg");
   }
   5% {
     left: 0;
   }
   50% {
     left: 70vw;
+    background-image: url("/img/svg/trolley.svg");
   }
   55% {
     left: 70vw;
+    background-image: url("/img/svg/trolleyEmpty.svg");
+  }
+  95% {
+    left: 0vw;
+    background-image: url("/img/svg/trolleyEmpty.svg");
   }
   to {
     left: 0;
+    background-image: url("/img/svg/trolley.svg");
   }
 }
 
 @keyframes slide {
   from {
     left: 0;
+    background-image: url("/img/svg/trolley.svg");
   }
   5% {
     left: 0;
   }
   50% {
     left: 70vw;
+    background-image: url("/img/svg/trolley.svg");
   }
   55% {
     left: 70vw;
+    background-image: url("/img/svg/trolleyEmpty.svg");
+  }
+  95% {
+    left: 0vw;
+    background-image: url("/img/svg/trolleyEmpty.svg");
   }
   to {
     left: 0;
+    background-image: url("/img/svg/trolley.svg");
   }
 }
 
