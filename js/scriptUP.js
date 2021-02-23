@@ -4,11 +4,19 @@ const stoneContainer = document.querySelectorAll('.stone');
 //main sign up
 const signUp = document.querySelector('.signUp');
 
+//myMine elements
+const stonesLvl = document.querySelector('.stoneLvl');
+const woodTables = document.querySelector('.woodTables');
+
+
+
+
 //username banner
 const user = document.querySelector('.user');
 //UP NAV
 const nav = document.querySelector('.nav');
 //columns
+const columnsAll = document.querySelector('.columns');
 const columns = document.querySelectorAll('.column');
 const bigBanner = document.querySelector('.bigBanner');
 //columns content
@@ -55,6 +63,12 @@ const showItem = evt => {
     const target = evt.target;
 
     if (target.textContent.toLowerCase() == "моя шахта") {
+
+        stonesLvl.classList.remove('hide');
+        woodTables.classList.remove('hide');
+        columnsAll.classList.add('hide');
+
+
         if (!target.classList.contains('active')) {
             target.classList.add('active');
         }
@@ -80,8 +94,16 @@ const showItem = evt => {
             myGold[i].classList.add('hide');
         }
 
+
+
     }
     if (target.textContent.toLowerCase() == "золото") {
+
+        stonesLvl.classList.add('hide');
+        woodTables.classList.add('hide');
+        columnsAll.classList.remove('hide');
+
+
         if (!target.classList.contains('active')) {
             target.classList.add('active');
         }
@@ -110,6 +132,11 @@ const showItem = evt => {
 
     }
     if (target.textContent.toLowerCase() == "учет") {
+
+        stonesLvl.classList.add('hide');
+        woodTables.classList.add('hide');
+        columnsAll.classList.remove('hide');
+
         if (!target.classList.contains('active')) {
             target.classList.add('active');
         }
@@ -135,6 +162,11 @@ const showItem = evt => {
 
     }
     if (target.textContent.toLowerCase() == "работники") {
+
+        stonesLvl.classList.add('hide');
+        woodTables.classList.add('hide');
+        columnsAll.classList.remove('hide');
+
         if (!target.classList.contains('active')) {
             target.classList.add('active');
         }
@@ -160,6 +192,11 @@ const showItem = evt => {
 
     }
     if (target.textContent.toLowerCase() == "настройки") {
+
+        stonesLvl.classList.add('hide');
+        woodTables.classList.add('hide');
+        columnsAll.classList.remove('hide');
+
         if (!target.classList.contains('active')) {
             target.classList.add('active');
         }

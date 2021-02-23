@@ -23,6 +23,7 @@ main{
     position: relative;
     width: 100vw;
     height: 80%;
+    margin-bottom: -0.1vw;
 }
 
 .trolley{
@@ -160,58 +161,140 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-}
- .navContainer{
-     width: 100%;
- }
- .nav{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-family: "Sanek";
-    font-weight: bold;
-    font-size: 300%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    &Item {
-        width: 14vw;
-        height: 6.5vw;
-        line-height: 9.3vw;
-        display: inline;
-        background: url("../img/svg/wood.svg") 50% 60% no-repeat;
-        background-size: contain;
-        text-align: center;
-        vertical-align: bottom;
-        color: #fff;
-        text-shadow: black 0 0 4px;
-        
-        &:hover,
-        .active {
-            background-image: url("../img/svg/woodHover.svg");
-            color: #F8CC08;
+
+
+    .woodTables{
+        margin: 2vw 0 12vw 28vw;
+        .woodTableContainer{
+            position: relative;
+            display: inline-block;
+            margin-right: 3vw;
+            &:last-child{
+                margin-right: 0;
+            }
+            .woodTable{
+                width: 19vw;
+                height: auto;
+            }
+
+            .stats,
+            .workers{
+            position: absolute;
+            width: 13vw;
+            text-align: center;
+            top: 1.8vw;
+            left: 3vw;
+            text-transform: uppercase;
+            font-size: 300%;
+            // z-index: 50;
+            .head{
+                margin: 0vw;
+                padding: 0vw;
+                line-height: 2vw;
+                font-weight: normal;
+                font-family: "Bebas";
+                color: #400800;
+                width: 100%;
+
+            }
+            .firstLine,
+            .secondLine,
+            .thirdLine{
+                margin:0;
+                padding: 0;
+                line-height: 2.5vw;
+                font-weight: normal;
+                font-family: "Bebas";
+                font-size: smaller;
+                color: #400800;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                border: none; 
+                border-top: 1px solid #250C03;
+
+                .name{
+                    display: inline-block;
+                }
+                .content{
+                    display: inline-block;
+                    font-weight: bold;
+                }
+            }
+            // .secondLine{
+            //     margin:0.5vw 0;
+            //     padding: 0.5vw 0;
+            //     border-top: 2px solid #250C03;
+            //     border-bottom: 2px solid #250C03;
+            //     line-height: 2.4vw;
+            //     font-weight: bold;
+            //     font-family: "Bebas";
+            //     color: #400800;
+            // }
+            // .thirdLine{
+            //     margin:0;
+            //     padding: 0;
+            //     line-height: 2.1vw;;
+            //     font-weight: normal;
+            //     font-family: "Bebas";
+            //     color: #400800;
+            // }
+            }
         }
     }
-}
 
-.user{
-    width: 22vw;
-    height: 3vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Bebas";
-    font-weight: bold;
-    font-size: 200%;
-    text-transform: uppercase;
-    color: #400800;
-    background-color: #F8CC08;
-}
+    .navContainer{
+        width: 100%;
+    }
+    .nav{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: "Sanek";
+        font-weight: bold;
+        font-size: 300%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        &Item {
+            width: 14vw;
+            height: 6.5vw;
+            line-height: 9.3vw;
+            display: inline;
+            background: url("../img/svg/wood.svg") 50% 60% no-repeat;
+            background-size: contain;
+            text-align: center;
+            vertical-align: bottom;
+            color:  #fff; 
 
+            
+            &:hover,
+            .active {
+                background-image: url("../img/svg/woodHover.svg");
+                color: #F8CC08;
+            }
+        }
+    }
+
+    .user{
+        width: 22vw;
+        height: 3vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Bebas";
+        font-weight: bold;
+        font-size: 200%;
+        text-transform: uppercase;
+        color: #400800;
+        background-color: #F8CC08;
+    }
+}
 .hide{
     display:none !important;
 }
-
 ._sumMargin{
     margin-top: 0.25vw !important;
 }

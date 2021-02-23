@@ -10,6 +10,8 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* Sections
@@ -389,6 +391,7 @@ main {
   position: relative;
   width: 100vw;
   height: 80%;
+  margin-bottom: -0.1vw;
 }
 
 .trolley {
@@ -584,11 +587,99 @@ main {
           justify-content: space-between;
 }
 
-.navContainer {
+.sectionInner .woodTables {
+  margin: 2vw 0 12vw 28vw;
+}
+
+.sectionInner .woodTables .woodTableContainer {
+  position: relative;
+  display: inline-block;
+  margin-right: 3vw;
+}
+
+.sectionInner .woodTables .woodTableContainer:last-child {
+  margin-right: 0;
+}
+
+.sectionInner .woodTables .woodTableContainer .woodTable {
+  width: 19vw;
+  height: auto;
+}
+
+.sectionInner .woodTables .woodTableContainer .stats,
+.sectionInner .woodTables .woodTableContainer .workers {
+  position: absolute;
+  width: 13vw;
+  text-align: center;
+  top: 1.8vw;
+  left: 3vw;
+  text-transform: uppercase;
+  font-size: 300%;
+}
+
+.sectionInner .woodTables .woodTableContainer .stats .head,
+.sectionInner .woodTables .woodTableContainer .workers .head {
+  margin: 0vw;
+  padding: 0vw;
+  line-height: 2vw;
+  font-weight: normal;
+  font-family: "Bebas";
+  color: #400800;
   width: 100%;
 }
 
-.nav {
+.sectionInner .woodTables .woodTableContainer .stats .firstLine,
+.sectionInner .woodTables .woodTableContainer .stats .secondLine,
+.sectionInner .woodTables .woodTableContainer .stats .thirdLine,
+.sectionInner .woodTables .woodTableContainer .workers .firstLine,
+.sectionInner .woodTables .woodTableContainer .workers .secondLine,
+.sectionInner .woodTables .woodTableContainer .workers .thirdLine {
+  margin: 0;
+  padding: 0;
+  line-height: 2.5vw;
+  font-weight: normal;
+  font-family: "Bebas";
+  font-size: smaller;
+  color: #400800;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: none;
+  border-top: 1px solid #250C03;
+}
+
+.sectionInner .woodTables .woodTableContainer .stats .firstLine .name,
+.sectionInner .woodTables .woodTableContainer .stats .secondLine .name,
+.sectionInner .woodTables .woodTableContainer .stats .thirdLine .name,
+.sectionInner .woodTables .woodTableContainer .workers .firstLine .name,
+.sectionInner .woodTables .woodTableContainer .workers .secondLine .name,
+.sectionInner .woodTables .woodTableContainer .workers .thirdLine .name {
+  display: inline-block;
+}
+
+.sectionInner .woodTables .woodTableContainer .stats .firstLine .content,
+.sectionInner .woodTables .woodTableContainer .stats .secondLine .content,
+.sectionInner .woodTables .woodTableContainer .stats .thirdLine .content,
+.sectionInner .woodTables .woodTableContainer .workers .firstLine .content,
+.sectionInner .woodTables .woodTableContainer .workers .secondLine .content,
+.sectionInner .woodTables .woodTableContainer .workers .thirdLine .content {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.sectionInner .navContainer {
+  width: 100%;
+}
+
+.sectionInner .nav {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -607,7 +698,7 @@ main {
           justify-content: space-between;
 }
 
-.navItem {
+.sectionInner .navItem {
   width: 14vw;
   height: 6.5vw;
   line-height: 9.3vw;
@@ -617,16 +708,15 @@ main {
   text-align: center;
   vertical-align: bottom;
   color: #fff;
-  text-shadow: black 0 0 4px;
 }
 
-.navItem:hover,
-.navItem .active {
+.sectionInner .navItem:hover,
+.sectionInner .navItem .active {
   background-image: url("../img/svg/woodHover.svg");
   color: #F8CC08;
 }
 
-.user {
+.sectionInner .user {
   width: 22vw;
   height: 3vw;
   display: -webkit-box;
@@ -1706,6 +1796,142 @@ main {
   height: 2vw;
 }
 
+.stoneLvl .stones {
+  position: absolute;
+  bottom: 0;
+  left: 25vw;
+  height: 23vw;
+  width: auto;
+}
+
+.stoneLvl .stone1 {
+  position: absolute;
+  bottom: 19vw;
+  left: 36vw;
+  width: auto;
+  height: 5vw;
+}
+
+.stoneLvl .stone2 {
+  position: absolute;
+  bottom: 9vw;
+  left: 35vw;
+  width: auto;
+  height: 6vw;
+}
+
+.stoneLvl .stone3 {
+  position: absolute;
+  bottom: 18vw;
+  left: 31vw;
+  width: auto;
+  height: 7vw;
+}
+
+.stoneLvl .stone4 {
+  position: absolute;
+  bottom: 16vw;
+  left: 32.2vw;
+  width: auto;
+  height: 5.5vw;
+}
+
+.stoneLvl .stone5 {
+  position: absolute;
+  bottom: 3.6vw;
+  left: 31.2vw;
+  width: auto;
+  height: 9vw;
+}
+
+.stoneLvl .stone6 {
+  position: absolute;
+  bottom: 17.5vw;
+  left: 26.5vw;
+  width: auto;
+  height: 7vw;
+}
+
+.stoneLvl .stone7 {
+  position: absolute;
+  bottom: 8vw;
+  left: 30vw;
+  width: auto;
+  height: 10vw;
+}
+
+.stoneLvl .stone8 {
+  position: absolute;
+  bottom: 10vw;
+  left: 24.6vw;
+  width: auto;
+  height: 7vw;
+}
+
+.stoneLvl .stone9 {
+  position: absolute;
+  bottom: 0vw;
+  left: 33.5vw;
+  width: auto;
+  height: 9vw;
+}
+
+.stoneLvl .stone10 {
+  position: absolute;
+  bottom: 0vw;
+  left: 27vw;
+  width: auto;
+  height: 11vw;
+}
+
+.stoneLvl .stoneLeft {
+  position: absolute;
+  bottom: 0vw;
+  left: 23vw;
+  width: auto;
+  height: 10vw;
+}
+
+.stoneLvl .stoneLeftUp {
+  position: absolute;
+  bottom: 16vw;
+  left: 26vw;
+  width: auto;
+  height: 2.5vw;
+}
+
+.stoneLvl .stoneRightUp {
+  position: absolute;
+  bottom: 16.5vw;
+  left: 38vw;
+  width: auto;
+  height: 2vw;
+}
+
+.stoneLvl .stoneRightMidIn {
+  position: absolute;
+  bottom: 9vw;
+  left: 38vw;
+  width: auto;
+  height: 2vw;
+}
+
+.stoneLvl .stoneRightMidOut {
+  position: absolute;
+  bottom: 8vw;
+  left: 39.4vw;
+  width: auto;
+  height: 3vw;
+}
+
+.stoneLvl .stoneRightBot {
+  position: absolute;
+  bottom: 0vw;
+  left: 40vw;
+  width: auto;
+  height: 3.5vw;
+}
+
 footer {
   position: relative;
   z-index: 0;
@@ -1844,6 +2070,11 @@ footer .footerCopyright {
 
 footer .footerCopyright::before {
   content: '\A9';
+}
+
+.footer {
+  background: #754C24 url(/img/footerUP.svg);
+  background-size: cover;
 }
 
 @media (min-width: 370px) {

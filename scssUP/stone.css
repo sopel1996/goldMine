@@ -1,0 +1,136 @@
+.stoneLvl .stones {
+  position: absolute;
+  bottom: 0;
+  left: 25vw;
+  height: 23vw;
+  width: auto;
+}
+
+.stoneLvl .stone1 {
+  position: absolute;
+  bottom: 19vw;
+  left: 36vw;
+  width: auto;
+  height: 5vw;
+}
+
+.stoneLvl .stone2 {
+  position: absolute;
+  bottom: 9vw;
+  left: 35vw;
+  width: auto;
+  height: 6vw;
+}
+
+.stoneLvl .stone3 {
+  position: absolute;
+  bottom: 18vw;
+  left: 31vw;
+  width: auto;
+  height: 7vw;
+}
+
+.stoneLvl .stone4 {
+  position: absolute;
+  bottom: 16vw;
+  left: 32.2vw;
+  width: auto;
+  height: 5.5vw;
+}
+
+.stoneLvl .stone5 {
+  position: absolute;
+  bottom: 3.6vw;
+  left: 31.2vw;
+  width: auto;
+  height: 9vw;
+}
+
+.stoneLvl .stone6 {
+  position: absolute;
+  bottom: 17.5vw;
+  left: 26.5vw;
+  width: auto;
+  height: 7vw;
+}
+
+.stoneLvl .stone7 {
+  position: absolute;
+  bottom: 8vw;
+  left: 30vw;
+  width: auto;
+  height: 10vw;
+}
+
+.stoneLvl .stone8 {
+  position: absolute;
+  bottom: 10vw;
+  left: 24.6vw;
+  width: auto;
+  height: 7vw;
+}
+
+.stoneLvl .stone9 {
+  position: absolute;
+  bottom: 0vw;
+  left: 33.5vw;
+  width: auto;
+  height: 9vw;
+}
+
+.stoneLvl .stone10 {
+  position: absolute;
+  bottom: 0vw;
+  left: 27vw;
+  width: auto;
+  height: 11vw;
+}
+
+.stoneLvl .stoneLeft {
+  position: absolute;
+  bottom: 0vw;
+  left: 23vw;
+  width: auto;
+  height: 10vw;
+}
+
+.stoneLvl .stoneLeftUp {
+  position: absolute;
+  bottom: 16vw;
+  left: 26vw;
+  width: auto;
+  height: 2.5vw;
+}
+
+.stoneLvl .stoneRightUp {
+  position: absolute;
+  bottom: 16.5vw;
+  left: 38vw;
+  width: auto;
+  height: 2vw;
+}
+
+.stoneLvl .stoneRightMidIn {
+  position: absolute;
+  bottom: 9vw;
+  left: 38vw;
+  width: auto;
+  height: 2vw;
+}
+
+.stoneLvl .stoneRightMidOut {
+  position: absolute;
+  bottom: 8vw;
+  left: 39.4vw;
+  width: auto;
+  height: 3vw;
+}
+
+.stoneLvl .stoneRightBot {
+  position: absolute;
+  bottom: 0vw;
+  left: 40vw;
+  width: auto;
+  height: 3.5vw;
+}
+/*# sourceMappingURL=stone.css.map */

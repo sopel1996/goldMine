@@ -6,6 +6,10 @@
 @import 'columns.scss';
 // @import 'bigDesk.scss';
 // @import 'mine.scss';
-// @import 'statsPlate.scss';
+@import 'stone.scss';
 @import '../scss/footer.scss';
+.footer{
+    background: #754C24 url(/img/footerUP.svg);
+    background-size: cover;
+}
 @import 'media.scss';

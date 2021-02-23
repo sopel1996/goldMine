@@ -11,6 +11,8 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* Sections
